@@ -1,0 +1,7 @@
+ch.qos.logback.classic.db.names.ColumnName:CH.Qos.Logback.Classic.DB.Names:ColumnName
+ch.qos.logback.classic.db.names.TableName:CH.Qos.Logback.Classic.DB.Names:TableName
+org.neuroph.core.events.LearningEventType:Org.Neuroph.Core.Events:LearningEventType
+org.neuroph.core.events.NeuralNetworkEventType:Org.Neuroph.Core.Events:NeuralNetworkEventType
+org.neuroph.imgrec.ColorMode:Org.Neuroph.Imgrec:ColorMode
+org.neuroph.util.NeuralNetworkType:Org.Neuroph.Util:NeuralNetworkType
+org.neuroph.util.TransferFunctionType:Org.Neuroph.Util:TransferFunctionType
