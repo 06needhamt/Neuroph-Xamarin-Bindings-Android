@@ -13,14 +13,25 @@ namespace TestApp
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
 			Button button = FindViewById<Button>(Resource.Id.myButton);
 
-			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+			TextView tv = FindViewById<TextView>(Resource.Id.txtResult);
+
+			button.Click += delegate {
+				tv.SetText("Training Network...",TextView.BufferType.Normal);
+				ExampleNetwork network = new ExampleNetwork(BaseContext.Assets,BaseContext.FilesDir);
+				network.TrainNetwork();
+				tv.SetText("Loading Network...", TextView.BufferType.Normal);
+				network.LoadNetwork();
+				tv.SetText("Testing Network...", TextView.BufferType.Normal);
+				network.TestNetwork();
+				tv.SetText(network.Results, TextView.BufferType.Normal);
+			};
+
+
+
 		}
 	}
 }

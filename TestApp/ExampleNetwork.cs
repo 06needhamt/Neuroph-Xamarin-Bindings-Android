@@ -1,63 +1,87 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Collections.Generic;
-using Android.App;
-using Android.Widget;
-using Android.OS;
 using Org.Neuroph.Core;
 using Org.Neuroph.Core.Learning;
 using Org.Neuroph.Util;
 using Org.Neuroph.Nnet;
 using Org.Neuroph.Nnet.Learning;
-using Java.Lang;
-
-using Math = System.Math;
-using String = System.String;
+using Android.Runtime;
+using Android.Content.Res;
+using Environment = Android.OS.Environment;
 
 namespace TestApp
 {
-	public static class TestNetwork
+	public class ExampleNetwork
 	{
-		static int inputSize = 8;
-		static int outputSize = 1;
-		static NeuralNetwork network;
-		static TrainingSet trainingSet;
-		static TrainingSet testingSet;
-		static int[] layers = { 8, 8, 1 };
+		int inputSize = 8;
+		int outputSize = 1;
+		NeuralNetwork network;
+		TrainingSet trainingSet;
+		TrainingSet testingSet;
+		int[] layers = { 8, 8, 1 };
+		string results = "";
+		string basePath = "/data/data/nofew.testapp/files";
+		AssetManager assets;
+		Java.IO.File destinationFile;
 
-		public static void loadNetwork()
+		public string Results
 		{
-			network = NeuralNetwork.Load("D:/GitHub/Neuroph-Intellij-Plugin/TrainTest.nnet");
+			get { return results; }
+			set { results = value; }
 		}
 
-		public static void trainNetwork()
+		public ExampleNetwork(AssetManager inAssets, Java.IO.File inFile)
 		{
-			List<Integer> list = new List<Integer>();
-			foreach (Integer layer in layers)
+			this.assets = inAssets;
+			this.destinationFile = inFile;
+		}
+		public void LoadNetwork()
+		{
+			network = NeuralNetwork.Load( basePath + "/TrainTest.nnet");
+		}
+
+		public void TrainNetwork()
+		{
+			List<int> list = new List<int>();
+			foreach (int layer in layers)
 			{
 				list.Add(layer);
 			}
-
-			network = new MultiLayerPerceptron(list, TransferFunctionType.Sigmoid);
+			Stream stream = assets.Open("Classroom_Occupation_Data.csv", Access.Random);
+			StreamReader sr = new StreamReader(stream);
+			string content = sr.ReadToEnd();
+			StreamWriter destinationStream = new StreamWriter(basePath + "/Classroom_Occupation_Data.csv",false);
+			destinationStream.Write(content);
+			destinationStream.Flush();
+			network = new MultiLayerPerceptron(TransferFunctionType.Sigmoid, list.ToArray());
 			trainingSet = new TrainingSet(inputSize, outputSize);
-			trainingSet = TrainingSet.CreateFromFile("D:/GitHub/NeuralNetworkTest/Classroom Occupation Data.csv", inputSize, outputSize, ",");
+			trainingSet = TrainingSet.CreateFromFile(basePath + "/Classroom_Occupation_Data.csv", inputSize, outputSize, ",");
 			BackPropagation learningRule = new BackPropagation();
 			network.LearningRule = learningRule;
 			network.Learn(trainingSet);
-			network.Save("D:/GitHub/Neuroph-Intellij-Plugin/TrainTest.nnet");
+			network.Save(basePath + "/TrainTest.nnet");
+			destinationStream.Close();
+			destinationStream.Dispose();
 		}
 
-		public static void testNetworkAuto(String setPath)
+		public void TestNetwork()
 		{
 			double total = 0.0;
-			List<Integer> list = new List<Integer>();
+			List<int> list = new List<int>();
 			List<String> outputLine = new List<String>();
-			foreach (Integer layer in layers)
+			foreach (int layer in layers)
 			{
 				list.Add(layer);
 			}
-
-			testingSet = TrainingSet.CreateFromFile(setPath, inputSize, outputSize, ",");
+			Stream stream = assets.Open("Classroom_Occupation_Test_Data.csv", Access.Random);
+			StreamReader sr = new StreamReader(stream);
+			string content = sr.ReadToEnd();
+			StreamWriter destinationStream = new StreamWriter(basePath + "/Classroom_Occupation_Test_Data.csv", false);
+			destinationStream.Write(content);
+			destinationStream.Flush();
+			testingSet = TrainingSet.CreateFromFile(basePath + "/Classroom_Occupation_Test_Data.csv", inputSize, outputSize, ",");
 			int count = testingSet.Elements().Count;
 			double averageDeviance = 0;
 			String resultString = "";
@@ -85,16 +109,20 @@ namespace TestApp
 					resultString = resultString.Substring(0, resultString.Length - 2);
 					resultString += "";
 				}
+				Results = GetResults(count,total,averageDeviance);
 			}
 			catch (IOException ex)
 			{
 				Console.Error.WriteLine(ex.StackTrace);
 			}
+			destinationStream.Close();
+			destinationStream.Dispose();
 		}
 
-		public static double[] GetResults(int count, double total, double averageDeviance)
+		public string GetResults(int count, double total, double averageDeviance)
 		{
-			return new double[] { (total / count), (averageDeviance / count) };
+			return "Average: " + total / count + "\n" +
+				"Average Deviance: " + averageDeviance / count;
 		}
 }
 }

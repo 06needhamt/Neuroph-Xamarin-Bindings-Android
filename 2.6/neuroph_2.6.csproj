@@ -25,7 +25,7 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="xcopy /Y /S &quot;${SolutionDir}" workingdir="${SolutionDir}" />
+        <Command type="AfterBuild" command="xcopy /Y /S &quot;${SolutionDir}\2.6\obj\Debug\generated&quot; &quot;${SolutionDir}\2.6\src&quot;" workingdir="${SolutionDir}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedReferenceJar Include="Jars\mysql-connector-java-5.1.17-bin.jar" />
-    <EmbeddedReferenceJar Include="Jars\android.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
 </Project>
