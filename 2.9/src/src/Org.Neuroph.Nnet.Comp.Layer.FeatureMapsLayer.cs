@@ -25,36 +25,6 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 
 		protected FeatureMapsLayer (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor_Lorg_neuroph_nnet_comp_Kernel_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.comp.layer']/class[@name='FeatureMapsLayer']/constructor[@name='FeatureMapsLayer' and count(parameter)=1 and parameter[1][@type='org.neuroph.nnet.comp.Kernel']]"
-		[Register (".ctor", "(Lorg/neuroph/nnet/comp/Kernel;)V", "")]
-		public unsafe FeatureMapsLayer (global::Org.Neuroph.Nnet.Comp.Kernel p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (FeatureMapsLayer)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/comp/Kernel;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/comp/Kernel;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_nnet_comp_Kernel_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_nnet_comp_Kernel_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/nnet/comp/Kernel;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_Kernel_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_Kernel_, __args);
-			} finally {
-			}
-		}
-
 		static IntPtr id_ctor_Lorg_neuroph_nnet_comp_Kernel_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.comp.layer']/class[@name='FeatureMapsLayer']/constructor[@name='FeatureMapsLayer' and count(parameter)=2 and parameter[1][@type='org.neuroph.nnet.comp.Kernel'] and parameter[2][@type='org.neuroph.nnet.comp.layer.Layer2D.Dimensions']]"
 		[Register (".ctor", "(Lorg/neuroph/nnet/comp/Kernel;Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;)V", "")]
@@ -82,6 +52,36 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_Kernel_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_Kernel_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Lorg_neuroph_nnet_comp_Kernel_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.comp.layer']/class[@name='FeatureMapsLayer']/constructor[@name='FeatureMapsLayer' and count(parameter)=1 and parameter[1][@type='org.neuroph.nnet.comp.Kernel']]"
+		[Register (".ctor", "(Lorg/neuroph/nnet/comp/Kernel;)V", "")]
+		public unsafe FeatureMapsLayer (global::Org.Neuroph.Nnet.Comp.Kernel p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (FeatureMapsLayer)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/comp/Kernel;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/comp/Kernel;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_nnet_comp_Kernel_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_nnet_comp_Kernel_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/nnet/comp/Kernel;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_Kernel_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_Kernel_, __args);
 			} finally {
 			}
 		}

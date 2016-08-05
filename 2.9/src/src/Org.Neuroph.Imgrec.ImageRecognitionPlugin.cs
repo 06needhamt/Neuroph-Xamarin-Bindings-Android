@@ -29,6 +29,36 @@ namespace Org.Neuroph.Imgrec {
 
 		protected ImageRecognitionPlugin (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Lorg_neuroph_imgrec_image_Dimension_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.imgrec']/class[@name='ImageRecognitionPlugin']/constructor[@name='ImageRecognitionPlugin' and count(parameter)=1 and parameter[1][@type='org.neuroph.imgrec.image.Dimension']]"
+		[Register (".ctor", "(Lorg/neuroph/imgrec/image/Dimension;)V", "")]
+		public unsafe ImageRecognitionPlugin (global::Org.Neuroph.Imgrec.Image.Dimension p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (ImageRecognitionPlugin)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/imgrec/image/Dimension;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/imgrec/image/Dimension;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_imgrec_image_Dimension_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_imgrec_image_Dimension_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/imgrec/image/Dimension;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_imgrec_image_Dimension_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_imgrec_image_Dimension_, __args);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_Lorg_neuroph_imgrec_image_Dimension_Lorg_neuroph_imgrec_ColorMode_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.imgrec']/class[@name='ImageRecognitionPlugin']/constructor[@name='ImageRecognitionPlugin' and count(parameter)=2 and parameter[1][@type='org.neuroph.imgrec.image.Dimension'] and parameter[2][@type='org.neuroph.imgrec.ColorMode']]"
 		[Register (".ctor", "(Lorg/neuroph/imgrec/image/Dimension;Lorg/neuroph/imgrec/ColorMode;)V", "")]
@@ -56,36 +86,6 @@ namespace Org.Neuroph.Imgrec {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_imgrec_image_Dimension_Lorg_neuroph_imgrec_ColorMode_, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_imgrec_image_Dimension_Lorg_neuroph_imgrec_ColorMode_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Lorg_neuroph_imgrec_image_Dimension_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.imgrec']/class[@name='ImageRecognitionPlugin']/constructor[@name='ImageRecognitionPlugin' and count(parameter)=1 and parameter[1][@type='org.neuroph.imgrec.image.Dimension']]"
-		[Register (".ctor", "(Lorg/neuroph/imgrec/image/Dimension;)V", "")]
-		public unsafe ImageRecognitionPlugin (global::Org.Neuroph.Imgrec.Image.Dimension p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (ImageRecognitionPlugin)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/imgrec/image/Dimension;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/imgrec/image/Dimension;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_imgrec_image_Dimension_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_imgrec_image_Dimension_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/imgrec/image/Dimension;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_imgrec_image_Dimension_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_imgrec_image_Dimension_, __args);
 			} finally {
 			}
 		}

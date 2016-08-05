@@ -25,6 +25,41 @@ namespace Org.Neuroph.Core.Learning {
 
 		protected SupervisedTrainingElement (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.learning']/class[@name='SupervisedTrainingElement']/constructor[@name='SupervisedTrainingElement' and count(parameter)=2 and parameter[1][@type='java.util.ArrayList&lt;java.lang.Double&gt;'] and parameter[2][@type='java.util.ArrayList&lt;java.lang.Double&gt;']]"
+		[Register (".ctor", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", "")]
+		public unsafe SupervisedTrainingElement (global::System.Collections.Generic.IList<global::Java.Lang.Double> p0, global::System.Collections.Generic.IList<global::Java.Lang.Double> p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p0);
+			IntPtr native_p1 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				if (GetType () != typeof (SupervisedTrainingElement)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ == IntPtr.Zero)
+					id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
 		static IntPtr id_ctor_arrayDarrayD;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.learning']/class[@name='SupervisedTrainingElement']/constructor[@name='SupervisedTrainingElement' and count(parameter)=2 and parameter[1][@type='double[]'] and parameter[2][@type='double[]']]"
 		[Register (".ctor", "([D[D)V", "")]
@@ -95,41 +130,6 @@ namespace Org.Neuroph.Core.Learning {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
-			} finally {
-				JNIEnv.DeleteLocalRef (native_p0);
-				JNIEnv.DeleteLocalRef (native_p1);
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.learning']/class[@name='SupervisedTrainingElement']/constructor[@name='SupervisedTrainingElement' and count(parameter)=2 and parameter[1][@type='java.util.ArrayList&lt;java.lang.Double&gt;'] and parameter[2][@type='java.util.ArrayList&lt;java.lang.Double&gt;']]"
-		[Register (".ctor", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", "")]
-		public unsafe SupervisedTrainingElement (global::System.Collections.Generic.IList<global::Java.Lang.Double> p0, global::System.Collections.Generic.IList<global::Java.Lang.Double> p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p0);
-			IntPtr native_p1 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p1);
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (native_p0);
-				__args [1] = new JValue (native_p1);
-				if (GetType () != typeof (SupervisedTrainingElement)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ == IntPtr.Zero)
-					id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
