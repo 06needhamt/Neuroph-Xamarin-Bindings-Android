@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.UITests", "TestApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neuroph_2.9", "2.9\neuroph_2.9.csproj", "{274C8ACD-FA0E-43A4-A193-EF2AE40ECD6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neuroph_2.8", "2.8\neuroph_2.8.csproj", "{60F1C710-065E-4948-870B-DEA8D38232CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{274C8ACD-FA0E-43A4-A193-EF2AE40ECD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{274C8ACD-FA0E-43A4-A193-EF2AE40ECD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{274C8ACD-FA0E-43A4-A193-EF2AE40ECD6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F1C710-065E-4948-870B-DEA8D38232CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F1C710-065E-4948-870B-DEA8D38232CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F1C710-065E-4948-870B-DEA8D38232CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F1C710-065E-4948-870B-DEA8D38232CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
