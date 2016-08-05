@@ -45,6 +45,36 @@ namespace Org.Neuroph.Nnet.Learning {
 
 		protected SimulatedAnnealingLearning (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Lorg_neuroph_core_NeuralNetwork_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.learning']/class[@name='SimulatedAnnealingLearning']/constructor[@name='SimulatedAnnealingLearning' and count(parameter)=1 and parameter[1][@type='org.neuroph.core.NeuralNetwork']]"
+		[Register (".ctor", "(Lorg/neuroph/core/NeuralNetwork;)V", "")]
+		public unsafe SimulatedAnnealingLearning (global::Org.Neuroph.Core.NeuralNetwork p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (SimulatedAnnealingLearning)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/NeuralNetwork;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/NeuralNetwork;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_core_NeuralNetwork_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_core_NeuralNetwork_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/core/NeuralNetwork;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_Lorg_neuroph_core_NeuralNetwork_DDI;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.learning']/class[@name='SimulatedAnnealingLearning']/constructor[@name='SimulatedAnnealingLearning' and count(parameter)=4 and parameter[1][@type='org.neuroph.core.NeuralNetwork'] and parameter[2][@type='double'] and parameter[3][@type='double'] and parameter[4][@type='int']]"
 		[Register (".ctor", "(Lorg/neuroph/core/NeuralNetwork;DDI)V", "")]
@@ -74,36 +104,6 @@ namespace Org.Neuroph.Nnet.Learning {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_DDI, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_DDI, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Lorg_neuroph_core_NeuralNetwork_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.learning']/class[@name='SimulatedAnnealingLearning']/constructor[@name='SimulatedAnnealingLearning' and count(parameter)=1 and parameter[1][@type='org.neuroph.core.NeuralNetwork']]"
-		[Register (".ctor", "(Lorg/neuroph/core/NeuralNetwork;)V", "")]
-		public unsafe SimulatedAnnealingLearning (global::Org.Neuroph.Core.NeuralNetwork p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (SimulatedAnnealingLearning)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/NeuralNetwork;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/NeuralNetwork;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_core_NeuralNetwork_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_core_NeuralNetwork_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/core/NeuralNetwork;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args);
 			} finally {
 			}
 		}

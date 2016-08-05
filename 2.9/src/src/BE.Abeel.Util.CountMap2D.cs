@@ -26,6 +26,34 @@ namespace BE.Abeel.Util {
 
 		protected CountMap2D (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='CountMap2D']/constructor[@name='CountMap2D' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe CountMap2D ()
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				if (GetType () != typeof (CountMap2D)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					return;
+				}
+
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_I;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='CountMap2D']/constructor[@name='CountMap2D' and count(parameter)=1 and parameter[1][@type='int']]"
 		[Register (".ctor", "(I)V", "")]
@@ -52,34 +80,6 @@ namespace BE.Abeel.Util {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_I, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_I, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='CountMap2D']/constructor[@name='CountMap2D' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe CountMap2D ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				if (GetType () != typeof (CountMap2D)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
-					return;
-				}
-
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}

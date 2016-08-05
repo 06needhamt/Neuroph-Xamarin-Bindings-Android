@@ -25,30 +25,32 @@ namespace Org.Neuroph.Core.Transfer {
 
 		protected Trapezoid (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.transfer']/class[@name='Trapezoid']/constructor[@name='Trapezoid' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe Trapezoid ()
+		static IntPtr id_ctor_Lorg_neuroph_util_Properties_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.transfer']/class[@name='Trapezoid']/constructor[@name='Trapezoid' and count(parameter)=1 and parameter[1][@type='org.neuroph.util.Properties']]"
+		[Register (".ctor", "(Lorg/neuroph/util/Properties;)V", "")]
+		public unsafe Trapezoid (global::Org.Neuroph.Util.Properties p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			if (Handle != IntPtr.Zero)
 				return;
 
 			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
 				if (GetType () != typeof (Trapezoid)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/Properties;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/util/Properties;)V", __args);
 					return;
 				}
 
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				if (id_ctor_Lorg_neuroph_util_Properties_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_util_Properties_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/Properties;)V");
 				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args);
 			} finally {
 			}
 		}
@@ -86,32 +88,30 @@ namespace Org.Neuroph.Core.Transfer {
 			}
 		}
 
-		static IntPtr id_ctor_Lorg_neuroph_util_Properties_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.transfer']/class[@name='Trapezoid']/constructor[@name='Trapezoid' and count(parameter)=1 and parameter[1][@type='org.neuroph.util.Properties']]"
-		[Register (".ctor", "(Lorg/neuroph/util/Properties;)V", "")]
-		public unsafe Trapezoid (global::Org.Neuroph.Util.Properties p0)
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.transfer']/class[@name='Trapezoid']/constructor[@name='Trapezoid' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe Trapezoid ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			if (Handle != IntPtr.Zero)
 				return;
 
 			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
 				if (GetType () != typeof (Trapezoid)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/Properties;)V", __args),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/util/Properties;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
 					return;
 				}
 
-				if (id_ctor_Lorg_neuroph_util_Properties_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_util_Properties_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/Properties;)V");
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
 				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args),
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}

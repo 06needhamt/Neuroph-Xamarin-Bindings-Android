@@ -25,6 +25,39 @@ namespace Net.SF.Image4j.IO {
 
 		protected LittleEndianRandomAccessFile (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Ljava_io_File_Ljava_lang_String_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='net.sf.image4j.io']/class[@name='LittleEndianRandomAccessFile']/constructor[@name='LittleEndianRandomAccessFile' and count(parameter)=2 and parameter[1][@type='java.io.File'] and parameter[2][@type='java.lang.String']]"
+		[Register (".ctor", "(Ljava/io/File;Ljava/lang/String;)V", "")]
+		public unsafe LittleEndianRandomAccessFile (global::Java.IO.File p0, string p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				if (GetType () != typeof (LittleEndianRandomAccessFile)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/io/File;Ljava/lang/String;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/io/File;Ljava/lang/String;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_io_File_Ljava_lang_String_ == IntPtr.Zero)
+					id_ctor_Ljava_io_File_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/io/File;Ljava/lang/String;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_io_File_Ljava_lang_String_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_io_File_Ljava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
 		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='net.sf.image4j.io']/class[@name='LittleEndianRandomAccessFile']/constructor[@name='LittleEndianRandomAccessFile' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
 		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;)V", "")]
@@ -56,39 +89,6 @@ namespace Net.SF.Image4j.IO {
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
-				JNIEnv.DeleteLocalRef (native_p1);
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_io_File_Ljava_lang_String_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='net.sf.image4j.io']/class[@name='LittleEndianRandomAccessFile']/constructor[@name='LittleEndianRandomAccessFile' and count(parameter)=2 and parameter[1][@type='java.io.File'] and parameter[2][@type='java.lang.String']]"
-		[Register (".ctor", "(Ljava/io/File;Ljava/lang/String;)V", "")]
-		public unsafe LittleEndianRandomAccessFile (global::Java.IO.File p0, string p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p1 = JNIEnv.NewString (p1);
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (native_p1);
-				if (GetType () != typeof (LittleEndianRandomAccessFile)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/io/File;Ljava/lang/String;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/io/File;Ljava/lang/String;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_io_File_Ljava_lang_String_ == IntPtr.Zero)
-					id_ctor_Ljava_io_File_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/io/File;Ljava/lang/String;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_io_File_Ljava_lang_String_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_io_File_Ljava_lang_String_, __args);
-			} finally {
 				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}

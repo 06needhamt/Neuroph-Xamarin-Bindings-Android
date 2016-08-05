@@ -25,34 +25,6 @@ namespace Org.Neuroph.Contrib.Samples.Stockmarket {
 
 		protected TrainingData (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.contrib.samples.stockmarket']/class[@name='TrainingData']/constructor[@name='TrainingData' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe TrainingData ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				if (GetType () != typeof (TrainingData)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
-					return;
-				}
-
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
-			} finally {
-			}
-		}
-
 		static IntPtr id_ctor_arrayLjava_lang_String_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.contrib.samples.stockmarket']/class[@name='TrainingData']/constructor[@name='TrainingData' and count(parameter)=1 and parameter[1][@type='java.lang.String[]']]"
 		[Register (".ctor", "([Ljava/lang/String;)V", "")]
@@ -85,6 +57,34 @@ namespace Org.Neuroph.Contrib.Samples.Stockmarket {
 					JNIEnv.CopyArray (native_p0, p0);
 					JNIEnv.DeleteLocalRef (native_p0);
 				}
+			}
+		}
+
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.contrib.samples.stockmarket']/class[@name='TrainingData']/constructor[@name='TrainingData' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe TrainingData ()
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				if (GetType () != typeof (TrainingData)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					return;
+				}
+
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+			} finally {
 			}
 		}
 

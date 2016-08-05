@@ -25,6 +25,36 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 
 		protected KMeansClustering (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Lorg_neuroph_core_data_DataSet_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.learning.kmeans']/class[@name='KMeansClustering']/constructor[@name='KMeansClustering' and count(parameter)=1 and parameter[1][@type='org.neuroph.core.data.DataSet']]"
+		[Register (".ctor", "(Lorg/neuroph/core/data/DataSet;)V", "")]
+		public unsafe KMeansClustering (global::Org.Neuroph.Core.Data.DataSet p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (KMeansClustering)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/data/DataSet;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/data/DataSet;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_core_data_DataSet_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_core_data_DataSet_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/core/data/DataSet;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_, __args);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_Lorg_neuroph_core_data_DataSet_I;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.learning.kmeans']/class[@name='KMeansClustering']/constructor[@name='KMeansClustering' and count(parameter)=2 and parameter[1][@type='org.neuroph.core.data.DataSet'] and parameter[2][@type='int']]"
 		[Register (".ctor", "(Lorg/neuroph/core/data/DataSet;I)V", "")]
@@ -52,36 +82,6 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_I, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_I, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Lorg_neuroph_core_data_DataSet_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.learning.kmeans']/class[@name='KMeansClustering']/constructor[@name='KMeansClustering' and count(parameter)=1 and parameter[1][@type='org.neuroph.core.data.DataSet']]"
-		[Register (".ctor", "(Lorg/neuroph/core/data/DataSet;)V", "")]
-		public unsafe KMeansClustering (global::Org.Neuroph.Core.Data.DataSet p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (KMeansClustering)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/data/DataSet;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/data/DataSet;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_core_data_DataSet_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_core_data_DataSet_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/core/data/DataSet;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_, __args);
 			} finally {
 			}
 		}

@@ -47,6 +47,76 @@ namespace Org.Neuroph.Core.Data {
 
 		protected DataSetRow (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.data']/class[@name='DataSetRow']/constructor[@name='DataSetRow' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;)V", "")]
+		public unsafe DataSetRow (string p0, string p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				if (GetType () != typeof (DataSetRow)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+					id_ctor_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/String;Ljava/lang/String;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
+		static IntPtr id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.data']/class[@name='DataSetRow']/constructor[@name='DataSetRow' and count(parameter)=2 and parameter[1][@type='java.util.ArrayList&lt;java.lang.Double&gt;'] and parameter[2][@type='java.util.ArrayList&lt;java.lang.Double&gt;']]"
+		[Register (".ctor", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", "")]
+		public unsafe DataSetRow (global::System.Collections.Generic.IList<global::Java.Lang.Double> p0, global::System.Collections.Generic.IList<global::Java.Lang.Double> p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p0);
+			IntPtr native_p1 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				if (GetType () != typeof (DataSetRow)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ == IntPtr.Zero)
+					id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
 		static IntPtr id_ctor_arrayDarrayD;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.data']/class[@name='DataSetRow']/constructor[@name='DataSetRow' and count(parameter)=2 and parameter[1][@type='double[]'] and parameter[2][@type='double[]']]"
 		[Register (".ctor", "([D[D)V", "")]
@@ -88,38 +158,35 @@ namespace Org.Neuroph.Core.Data {
 			}
 		}
 
-		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.data']/class[@name='DataSetRow']/constructor[@name='DataSetRow' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
-		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;)V", "")]
-		public unsafe DataSetRow (string p0, string p1)
+		static IntPtr id_ctor_Ljava_util_ArrayList_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.data']/class[@name='DataSetRow']/constructor[@name='DataSetRow' and count(parameter)=1 and parameter[1][@type='java.util.ArrayList&lt;java.lang.Double&gt;']]"
+		[Register (".ctor", "(Ljava/util/ArrayList;)V", "")]
+		public unsafe DataSetRow (global::System.Collections.Generic.IList<global::Java.Lang.Double> p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
 			if (Handle != IntPtr.Zero)
 				return;
 
-			IntPtr native_p0 = JNIEnv.NewString (p0);
-			IntPtr native_p1 = JNIEnv.NewString (p1);
+			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p0);
 			try {
-				JValue* __args = stackalloc JValue [2];
+				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (native_p0);
-				__args [1] = new JValue (native_p1);
 				if (GetType () != typeof (DataSetRow)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/ArrayList;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/ArrayList;)V", __args);
 					return;
 				}
 
-				if (id_ctor_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
-					id_ctor_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/String;Ljava/lang/String;)V");
+				if (id_ctor_Ljava_util_ArrayList_ == IntPtr.Zero)
+					id_ctor_Ljava_util_ArrayList_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/ArrayList;)V");
 				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_ArrayList_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_ArrayList_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
-				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 
@@ -155,73 +222,6 @@ namespace Org.Neuroph.Core.Data {
 					JNIEnv.CopyArray (native_p0, p0);
 					JNIEnv.DeleteLocalRef (native_p0);
 				}
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_util_ArrayList_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.data']/class[@name='DataSetRow']/constructor[@name='DataSetRow' and count(parameter)=1 and parameter[1][@type='java.util.ArrayList&lt;java.lang.Double&gt;']]"
-		[Register (".ctor", "(Ljava/util/ArrayList;)V", "")]
-		public unsafe DataSetRow (global::System.Collections.Generic.IList<global::Java.Lang.Double> p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p0);
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (native_p0);
-				if (GetType () != typeof (DataSetRow)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/ArrayList;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/ArrayList;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_util_ArrayList_ == IntPtr.Zero)
-					id_ctor_Ljava_util_ArrayList_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/ArrayList;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_ArrayList_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_ArrayList_, __args);
-			} finally {
-				JNIEnv.DeleteLocalRef (native_p0);
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.data']/class[@name='DataSetRow']/constructor[@name='DataSetRow' and count(parameter)=2 and parameter[1][@type='java.util.ArrayList&lt;java.lang.Double&gt;'] and parameter[2][@type='java.util.ArrayList&lt;java.lang.Double&gt;']]"
-		[Register (".ctor", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", "")]
-		public unsafe DataSetRow (global::System.Collections.Generic.IList<global::Java.Lang.Double> p0, global::System.Collections.Generic.IList<global::Java.Lang.Double> p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p0);
-			IntPtr native_p1 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p1);
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (native_p0);
-				__args [1] = new JValue (native_p1);
-				if (GetType () != typeof (DataSetRow)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ == IntPtr.Zero)
-					id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args);
-			} finally {
-				JNIEnv.DeleteLocalRef (native_p0);
-				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 

@@ -25,36 +25,6 @@ namespace Org.Neuroph.Nnet.Flat {
 
 		protected FlatNetworkLearning (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.flat']/class[@name='FlatNetworkLearning']/constructor[@name='FlatNetworkLearning' and count(parameter)=1 and parameter[1][@type='org.encog.engine.network.flat.FlatNetwork']]"
-		[Register (".ctor", "(Lorg/encog/engine/network/flat/FlatNetwork;)V", "")]
-		public unsafe FlatNetworkLearning (global::Org.Encog.Engine.Network.Flat.FlatNetwork p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (FlatNetworkLearning)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/network/flat/FlatNetwork;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/network/flat/FlatNetwork;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_ == IntPtr.Zero)
-					id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/encog/engine/network/flat/FlatNetwork;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_, __args);
-			} finally {
-			}
-		}
-
 		static IntPtr id_ctor_Lorg_neuroph_core_NeuralNetwork_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.flat']/class[@name='FlatNetworkLearning']/constructor[@name='FlatNetworkLearning' and count(parameter)=1 and parameter[1][@type='org.neuroph.core.NeuralNetwork']]"
 		[Register (".ctor", "(Lorg/neuroph/core/NeuralNetwork;)V", "")]
@@ -81,6 +51,36 @@ namespace Org.Neuroph.Nnet.Flat {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet.flat']/class[@name='FlatNetworkLearning']/constructor[@name='FlatNetworkLearning' and count(parameter)=1 and parameter[1][@type='org.encog.engine.network.flat.FlatNetwork']]"
+		[Register (".ctor", "(Lorg/encog/engine/network/flat/FlatNetwork;)V", "")]
+		public unsafe FlatNetworkLearning (global::Org.Encog.Engine.Network.Flat.FlatNetwork p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (FlatNetworkLearning)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/network/flat/FlatNetwork;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/network/flat/FlatNetwork;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_ == IntPtr.Zero)
+					id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/encog/engine/network/flat/FlatNetwork;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_, __args);
 			} finally {
 			}
 		}

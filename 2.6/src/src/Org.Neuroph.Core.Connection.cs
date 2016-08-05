@@ -25,6 +25,37 @@ namespace Org.Neuroph.Core {
 
 		protected Connection (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core']/class[@name='Connection']/constructor[@name='Connection' and count(parameter)=2 and parameter[1][@type='org.neuroph.core.Neuron'] and parameter[2][@type='org.neuroph.core.Neuron']]"
+		[Register (".ctor", "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V", "")]
+		public unsafe Connection (global::Org.Neuroph.Core.Neuron p0, global::Org.Neuroph.Core.Neuron p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				if (GetType () != typeof (Connection)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_, __args);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Weight_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core']/class[@name='Connection']/constructor[@name='Connection' and count(parameter)=3 and parameter[1][@type='org.neuroph.core.Neuron'] and parameter[2][@type='org.neuroph.core.Neuron'] and parameter[3][@type='org.neuroph.core.Weight']]"
 		[Register (".ctor", "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Weight;)V", "")]
@@ -53,37 +84,6 @@ namespace Org.Neuroph.Core {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Weight_, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Weight_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core']/class[@name='Connection']/constructor[@name='Connection' and count(parameter)=2 and parameter[1][@type='org.neuroph.core.Neuron'] and parameter[2][@type='org.neuroph.core.Neuron']]"
-		[Register (".ctor", "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V", "")]
-		public unsafe Connection (global::Org.Neuroph.Core.Neuron p0, global::Org.Neuroph.Core.Neuron p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (p1);
-				if (GetType () != typeof (Connection)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_, __args);
 			} finally {
 			}
 		}

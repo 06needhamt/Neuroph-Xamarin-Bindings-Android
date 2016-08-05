@@ -60,6 +60,41 @@ namespace Org.Neuroph.Core.Learning {
 			}
 		}
 
+		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.learning']/class[@name='SupervisedTrainingElement']/constructor[@name='SupervisedTrainingElement' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;)V", "")]
+		public unsafe SupervisedTrainingElement (string p0, string p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				if (GetType () != typeof (SupervisedTrainingElement)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+					id_ctor_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/String;Ljava/lang/String;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
 		static IntPtr id_ctor_arrayDarrayD;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.learning']/class[@name='SupervisedTrainingElement']/constructor[@name='SupervisedTrainingElement' and count(parameter)=2 and parameter[1][@type='double[]'] and parameter[2][@type='double[]']]"
 		[Register (".ctor", "([D[D)V", "")]
@@ -98,41 +133,6 @@ namespace Org.Neuroph.Core.Learning {
 					JNIEnv.CopyArray (native_p1, p1);
 					JNIEnv.DeleteLocalRef (native_p1);
 				}
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.learning']/class[@name='SupervisedTrainingElement']/constructor[@name='SupervisedTrainingElement' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
-		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;)V", "")]
-		public unsafe SupervisedTrainingElement (string p0, string p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p0 = JNIEnv.NewString (p0);
-			IntPtr native_p1 = JNIEnv.NewString (p1);
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (native_p0);
-				__args [1] = new JValue (native_p1);
-				if (GetType () != typeof (SupervisedTrainingElement)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
-					id_ctor_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/String;Ljava/lang/String;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
-			} finally {
-				JNIEnv.DeleteLocalRef (native_p0);
-				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 

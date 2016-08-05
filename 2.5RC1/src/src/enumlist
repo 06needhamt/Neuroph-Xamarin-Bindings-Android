@@ -1,0 +1,8 @@
+org.encog.engine.util.ErrorCalculationMode:Org.Encog.Engine.Util:ErrorCalculationMode
+org.jocl.CL$LogLevel:Org.Jocl:CL.LogLevel
+org.neuroph.contrib.imgrec.ColorMode:Org.Neuroph.Contrib.Imgrec:ColorMode
+org.neuroph.nnet.flat.FlatLearningType:Org.Neuroph.Nnet.Flat:FlatLearningType
+org.neuroph.util.NeuralNetworkType:Org.Neuroph.Util:NeuralNetworkType
+org.neuroph.util.SummingFunctionType:Org.Neuroph.Util:SummingFunctionType
+org.neuroph.util.TransferFunctionType:Org.Neuroph.Util:TransferFunctionType
+org.neuroph.util.WeightsFunctionType:Org.Neuroph.Util:WeightsFunctionType

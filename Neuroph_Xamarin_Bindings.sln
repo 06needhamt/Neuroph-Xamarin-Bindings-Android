@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neuroph_2.7", "2.7\neuroph_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neuroph_2.5RC2", "2.5RC2\neuroph_2.5RC2.csproj", "{A0C5E1C0-DCF6-46E5-BEDF-9DF00A2BE530}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "neuroph_2.5RC1", "2.5RC1\neuroph_2.5RC1.csproj", "{F7D983CE-BFDC-40BE-B08E-385BBA5207E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +51,9 @@ Global
 		{A0C5E1C0-DCF6-46E5-BEDF-9DF00A2BE530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0C5E1C0-DCF6-46E5-BEDF-9DF00A2BE530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0C5E1C0-DCF6-46E5-BEDF-9DF00A2BE530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7D983CE-BFDC-40BE-B08E-385BBA5207E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7D983CE-BFDC-40BE-B08E-385BBA5207E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7D983CE-BFDC-40BE-B08E-385BBA5207E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7D983CE-BFDC-40BE-B08E-385BBA5207E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
