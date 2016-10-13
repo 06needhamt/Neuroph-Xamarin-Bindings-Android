@@ -31,7 +31,7 @@ namespace Org.Jocl {
 		public unsafe Pointer ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Jocl {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Jocl {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -247,7 +247,7 @@ namespace Org.Jocl {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
-				return global::Java.Lang.Object.GetObject<global::Org.Jocl.Pointer> (JNIEnv.CallObjectMethod  (Handle, id_withByteOffset_J, __args), JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::Org.Jocl.Pointer> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_withByteOffset_J, __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

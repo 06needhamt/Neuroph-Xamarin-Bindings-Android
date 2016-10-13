@@ -35,7 +35,7 @@ namespace Org.Encog.Engine.Concurrency {
 		public unsafe DetermineWorkload (int p0, int p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -46,7 +46,7 @@ namespace Org.Encog.Engine.Concurrency {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(II)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(II)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(II)V", __args);
 					return;
 				}
 
@@ -55,7 +55,7 @@ namespace Org.Encog.Engine.Concurrency {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_II, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_II, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_II, __args);
 			} finally {
 			}
 		}
@@ -86,9 +86,9 @@ namespace Org.Encog.Engine.Concurrency {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getThreadCount);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getThreadCount);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getThreadCount", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getThreadCount", "()I"));
 				} finally {
 				}
 			}
@@ -120,9 +120,9 @@ namespace Org.Encog.Engine.Concurrency {
 			try {
 
 				if (GetType () == ThresholdType)
-					return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Util.IntRange>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_calculateWorkers), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Util.IntRange>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_calculateWorkers), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Util.IntRange>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateWorkers", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Util.IntRange>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateWorkers", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

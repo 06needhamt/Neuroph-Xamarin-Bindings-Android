@@ -31,7 +31,7 @@ namespace BE.Abeel.Bioinformatics {
 		public unsafe Record (string p0, string p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewString (p0);
@@ -44,7 +44,7 @@ namespace BE.Abeel.Bioinformatics {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -53,7 +53,7 @@ namespace BE.Abeel.Bioinformatics {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
@@ -104,9 +104,9 @@ namespace BE.Abeel.Bioinformatics {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getDescription), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDescription), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDescription", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDescription", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -121,9 +121,9 @@ namespace BE.Abeel.Bioinformatics {
 					__args [0] = new JValue (native_value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setDescription_Ljava_lang_String_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setDescription_Ljava_lang_String_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDescription", "(Ljava/lang/String;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDescription", "(Ljava/lang/String;)V"), __args);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -174,9 +174,9 @@ namespace BE.Abeel.Bioinformatics {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getSequence), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getSequence), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSequence", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSequence", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -191,9 +191,9 @@ namespace BE.Abeel.Bioinformatics {
 					__args [0] = new JValue (native_value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setSequence_Ljava_lang_String_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setSequence_Ljava_lang_String_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setSequence", "(Ljava/lang/String;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setSequence", "(Ljava/lang/String;)V"), __args);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}

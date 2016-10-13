@@ -44,7 +44,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 		public unsafe PoolingLayer (global::Org.Neuroph.Nnet.Comp.Layer.FeatureMapsLayer p0, global::Org.Neuroph.Nnet.Comp.Kernel p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -55,7 +55,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/comp/layer/FeatureMapsLayer;Lorg/neuroph/nnet/comp/Kernel;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/comp/layer/FeatureMapsLayer;Lorg/neuroph/nnet/comp/Kernel;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/nnet/comp/layer/FeatureMapsLayer;Lorg/neuroph/nnet/comp/Kernel;)V", __args);
 					return;
 				}
 
@@ -64,7 +64,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_FeatureMapsLayer_Lorg_neuroph_nnet_comp_Kernel_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_FeatureMapsLayer_Lorg_neuroph_nnet_comp_Kernel_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_FeatureMapsLayer_Lorg_neuroph_nnet_comp_Kernel_, __args);
 			} finally {
 			}
 		}
@@ -75,7 +75,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 		public unsafe PoolingLayer (global::Org.Neuroph.Nnet.Comp.Layer.FeatureMapsLayer p0, global::Org.Neuroph.Nnet.Comp.Kernel p1, int p2, global::Org.Neuroph.Util.NeuronProperties p3)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -88,7 +88,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/comp/layer/FeatureMapsLayer;Lorg/neuroph/nnet/comp/Kernel;ILorg/neuroph/util/NeuronProperties;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/comp/layer/FeatureMapsLayer;Lorg/neuroph/nnet/comp/Kernel;ILorg/neuroph/util/NeuronProperties;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/nnet/comp/layer/FeatureMapsLayer;Lorg/neuroph/nnet/comp/Kernel;ILorg/neuroph/util/NeuronProperties;)V", __args);
 					return;
 				}
 
@@ -97,7 +97,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_FeatureMapsLayer_Lorg_neuroph_nnet_comp_Kernel_ILorg_neuroph_util_NeuronProperties_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_FeatureMapsLayer_Lorg_neuroph_nnet_comp_Kernel_ILorg_neuroph_util_NeuronProperties_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_FeatureMapsLayer_Lorg_neuroph_nnet_comp_Kernel_ILorg_neuroph_util_NeuronProperties_, __args);
 			} finally {
 			}
 		}

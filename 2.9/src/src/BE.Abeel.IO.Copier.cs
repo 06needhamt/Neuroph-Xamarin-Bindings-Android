@@ -22,14 +22,14 @@ namespace BE.Abeel.IO {
 				get {
 					if (buf_jfieldId == IntPtr.Zero)
 						buf_jfieldId = JNIEnv.GetFieldID (class_ref, "buf", "[B");
-					return JavaArray<byte>.FromJniHandle (JNIEnv.GetObjectField (Handle, buf_jfieldId), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaArray<byte>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, buf_jfieldId), JniHandleOwnership.TransferLocalRef);
 				}
 				set {
 					if (buf_jfieldId == IntPtr.Zero)
 						buf_jfieldId = JNIEnv.GetFieldID (class_ref, "buf", "[B");
-					IntPtr native_value = JavaArray<byte>.ToLocalJniHandle (value);
+					IntPtr native_value = global::Android.Runtime.JavaArray<byte>.ToLocalJniHandle (value);
 					try {
-						JNIEnv.SetField (Handle, buf_jfieldId, native_value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, buf_jfieldId, native_value);
 					} finally {
 						JNIEnv.DeleteLocalRef (native_value);
 					}
@@ -44,13 +44,13 @@ namespace BE.Abeel.IO {
 				get {
 					if (count_jfieldId == IntPtr.Zero)
 						count_jfieldId = JNIEnv.GetFieldID (class_ref, "count", "I");
-					return JNIEnv.GetIntField (Handle, count_jfieldId);
+					return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, count_jfieldId);
 				}
 				set {
 					if (count_jfieldId == IntPtr.Zero)
 						count_jfieldId = JNIEnv.GetFieldID (class_ref, "count", "I");
 					try {
-						JNIEnv.SetField (Handle, count_jfieldId, value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, count_jfieldId, value);
 					} finally {
 					}
 				}
@@ -64,13 +64,13 @@ namespace BE.Abeel.IO {
 				get {
 					if (pos_jfieldId == IntPtr.Zero)
 						pos_jfieldId = JNIEnv.GetFieldID (class_ref, "pos", "I");
-					return JNIEnv.GetIntField (Handle, pos_jfieldId);
+					return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, pos_jfieldId);
 				}
 				set {
 					if (pos_jfieldId == IntPtr.Zero)
 						pos_jfieldId = JNIEnv.GetFieldID (class_ref, "pos", "I");
 					try {
-						JNIEnv.SetField (Handle, pos_jfieldId, value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, pos_jfieldId, value);
 					} finally {
 					}
 				}
@@ -98,7 +98,7 @@ namespace BE.Abeel.IO {
 			public unsafe FastByteArrayInputStream (global::BE.Abeel.IO.Copier __self, byte[] p1, int p2)
 				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 			{
-				if (Handle != IntPtr.Zero)
+				if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 					return;
 
 				IntPtr native_p1 = JNIEnv.NewArray (p1);
@@ -111,7 +111,7 @@ namespace BE.Abeel.IO {
 						SetHandle (
 								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";[BI)V", __args),
 								JniHandleOwnership.TransferLocalRef);
-						global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";[BI)V", __args);
+						global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";[BI)V", __args);
 						return;
 					}
 
@@ -120,7 +120,7 @@ namespace BE.Abeel.IO {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lbe_abeel_io_Copier_arrayBI, __args),
 							JniHandleOwnership.TransferLocalRef);
-					JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lbe_abeel_io_Copier_arrayBI, __args);
+					JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lbe_abeel_io_Copier_arrayBI, __args);
 				} finally {
 					if (p1 != null) {
 						JNIEnv.CopyArray (native_p1, p1);
@@ -137,7 +137,7 @@ namespace BE.Abeel.IO {
 				if (id_available == IntPtr.Zero)
 					id_available = JNIEnv.GetMethodID (class_ref, "available", "()I");
 				try {
-					return JNIEnv.CallIntMethod  (Handle, id_available);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_available);
 				} finally {
 				}
 			}
@@ -150,7 +150,7 @@ namespace BE.Abeel.IO {
 				if (id_read == IntPtr.Zero)
 					id_read = JNIEnv.GetMethodID (class_ref, "read", "()I");
 				try {
-					return JNIEnv.CallIntMethod  (Handle, id_read);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_read);
 				} finally {
 				}
 			}
@@ -168,7 +168,7 @@ namespace BE.Abeel.IO {
 					__args [0] = new JValue (native_p0);
 					__args [1] = new JValue (p1);
 					__args [2] = new JValue (p2);
-					int __ret = JNIEnv.CallIntMethod  (Handle, id_read_arrayBII, __args);
+					int __ret = JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_read_arrayBII, __args);
 					return __ret;
 				} finally {
 					if (p0 != null) {
@@ -188,7 +188,7 @@ namespace BE.Abeel.IO {
 				try {
 					JValue* __args = stackalloc JValue [1];
 					__args [0] = new JValue (p0);
-					return JNIEnv.CallLongMethod  (Handle, id_skip_J, __args);
+					return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_skip_J, __args);
 				} finally {
 				}
 			}
@@ -208,14 +208,14 @@ namespace BE.Abeel.IO {
 				get {
 					if (buf_jfieldId == IntPtr.Zero)
 						buf_jfieldId = JNIEnv.GetFieldID (class_ref, "buf", "[B");
-					return JavaArray<byte>.FromJniHandle (JNIEnv.GetObjectField (Handle, buf_jfieldId), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaArray<byte>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, buf_jfieldId), JniHandleOwnership.TransferLocalRef);
 				}
 				set {
 					if (buf_jfieldId == IntPtr.Zero)
 						buf_jfieldId = JNIEnv.GetFieldID (class_ref, "buf", "[B");
-					IntPtr native_value = JavaArray<byte>.ToLocalJniHandle (value);
+					IntPtr native_value = global::Android.Runtime.JavaArray<byte>.ToLocalJniHandle (value);
 					try {
-						JNIEnv.SetField (Handle, buf_jfieldId, native_value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, buf_jfieldId, native_value);
 					} finally {
 						JNIEnv.DeleteLocalRef (native_value);
 					}
@@ -238,13 +238,43 @@ namespace BE.Abeel.IO {
 
 			protected FastByteArrayOutputStream (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+			static IntPtr id_ctor_Lbe_abeel_io_Copier_;
+			// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.io']/class[@name='Copier.FastByteArrayOutputStream']/constructor[@name='Copier.FastByteArrayOutputStream' and count(parameter)=1 and parameter[1][@type='be.abeel.io.Copier']]"
+			[Register (".ctor", "(Lbe/abeel/io/Copier;)V", "")]
+			public unsafe FastByteArrayOutputStream (global::BE.Abeel.IO.Copier __self)
+				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+			{
+				if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+					return;
+
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (__self);
+					if (GetType () != typeof (FastByteArrayOutputStream)) {
+						SetHandle (
+								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args),
+								JniHandleOwnership.TransferLocalRef);
+						global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args);
+						return;
+					}
+
+					if (id_ctor_Lbe_abeel_io_Copier_ == IntPtr.Zero)
+						id_ctor_Lbe_abeel_io_Copier_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lbe/abeel/io/Copier;)V");
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lbe_abeel_io_Copier_, __args),
+							JniHandleOwnership.TransferLocalRef);
+					JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lbe_abeel_io_Copier_, __args);
+				} finally {
+				}
+			}
+
 			static IntPtr id_ctor_Lbe_abeel_io_Copier_I;
 			// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.io']/class[@name='Copier.FastByteArrayOutputStream']/constructor[@name='Copier.FastByteArrayOutputStream' and count(parameter)=2 and parameter[1][@type='be.abeel.io.Copier'] and parameter[2][@type='int']]"
 			[Register (".ctor", "(Lbe/abeel/io/Copier;I)V", "")]
 			public unsafe FastByteArrayOutputStream (global::BE.Abeel.IO.Copier __self, int p1)
 				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 			{
-				if (Handle != IntPtr.Zero)
+				if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 					return;
 
 				try {
@@ -255,7 +285,7 @@ namespace BE.Abeel.IO {
 						SetHandle (
 								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";I)V", __args),
 								JniHandleOwnership.TransferLocalRef);
-						global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";I)V", __args);
+						global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";I)V", __args);
 						return;
 					}
 
@@ -264,37 +294,7 @@ namespace BE.Abeel.IO {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lbe_abeel_io_Copier_I, __args),
 							JniHandleOwnership.TransferLocalRef);
-					JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lbe_abeel_io_Copier_I, __args);
-				} finally {
-				}
-			}
-
-			static IntPtr id_ctor_Lbe_abeel_io_Copier_;
-			// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.io']/class[@name='Copier.FastByteArrayOutputStream']/constructor[@name='Copier.FastByteArrayOutputStream' and count(parameter)=1 and parameter[1][@type='be.abeel.io.Copier']]"
-			[Register (".ctor", "(Lbe/abeel/io/Copier;)V", "")]
-			public unsafe FastByteArrayOutputStream (global::BE.Abeel.IO.Copier __self)
-				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-			{
-				if (Handle != IntPtr.Zero)
-					return;
-
-				try {
-					JValue* __args = stackalloc JValue [1];
-					__args [0] = new JValue (__self);
-					if (GetType () != typeof (FastByteArrayOutputStream)) {
-						SetHandle (
-								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args),
-								JniHandleOwnership.TransferLocalRef);
-						global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args);
-						return;
-					}
-
-					if (id_ctor_Lbe_abeel_io_Copier_ == IntPtr.Zero)
-						id_ctor_Lbe_abeel_io_Copier_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lbe/abeel/io/Copier;)V");
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lbe_abeel_io_Copier_, __args),
-							JniHandleOwnership.TransferLocalRef);
-					JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lbe_abeel_io_Copier_, __args);
+					JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lbe_abeel_io_Copier_I, __args);
 				} finally {
 				}
 			}
@@ -325,9 +325,9 @@ namespace BE.Abeel.IO {
 					try {
 
 						if (GetType () == ThresholdType)
-							return global::Android.Runtime.InputStreamInvoker.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getInputStream), JniHandleOwnership.TransferLocalRef);
+							return global::Android.Runtime.InputStreamInvoker.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getInputStream), JniHandleOwnership.TransferLocalRef);
 						else
-							return global::Android.Runtime.InputStreamInvoker.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInputStream", "()Ljava/io/InputStream;")), JniHandleOwnership.TransferLocalRef);
+							return global::Android.Runtime.InputStreamInvoker.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInputStream", "()Ljava/io/InputStream;")), JniHandleOwnership.TransferLocalRef);
 					} finally {
 					}
 				}
@@ -359,9 +359,9 @@ namespace BE.Abeel.IO {
 					try {
 
 						if (GetType () == ThresholdType)
-							return JNIEnv.CallIntMethod  (Handle, id_getSize);
+							return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getSize);
 						else
-							return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSize", "()I"));
+							return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSize", "()I"));
 					} finally {
 					}
 				}
@@ -393,9 +393,9 @@ namespace BE.Abeel.IO {
 				try {
 
 					if (GetType () == ThresholdType)
-						return (byte[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getByteArray), JniHandleOwnership.TransferLocalRef, typeof (byte));
+						return (byte[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getByteArray), JniHandleOwnership.TransferLocalRef, typeof (byte));
 					else
-						return (byte[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getByteArray", "()[B")), JniHandleOwnership.TransferLocalRef, typeof (byte));
+						return (byte[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getByteArray", "()[B")), JniHandleOwnership.TransferLocalRef, typeof (byte));
 				} finally {
 				}
 			}
@@ -426,9 +426,9 @@ namespace BE.Abeel.IO {
 				try {
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_reset);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_reset);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reset", "()V"));
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reset", "()V"));
 				} finally {
 				}
 			}
@@ -444,7 +444,7 @@ namespace BE.Abeel.IO {
 				try {
 					JValue* __args = stackalloc JValue [1];
 					__args [0] = new JValue (native_p0);
-					JNIEnv.CallVoidMethod  (Handle, id_write_arrayB, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_write_arrayB, __args);
 				} finally {
 					if (p0 != null) {
 						JNIEnv.CopyArray (native_p0, p0);
@@ -466,7 +466,7 @@ namespace BE.Abeel.IO {
 					__args [0] = new JValue (native_p0);
 					__args [1] = new JValue (p1);
 					__args [2] = new JValue (p2);
-					JNIEnv.CallVoidMethod  (Handle, id_write_arrayBII, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_write_arrayBII, __args);
 				} finally {
 					if (p0 != null) {
 						JNIEnv.CopyArray (native_p0, p0);
@@ -485,7 +485,7 @@ namespace BE.Abeel.IO {
 				try {
 					JValue* __args = stackalloc JValue [1];
 					__args [0] = new JValue (p0);
-					JNIEnv.CallVoidMethod  (Handle, id_write_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_write_I, __args);
 				} finally {
 				}
 			}
@@ -515,7 +515,7 @@ namespace BE.Abeel.IO {
 		public unsafe Copier ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -523,7 +523,7 @@ namespace BE.Abeel.IO {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -532,7 +532,7 @@ namespace BE.Abeel.IO {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -548,7 +548,7 @@ namespace BE.Abeel.IO {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (native_p0);
-				global::Java.Lang.Object __ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_copy_Ljava_lang_Object_, __args), JniHandleOwnership.TransferLocalRef);
+				global::Java.Lang.Object __ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_copy_Ljava_lang_Object_, __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);

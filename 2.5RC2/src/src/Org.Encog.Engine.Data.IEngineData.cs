@@ -69,7 +69,7 @@ namespace Org.Encog.Engine.Data {
 
 		public IEngineDataInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -95,7 +95,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_isSupervised == IntPtr.Zero)
 					id_isSupervised = JNIEnv.GetMethodID (class_ref, "isSupervised", "()Z");
-				return JNIEnv.CallBooleanMethod (Handle, id_isSupervised);
+				return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isSupervised);
 			}
 		}
 
@@ -120,7 +120,7 @@ namespace Org.Encog.Engine.Data {
 		{
 			if (id_getIdealArray == IntPtr.Zero)
 				id_getIdealArray = JNIEnv.GetMethodID (class_ref, "getIdealArray", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getIdealArray), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getIdealArray), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_getInputArray;
@@ -144,7 +144,7 @@ namespace Org.Encog.Engine.Data {
 		{
 			if (id_getInputArray == IntPtr.Zero)
 				id_getInputArray = JNIEnv.GetMethodID (class_ref, "getInputArray", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getInputArray), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getInputArray), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_setIdealArray_arrayD;
@@ -174,7 +174,7 @@ namespace Org.Encog.Engine.Data {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_setIdealArray_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIdealArray_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -208,7 +208,7 @@ namespace Org.Encog.Engine.Data {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_setInputArray_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setInputArray_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);

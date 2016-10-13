@@ -227,13 +227,13 @@ namespace CH.Qos.Logback.Classic {
 			get {
 				if (levelInt_jfieldId == IntPtr.Zero)
 					levelInt_jfieldId = JNIEnv.GetFieldID (class_ref, "levelInt", "I");
-				return JNIEnv.GetIntField (Handle, levelInt_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, levelInt_jfieldId);
 			}
 			set {
 				if (levelInt_jfieldId == IntPtr.Zero)
 					levelInt_jfieldId = JNIEnv.GetFieldID (class_ref, "levelInt", "I");
 				try {
-					JNIEnv.SetField (Handle, levelInt_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, levelInt_jfieldId, value);
 				} finally {
 				}
 			}
@@ -247,7 +247,7 @@ namespace CH.Qos.Logback.Classic {
 			get {
 				if (levelStr_jfieldId == IntPtr.Zero)
 					levelStr_jfieldId = JNIEnv.GetFieldID (class_ref, "levelStr", "Ljava/lang/String;");
-				IntPtr __ret = JNIEnv.GetObjectField (Handle, levelStr_jfieldId);
+				IntPtr __ret = JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, levelStr_jfieldId);
 				return JNIEnv.GetString (__ret, JniHandleOwnership.TransferLocalRef);
 			}
 			set {
@@ -255,7 +255,7 @@ namespace CH.Qos.Logback.Classic {
 					levelStr_jfieldId = JNIEnv.GetFieldID (class_ref, "levelStr", "Ljava/lang/String;");
 				IntPtr native_value = JNIEnv.NewString (value);
 				try {
-					JNIEnv.SetField (Handle, levelStr_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, levelStr_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -303,7 +303,7 @@ namespace CH.Qos.Logback.Classic {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
-				bool __ret = JNIEnv.CallBooleanMethod  (Handle, id_isGreaterOrEqual_Lch_qos_logback_classic_Level_, __args);
+				bool __ret = JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isGreaterOrEqual_Lch_qos_logback_classic_Level_, __args);
 				return __ret;
 			} finally {
 			}
@@ -317,7 +317,7 @@ namespace CH.Qos.Logback.Classic {
 			if (id_toInt == IntPtr.Zero)
 				id_toInt = JNIEnv.GetMethodID (class_ref, "toInt", "()I");
 			try {
-				return JNIEnv.CallIntMethod  (Handle, id_toInt);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_toInt);
 			} finally {
 			}
 		}
@@ -330,7 +330,7 @@ namespace CH.Qos.Logback.Classic {
 			if (id_toInteger == IntPtr.Zero)
 				id_toInteger = JNIEnv.GetMethodID (class_ref, "toInteger", "()Ljava/lang/Integer;");
 			try {
-				return global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (JNIEnv.CallObjectMethod  (Handle, id_toInteger), JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_toInteger), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

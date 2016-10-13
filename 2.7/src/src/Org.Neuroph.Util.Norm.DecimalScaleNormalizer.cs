@@ -31,7 +31,7 @@ namespace Org.Neuroph.Util.Norm {
 		public unsafe DecimalScaleNormalizer ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Neuroph.Util.Norm {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Neuroph.Util.Norm {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -79,9 +79,9 @@ namespace Org.Neuroph.Util.Norm {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_findScaleVector);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_findScaleVector);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "findScaleVector", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "findScaleVector", "()V"));
 			} finally {
 			}
 		}
@@ -115,9 +115,9 @@ namespace Org.Neuroph.Util.Norm {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_normalize_Lorg_neuroph_core_learning_DataSet_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_normalize_Lorg_neuroph_core_learning_DataSet_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalize", "(Lorg/neuroph/core/learning/DataSet;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalize", "(Lorg/neuroph/core/learning/DataSet;)V"), __args);
 			} finally {
 			}
 		}
@@ -156,9 +156,9 @@ namespace Org.Neuroph.Util.Norm {
 
 				double[] __ret;
 				if (GetType () == ThresholdType)
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_normalizeScale_arrayD, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_normalizeScale_arrayD, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalizeScale", "([D)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalizeScale", "([D)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				return __ret;
 			} finally {
 				if (p0 != null) {

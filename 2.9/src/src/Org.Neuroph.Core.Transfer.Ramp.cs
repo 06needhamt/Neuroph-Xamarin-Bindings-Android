@@ -25,13 +25,43 @@ namespace Org.Neuroph.Core.Transfer {
 
 		protected Ramp (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Lorg_neuroph_util_Properties_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.transfer']/class[@name='Ramp']/constructor[@name='Ramp' and count(parameter)=1 and parameter[1][@type='org.neuroph.util.Properties']]"
+		[Register (".ctor", "(Lorg/neuroph/util/Properties;)V", "")]
+		public unsafe Ramp (global::Org.Neuroph.Util.Properties p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (Ramp)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/Properties;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/util/Properties;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_util_Properties_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_util_Properties_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/Properties;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_DDDDD;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.transfer']/class[@name='Ramp']/constructor[@name='Ramp' and count(parameter)=5 and parameter[1][@type='double'] and parameter[2][@type='double'] and parameter[3][@type='double'] and parameter[4][@type='double'] and parameter[5][@type='double']]"
 		[Register (".ctor", "(DDDDD)V", "")]
 		public unsafe Ramp (double p0, double p1, double p2, double p3, double p4)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -45,7 +75,7 @@ namespace Org.Neuroph.Core.Transfer {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(DDDDD)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(DDDDD)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(DDDDD)V", __args);
 					return;
 				}
 
@@ -54,7 +84,7 @@ namespace Org.Neuroph.Core.Transfer {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_DDDDD, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_DDDDD, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_DDDDD, __args);
 			} finally {
 			}
 		}
@@ -65,7 +95,7 @@ namespace Org.Neuroph.Core.Transfer {
 		public unsafe Ramp ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -73,7 +103,7 @@ namespace Org.Neuroph.Core.Transfer {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -82,37 +112,7 @@ namespace Org.Neuroph.Core.Transfer {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Lorg_neuroph_util_Properties_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.transfer']/class[@name='Ramp']/constructor[@name='Ramp' and count(parameter)=1 and parameter[1][@type='org.neuroph.util.Properties']]"
-		[Register (".ctor", "(Lorg/neuroph/util/Properties;)V", "")]
-		public unsafe Ramp (global::Org.Neuroph.Util.Properties p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (Ramp)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/Properties;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/util/Properties;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_util_Properties_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_util_Properties_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/Properties;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_util_Properties_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -160,9 +160,9 @@ namespace Org.Neuroph.Core.Transfer {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getXHigh);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getXHigh);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getXHigh", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getXHigh", "()D"));
 				} finally {
 				}
 			}
@@ -176,9 +176,9 @@ namespace Org.Neuroph.Core.Transfer {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setXHigh_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setXHigh_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setXHigh", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setXHigh", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -227,9 +227,9 @@ namespace Org.Neuroph.Core.Transfer {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getXLow);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getXLow);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getXLow", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getXLow", "()D"));
 				} finally {
 				}
 			}
@@ -243,9 +243,9 @@ namespace Org.Neuroph.Core.Transfer {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setXLow_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setXLow_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setXLow", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setXLow", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -294,9 +294,9 @@ namespace Org.Neuroph.Core.Transfer {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getYHigh);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getYHigh);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getYHigh", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getYHigh", "()D"));
 				} finally {
 				}
 			}
@@ -310,9 +310,9 @@ namespace Org.Neuroph.Core.Transfer {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setYHigh_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setYHigh_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setYHigh", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setYHigh", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -361,9 +361,9 @@ namespace Org.Neuroph.Core.Transfer {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getYLow);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getYLow);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getYLow", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getYLow", "()D"));
 				} finally {
 				}
 			}
@@ -377,9 +377,9 @@ namespace Org.Neuroph.Core.Transfer {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setYLow_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setYLow_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setYLow", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setYLow", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -413,9 +413,9 @@ namespace Org.Neuroph.Core.Transfer {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_getOutput_D, __args);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getOutput_D, __args);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(D)D"), __args);
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(D)D"), __args);
 			} finally {
 			}
 		}

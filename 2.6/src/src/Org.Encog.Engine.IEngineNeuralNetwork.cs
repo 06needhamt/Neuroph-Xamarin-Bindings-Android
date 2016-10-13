@@ -61,7 +61,7 @@ namespace Org.Encog.Engine {
 
 		public IEngineNeuralNetworkInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -87,7 +87,7 @@ namespace Org.Encog.Engine {
 			get {
 				if (id_getEncodeLength == IntPtr.Zero)
 					id_getEncodeLength = JNIEnv.GetMethodID (class_ref, "getEncodeLength", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getEncodeLength);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getEncodeLength);
 			}
 		}
 
@@ -118,7 +118,7 @@ namespace Org.Encog.Engine {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_decodeNetwork_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_decodeNetwork_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -146,7 +146,7 @@ namespace Org.Encog.Engine {
 		{
 			if (id_encodeNetwork == IntPtr.Zero)
 				id_encodeNetwork = JNIEnv.GetMethodID (class_ref, "encodeNetwork", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_encodeNetwork), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_encodeNetwork), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_getInputCount;
@@ -170,7 +170,7 @@ namespace Org.Encog.Engine {
 			get {
 				if (id_getInputCount == IntPtr.Zero)
 					id_getInputCount = JNIEnv.GetMethodID (class_ref, "getInputCount", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getInputCount);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getInputCount);
 			}
 		}
 
@@ -195,7 +195,7 @@ namespace Org.Encog.Engine {
 			get {
 				if (id_getOutputCount == IntPtr.Zero)
 					id_getOutputCount = JNIEnv.GetMethodID (class_ref, "getOutputCount", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getOutputCount);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getOutputCount);
 			}
 		}
 
@@ -231,7 +231,7 @@ namespace Org.Encog.Engine {
 			JValue* __args = stackalloc JValue [2];
 			__args [0] = new JValue (native_p0);
 			__args [1] = new JValue (native_p1);
-			JNIEnv.CallVoidMethod (Handle, id_compute_arrayDarrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_compute_arrayDarrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);

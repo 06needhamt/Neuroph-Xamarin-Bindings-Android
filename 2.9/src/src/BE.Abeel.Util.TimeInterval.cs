@@ -25,13 +25,43 @@ namespace BE.Abeel.Util {
 
 		protected TimeInterval (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_J;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='TimeInterval']/constructor[@name='TimeInterval' and count(parameter)=1 and parameter[1][@type='long']]"
+		[Register (".ctor", "(J)V", "")]
+		public unsafe TimeInterval (long p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (TimeInterval)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(J)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(J)V", __args);
+					return;
+				}
+
+				if (id_ctor_J == IntPtr.Zero)
+					id_ctor_J = JNIEnv.GetMethodID (class_ref, "<init>", "(J)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_J, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_J, __args);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_Ljava_lang_String_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='TimeInterval']/constructor[@name='TimeInterval' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
 		[Register (".ctor", "(Ljava/lang/String;)V", "")]
 		public unsafe TimeInterval (string p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewString (p0);
@@ -42,7 +72,7 @@ namespace BE.Abeel.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -51,39 +81,9 @@ namespace BE.Abeel.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
-			}
-		}
-
-		static IntPtr id_ctor_J;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='TimeInterval']/constructor[@name='TimeInterval' and count(parameter)=1 and parameter[1][@type='long']]"
-		[Register (".ctor", "(J)V", "")]
-		public unsafe TimeInterval (long p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (TimeInterval)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(J)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(J)V", __args);
-					return;
-				}
-
-				if (id_ctor_J == IntPtr.Zero)
-					id_ctor_J = JNIEnv.GetMethodID (class_ref, "<init>", "(J)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_J, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_J, __args);
-			} finally {
 			}
 		}
 
@@ -113,9 +113,9 @@ namespace BE.Abeel.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallLongMethod  (Handle, id_getDays);
+						return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getDays);
 					else
-						return JNIEnv.CallNonvirtualLongMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDays", "()J"));
+						return JNIEnv.CallNonvirtualLongMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDays", "()J"));
 				} finally {
 				}
 			}
@@ -147,9 +147,9 @@ namespace BE.Abeel.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallLongMethod  (Handle, id_getHours);
+						return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getHours);
 					else
-						return JNIEnv.CallNonvirtualLongMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHours", "()J"));
+						return JNIEnv.CallNonvirtualLongMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHours", "()J"));
 				} finally {
 				}
 			}
@@ -181,9 +181,9 @@ namespace BE.Abeel.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallLongMethod  (Handle, id_getLengthInMilliseconds);
+						return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getLengthInMilliseconds);
 					else
-						return JNIEnv.CallNonvirtualLongMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLengthInMilliseconds", "()J"));
+						return JNIEnv.CallNonvirtualLongMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLengthInMilliseconds", "()J"));
 				} finally {
 				}
 			}
@@ -215,9 +215,9 @@ namespace BE.Abeel.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallLongMethod  (Handle, id_getMilliseconds);
+						return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getMilliseconds);
 					else
-						return JNIEnv.CallNonvirtualLongMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMilliseconds", "()J"));
+						return JNIEnv.CallNonvirtualLongMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMilliseconds", "()J"));
 				} finally {
 				}
 			}
@@ -249,9 +249,9 @@ namespace BE.Abeel.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallLongMethod  (Handle, id_getMinutes);
+						return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getMinutes);
 					else
-						return JNIEnv.CallNonvirtualLongMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMinutes", "()J"));
+						return JNIEnv.CallNonvirtualLongMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMinutes", "()J"));
 				} finally {
 				}
 			}
@@ -283,9 +283,9 @@ namespace BE.Abeel.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallLongMethod  (Handle, id_getSeconds);
+						return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getSeconds);
 					else
-						return JNIEnv.CallNonvirtualLongMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSeconds", "()J"));
+						return JNIEnv.CallNonvirtualLongMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSeconds", "()J"));
 				} finally {
 				}
 			}

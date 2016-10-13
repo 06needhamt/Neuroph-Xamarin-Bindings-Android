@@ -58,7 +58,7 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 
 		public IDBNameResolverInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -89,7 +89,7 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 			IntPtr native_p0 = JNIEnv.ToLocalJniHandle (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_getColumnName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
+			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getColumnName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
 			JNIEnv.DeleteLocalRef (native_p0);
 			return __ret;
 		}
@@ -120,7 +120,7 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 			IntPtr native_p0 = JNIEnv.ToLocalJniHandle (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_getTableName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
+			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTableName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
 			JNIEnv.DeleteLocalRef (native_p0);
 			return __ret;
 		}

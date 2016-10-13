@@ -25,45 +25,13 @@ namespace Org.Neuroph.Nnet {
 
 		protected MultiLayerPerceptron (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor_Ljava_util_List_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet']/class[@name='MultiLayerPerceptron']/constructor[@name='MultiLayerPerceptron' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;java.lang.Integer&gt;']]"
-		[Register (".ctor", "(Ljava/util/List;)V", "")]
-		public unsafe MultiLayerPerceptron (global::System.Collections.Generic.IList<global::Java.Lang.Integer> p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Integer>.ToLocalJniHandle (p0);
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (native_p0);
-				if (GetType () != typeof (MultiLayerPerceptron)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/List;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/List;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_util_List_ == IntPtr.Zero)
-					id_ctor_Ljava_util_List_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/List;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_List_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_List_, __args);
-			} finally {
-				JNIEnv.DeleteLocalRef (native_p0);
-			}
-		}
-
 		static IntPtr id_ctor_Ljava_util_List_Lorg_neuroph_util_NeuronProperties_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet']/class[@name='MultiLayerPerceptron']/constructor[@name='MultiLayerPerceptron' and count(parameter)=2 and parameter[1][@type='java.util.List&lt;java.lang.Integer&gt;'] and parameter[2][@type='org.neuroph.util.NeuronProperties']]"
 		[Register (".ctor", "(Ljava/util/List;Lorg/neuroph/util/NeuronProperties;)V", "")]
 		public unsafe MultiLayerPerceptron (global::System.Collections.Generic.IList<global::Java.Lang.Integer> p0, global::Org.Neuroph.Util.NeuronProperties p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Integer>.ToLocalJniHandle (p0);
@@ -75,7 +43,7 @@ namespace Org.Neuroph.Nnet {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/List;Lorg/neuroph/util/NeuronProperties;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/List;Lorg/neuroph/util/NeuronProperties;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/util/List;Lorg/neuroph/util/NeuronProperties;)V", __args);
 					return;
 				}
 
@@ -84,7 +52,7 @@ namespace Org.Neuroph.Nnet {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_List_Lorg_neuroph_util_NeuronProperties_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_List_Lorg_neuroph_util_NeuronProperties_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_util_List_Lorg_neuroph_util_NeuronProperties_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -96,7 +64,7 @@ namespace Org.Neuroph.Nnet {
 		public unsafe MultiLayerPerceptron (global::System.Collections.Generic.IList<global::Java.Lang.Integer> p0, global::Org.Neuroph.Util.TransferFunctionType p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Integer>.ToLocalJniHandle (p0);
@@ -108,7 +76,7 @@ namespace Org.Neuroph.Nnet {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/List;Lorg/neuroph/util/TransferFunctionType;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/List;Lorg/neuroph/util/TransferFunctionType;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/util/List;Lorg/neuroph/util/TransferFunctionType;)V", __args);
 					return;
 				}
 
@@ -117,7 +85,7 @@ namespace Org.Neuroph.Nnet {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_List_Lorg_neuroph_util_TransferFunctionType_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_List_Lorg_neuroph_util_TransferFunctionType_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_util_List_Lorg_neuroph_util_TransferFunctionType_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -129,7 +97,7 @@ namespace Org.Neuroph.Nnet {
 		public unsafe MultiLayerPerceptron (global::Org.Neuroph.Util.TransferFunctionType p0, params  int[] p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p1 = JNIEnv.NewArray (p1);
@@ -141,7 +109,7 @@ namespace Org.Neuroph.Nnet {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/TransferFunctionType;[I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/util/TransferFunctionType;[I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/util/TransferFunctionType;[I)V", __args);
 					return;
 				}
 
@@ -150,7 +118,7 @@ namespace Org.Neuroph.Nnet {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_arrayI, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_arrayI, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_arrayI, __args);
 			} finally {
 				if (p1 != null) {
 					JNIEnv.CopyArray (native_p1, p1);
@@ -165,7 +133,7 @@ namespace Org.Neuroph.Nnet {
 		public unsafe MultiLayerPerceptron (params  int[] p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
@@ -176,7 +144,7 @@ namespace Org.Neuroph.Nnet {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "([I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "([I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "([I)V", __args);
 					return;
 				}
 
@@ -185,12 +153,44 @@ namespace Org.Neuroph.Nnet {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_arrayI, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_arrayI, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_arrayI, __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
 					JNIEnv.DeleteLocalRef (native_p0);
 				}
+			}
+		}
+
+		static IntPtr id_ctor_Ljava_util_List_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet']/class[@name='MultiLayerPerceptron']/constructor[@name='MultiLayerPerceptron' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;java.lang.Integer&gt;']]"
+		[Register (".ctor", "(Ljava/util/List;)V", "")]
+		public unsafe MultiLayerPerceptron (global::System.Collections.Generic.IList<global::Java.Lang.Integer> p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Integer>.ToLocalJniHandle (p0);
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (native_p0);
+				if (GetType () != typeof (MultiLayerPerceptron)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/List;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/util/List;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_util_List_ == IntPtr.Zero)
+					id_ctor_Ljava_util_List_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/util/List;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_List_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_util_List_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
 			}
 		}
 
@@ -220,9 +220,9 @@ namespace Org.Neuroph.Nnet {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_connectInputsToOutputs);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_connectInputsToOutputs);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "connectInputsToOutputs", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "connectInputsToOutputs", "()V"));
 			} finally {
 			}
 		}

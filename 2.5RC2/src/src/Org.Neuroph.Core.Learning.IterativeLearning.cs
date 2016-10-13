@@ -17,13 +17,13 @@ namespace Org.Neuroph.Core.Learning {
 			get {
 				if (iterationsLimited_jfieldId == IntPtr.Zero)
 					iterationsLimited_jfieldId = JNIEnv.GetFieldID (class_ref, "iterationsLimited", "Z");
-				return JNIEnv.GetBooleanField (Handle, iterationsLimited_jfieldId);
+				return JNIEnv.GetBooleanField (((global::Java.Lang.Object) this).Handle, iterationsLimited_jfieldId);
 			}
 			set {
 				if (iterationsLimited_jfieldId == IntPtr.Zero)
 					iterationsLimited_jfieldId = JNIEnv.GetFieldID (class_ref, "iterationsLimited", "Z");
 				try {
-					JNIEnv.SetField (Handle, iterationsLimited_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iterationsLimited_jfieldId, value);
 				} finally {
 				}
 			}
@@ -37,13 +37,13 @@ namespace Org.Neuroph.Core.Learning {
 			get {
 				if (maxIterations_jfieldId == IntPtr.Zero)
 					maxIterations_jfieldId = JNIEnv.GetFieldID (class_ref, "maxIterations", "I");
-				return JNIEnv.GetIntField (Handle, maxIterations_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, maxIterations_jfieldId);
 			}
 			set {
 				if (maxIterations_jfieldId == IntPtr.Zero)
 					maxIterations_jfieldId = JNIEnv.GetFieldID (class_ref, "maxIterations", "I");
 				try {
-					JNIEnv.SetField (Handle, maxIterations_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, maxIterations_jfieldId, value);
 				} finally {
 				}
 			}
@@ -71,7 +71,7 @@ namespace Org.Neuroph.Core.Learning {
 		public unsafe IterativeLearning ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -79,7 +79,7 @@ namespace Org.Neuroph.Core.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -88,7 +88,7 @@ namespace Org.Neuroph.Core.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -119,9 +119,9 @@ namespace Org.Neuroph.Core.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (JNIEnv.CallObjectMethod  (Handle, id_getCurrentIteration), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCurrentIteration), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCurrentIteration", "()Ljava/lang/Integer;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCurrentIteration", "()Ljava/lang/Integer;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -153,9 +153,9 @@ namespace Org.Neuroph.Core.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_isPausedLearning);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isPausedLearning);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isPausedLearning", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isPausedLearning", "()Z"));
 				} finally {
 				}
 			}
@@ -204,9 +204,9 @@ namespace Org.Neuroph.Core.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getLearningRate);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getLearningRate);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLearningRate", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLearningRate", "()D"));
 				} finally {
 				}
 			}
@@ -220,9 +220,9 @@ namespace Org.Neuroph.Core.Learning {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setLearningRate_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setLearningRate_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLearningRate", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLearningRate", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -278,9 +278,9 @@ namespace Org.Neuroph.Core.Learning {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_doOneLearningIteration_Lorg_neuroph_core_learning_TrainingSet_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_doOneLearningIteration_Lorg_neuroph_core_learning_TrainingSet_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "doOneLearningIteration", "(Lorg/neuroph/core/learning/TrainingSet;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "doOneLearningIteration", "(Lorg/neuroph/core/learning/TrainingSet;)V"), __args);
 			} finally {
 			}
 		}
@@ -314,9 +314,9 @@ namespace Org.Neuroph.Core.Learning {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_learn_Lorg_neuroph_core_learning_TrainingSet_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_learn_Lorg_neuroph_core_learning_TrainingSet_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learn", "(Lorg/neuroph/core/learning/TrainingSet;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learn", "(Lorg/neuroph/core/learning/TrainingSet;)V"), __args);
 			} finally {
 			}
 		}
@@ -351,9 +351,9 @@ namespace Org.Neuroph.Core.Learning {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_learn_Lorg_neuroph_core_learning_TrainingSet_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_learn_Lorg_neuroph_core_learning_TrainingSet_I, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learn", "(Lorg/neuroph/core/learning/TrainingSet;I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learn", "(Lorg/neuroph/core/learning/TrainingSet;I)V"), __args);
 			} finally {
 			}
 		}
@@ -384,9 +384,9 @@ namespace Org.Neuroph.Core.Learning {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_pause);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_pause);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "pause", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "pause", "()V"));
 			} finally {
 			}
 		}
@@ -417,9 +417,9 @@ namespace Org.Neuroph.Core.Learning {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_reset);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_reset);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reset", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reset", "()V"));
 			} finally {
 			}
 		}
@@ -450,9 +450,9 @@ namespace Org.Neuroph.Core.Learning {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_resume);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_resume);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "resume", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "resume", "()V"));
 			} finally {
 			}
 		}
@@ -485,9 +485,9 @@ namespace Org.Neuroph.Core.Learning {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setMaxIterations_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setMaxIterations_I, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMaxIterations", "(I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMaxIterations", "(I)V"), __args);
 			} finally {
 			}
 		}
@@ -513,7 +513,7 @@ namespace Org.Neuroph.Core.Learning {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
-				JNIEnv.CallVoidMethod  (Handle, id_doLearningEpoch_Lorg_neuroph_core_learning_TrainingSet_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_doLearningEpoch_Lorg_neuroph_core_learning_TrainingSet_, __args);
 			} finally {
 			}
 		}

@@ -52,7 +52,7 @@ namespace Org.Encog.Engine.Concurrency {
 
 		public IEngineTaskInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -78,7 +78,7 @@ namespace Org.Encog.Engine.Concurrency {
 		{
 			if (id_run == IntPtr.Zero)
 				id_run = JNIEnv.GetMethodID (class_ref, "run", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_run);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_run);
 		}
 
 	}

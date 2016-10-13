@@ -31,7 +31,7 @@ namespace Org.Jocl {
 		public unsafe Cl_context_properties ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Jocl {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Jocl {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -64,7 +64,7 @@ namespace Org.Jocl {
 				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (p0);
 				__args [1] = new JValue (p1);
-				JNIEnv.CallVoidMethod  (Handle, id_addProperty_JJ, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_addProperty_JJ, __args);
 			} finally {
 			}
 		}
@@ -80,7 +80,7 @@ namespace Org.Jocl {
 				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (p0);
 				__args [1] = new JValue (p1);
-				JNIEnv.CallVoidMethod  (Handle, id_addProperty_JLorg_jocl_cl_platform_id_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_addProperty_JLorg_jocl_cl_platform_id_, __args);
 			} finally {
 			}
 		}

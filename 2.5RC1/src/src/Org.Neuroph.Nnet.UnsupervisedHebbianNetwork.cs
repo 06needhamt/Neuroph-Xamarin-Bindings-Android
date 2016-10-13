@@ -25,13 +25,44 @@ namespace Org.Neuroph.Nnet {
 
 		protected UnsupervisedHebbianNetwork (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_II;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet']/class[@name='UnsupervisedHebbianNetwork']/constructor[@name='UnsupervisedHebbianNetwork' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
+		[Register (".ctor", "(II)V", "")]
+		public unsafe UnsupervisedHebbianNetwork (int p0, int p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				if (GetType () != typeof (UnsupervisedHebbianNetwork)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(II)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(II)V", __args);
+					return;
+				}
+
+				if (id_ctor_II == IntPtr.Zero)
+					id_ctor_II = JNIEnv.GetMethodID (class_ref, "<init>", "(II)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_II, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_II, __args);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_IILorg_neuroph_util_TransferFunctionType_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet']/class[@name='UnsupervisedHebbianNetwork']/constructor[@name='UnsupervisedHebbianNetwork' and count(parameter)=3 and parameter[1][@type='int'] and parameter[2][@type='int'] and parameter[3][@type='org.neuroph.util.TransferFunctionType']]"
 		[Register (".ctor", "(IILorg/neuroph/util/TransferFunctionType;)V", "")]
 		public unsafe UnsupervisedHebbianNetwork (int p0, int p1, global::Org.Neuroph.Util.TransferFunctionType p2)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -43,7 +74,7 @@ namespace Org.Neuroph.Nnet {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(IILorg/neuroph/util/TransferFunctionType;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(IILorg/neuroph/util/TransferFunctionType;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(IILorg/neuroph/util/TransferFunctionType;)V", __args);
 					return;
 				}
 
@@ -52,38 +83,7 @@ namespace Org.Neuroph.Nnet {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_IILorg_neuroph_util_TransferFunctionType_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_IILorg_neuroph_util_TransferFunctionType_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_II;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.nnet']/class[@name='UnsupervisedHebbianNetwork']/constructor[@name='UnsupervisedHebbianNetwork' and count(parameter)=2 and parameter[1][@type='int'] and parameter[2][@type='int']]"
-		[Register (".ctor", "(II)V", "")]
-		public unsafe UnsupervisedHebbianNetwork (int p0, int p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (p1);
-				if (GetType () != typeof (UnsupervisedHebbianNetwork)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(II)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(II)V", __args);
-					return;
-				}
-
-				if (id_ctor_II == IntPtr.Zero)
-					id_ctor_II = JNIEnv.GetMethodID (class_ref, "<init>", "(II)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_II, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_II, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_IILorg_neuroph_util_TransferFunctionType_, __args);
 			} finally {
 			}
 		}

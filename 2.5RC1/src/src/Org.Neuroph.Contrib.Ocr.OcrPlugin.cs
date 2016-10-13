@@ -55,9 +55,9 @@ namespace Org.Neuroph.Contrib.Ocr {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallObjectMethod  (Handle, id_getColorMode), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getColorMode), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColorMode", "()Lorg/neuroph/contrib/imgrec/ColorMode;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColorMode", "()Lorg/neuroph/contrib/imgrec/ColorMode;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

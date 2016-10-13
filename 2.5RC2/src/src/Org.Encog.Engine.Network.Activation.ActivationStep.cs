@@ -43,7 +43,7 @@ namespace Org.Encog.Engine.Network.Activation {
 		public unsafe ActivationStep (double p0, double p1, double p2)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -55,7 +55,7 @@ namespace Org.Encog.Engine.Network.Activation {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(DDD)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(DDD)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(DDD)V", __args);
 					return;
 				}
 
@@ -64,7 +64,7 @@ namespace Org.Encog.Engine.Network.Activation {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_DDD, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_DDD, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_DDD, __args);
 			} finally {
 			}
 		}
@@ -75,7 +75,7 @@ namespace Org.Encog.Engine.Network.Activation {
 		public unsafe ActivationStep ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -83,7 +83,7 @@ namespace Org.Encog.Engine.Network.Activation {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -92,7 +92,7 @@ namespace Org.Encog.Engine.Network.Activation {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -140,9 +140,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getCenter);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getCenter);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCenter", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCenter", "()D"));
 				} finally {
 				}
 			}
@@ -156,9 +156,9 @@ namespace Org.Encog.Engine.Network.Activation {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setCenter_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setCenter_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setCenter", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setCenter", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -190,9 +190,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_hasDerivative);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_hasDerivative);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "hasDerivative", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "hasDerivative", "()Z"));
 				} finally {
 				}
 			}
@@ -241,9 +241,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getHigh);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getHigh);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHigh", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHigh", "()D"));
 				} finally {
 				}
 			}
@@ -257,9 +257,9 @@ namespace Org.Encog.Engine.Network.Activation {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setHigh_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setHigh_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHigh", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHigh", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -308,9 +308,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getLow);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getLow);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLow", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLow", "()D"));
 				} finally {
 				}
 			}
@@ -324,9 +324,9 @@ namespace Org.Encog.Engine.Network.Activation {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setLow_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setLow_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLow", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLow", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -366,9 +366,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				__args [2] = new JValue (p2);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_activationFunction_arrayDII, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_activationFunction_arrayDII, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "activationFunction", "([DII)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "activationFunction", "([DII)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -403,9 +403,9 @@ namespace Org.Encog.Engine.Network.Activation {
 			try {
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Activation.IActivationFunction> (JNIEnv.CallObjectMethod  (Handle, id_clone), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Activation.IActivationFunction> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_clone), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Activation.IActivationFunction> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "clone", "()Lorg/encog/engine/network/activation/ActivationFunction;")), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Activation.IActivationFunction> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "clone", "()Lorg/encog/engine/network/activation/ActivationFunction;")), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -438,9 +438,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_derivativeFunction_D, __args);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_derivativeFunction_D, __args);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "derivativeFunction", "(D)D"), __args);
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "derivativeFunction", "(D)D"), __args);
 			} finally {
 			}
 		}
@@ -473,9 +473,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getOpenCLExpression_Z, __args), JniHandleOwnership.TransferLocalRef);
+					return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getOpenCLExpression_Z, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOpenCLExpression", "(Z)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+					return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOpenCLExpression", "(Z)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -506,9 +506,9 @@ namespace Org.Encog.Engine.Network.Activation {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (string[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getParamNames), JniHandleOwnership.TransferLocalRef, typeof (string));
+					return (string[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getParamNames), JniHandleOwnership.TransferLocalRef, typeof (string));
 				else
-					return (string[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getParamNames", "()[Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef, typeof (string));
+					return (string[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getParamNames", "()[Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef, typeof (string));
 			} finally {
 			}
 		}
@@ -539,9 +539,9 @@ namespace Org.Encog.Engine.Network.Activation {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getParams), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getParams), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getParams", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getParams", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}
@@ -575,9 +575,9 @@ namespace Org.Encog.Engine.Network.Activation {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setParam_ID, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setParam_ID, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setParam", "(ID)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setParam", "(ID)V"), __args);
 			} finally {
 			}
 		}

@@ -35,7 +35,7 @@ namespace Org.Neuroph.Util.Plugins {
 		public unsafe LabelsPlugin ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -43,7 +43,7 @@ namespace Org.Neuroph.Util.Plugins {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -52,7 +52,7 @@ namespace Org.Neuroph.Util.Plugins {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -88,9 +88,9 @@ namespace Org.Neuroph.Util.Plugins {
 
 				string __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getLabel_Ljava_lang_Object_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getLabel_Ljava_lang_Object_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLabel", "(Ljava/lang/Object;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLabel", "(Ljava/lang/Object;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}
@@ -128,9 +128,9 @@ namespace Org.Neuroph.Util.Plugins {
 				__args [1] = new JValue (native_p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setLabel_Ljava_lang_Object_Ljava_lang_String_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setLabel_Ljava_lang_Object_Ljava_lang_String_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLabel", "(Ljava/lang/Object;Ljava/lang/String;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLabel", "(Ljava/lang/Object;Ljava/lang/String;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p1);
 			}

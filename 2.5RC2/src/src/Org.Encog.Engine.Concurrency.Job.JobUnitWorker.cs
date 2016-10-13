@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 		public unsafe JobUnitWorker (global::Org.Encog.Engine.Concurrency.Job.JobUnitContext p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/concurrency/job/JobUnitContext;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/concurrency/job/JobUnitContext;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/encog/engine/concurrency/job/JobUnitContext;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_concurrency_job_JobUnitContext_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_concurrency_job_JobUnitContext_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_encog_engine_concurrency_job_JobUnitContext_, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Encog.Engine.Concurrency.Job {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_run);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_run);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "run", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "run", "()V"));
 			} finally {
 			}
 		}

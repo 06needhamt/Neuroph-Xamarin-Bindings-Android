@@ -35,7 +35,7 @@ namespace Org.Neuroph.Samples.Convolution {
 			public unsafe Output (int p0, double p1)
 				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 			{
-				if (Handle != IntPtr.Zero)
+				if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 					return;
 
 				try {
@@ -46,7 +46,7 @@ namespace Org.Neuroph.Samples.Convolution {
 						SetHandle (
 								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(ID)V", __args),
 								JniHandleOwnership.TransferLocalRef);
-						global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(ID)V", __args);
+						global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(ID)V", __args);
 						return;
 					}
 
@@ -55,7 +55,7 @@ namespace Org.Neuroph.Samples.Convolution {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_ID, __args),
 							JniHandleOwnership.TransferLocalRef);
-					JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_ID, __args);
+					JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_ID, __args);
 				} finally {
 				}
 			}
@@ -91,9 +91,9 @@ namespace Org.Neuroph.Samples.Convolution {
 
 					int __ret;
 					if (GetType () == ThresholdType)
-						__ret = JNIEnv.CallIntMethod  (Handle, id_compareTo_Ljava_lang_Object_, __args);
+						__ret = JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_compareTo_Ljava_lang_Object_, __args);
 					else
-						__ret = JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "compareTo", "(Ljava/lang/Object;)I"), __args);
+						__ret = JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "compareTo", "(Ljava/lang/Object;)I"), __args);
 					return __ret;
 				} finally {
 				}
@@ -124,7 +124,7 @@ namespace Org.Neuroph.Samples.Convolution {
 		public unsafe ModelMetric ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -132,7 +132,7 @@ namespace Org.Neuroph.Samples.Convolution {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -141,7 +141,7 @@ namespace Org.Neuroph.Samples.Convolution {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}

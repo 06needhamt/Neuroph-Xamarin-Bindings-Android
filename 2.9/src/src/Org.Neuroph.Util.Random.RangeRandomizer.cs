@@ -17,13 +17,13 @@ namespace Org.Neuroph.Util.Random {
 			get {
 				if (max_jfieldId == IntPtr.Zero)
 					max_jfieldId = JNIEnv.GetFieldID (class_ref, "max", "D");
-				return JNIEnv.GetDoubleField (Handle, max_jfieldId);
+				return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, max_jfieldId);
 			}
 			set {
 				if (max_jfieldId == IntPtr.Zero)
 					max_jfieldId = JNIEnv.GetFieldID (class_ref, "max", "D");
 				try {
-					JNIEnv.SetField (Handle, max_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, max_jfieldId, value);
 				} finally {
 				}
 			}
@@ -37,13 +37,13 @@ namespace Org.Neuroph.Util.Random {
 			get {
 				if (min_jfieldId == IntPtr.Zero)
 					min_jfieldId = JNIEnv.GetFieldID (class_ref, "min", "D");
-				return JNIEnv.GetDoubleField (Handle, min_jfieldId);
+				return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, min_jfieldId);
 			}
 			set {
 				if (min_jfieldId == IntPtr.Zero)
 					min_jfieldId = JNIEnv.GetFieldID (class_ref, "min", "D");
 				try {
-					JNIEnv.SetField (Handle, min_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, min_jfieldId, value);
 				} finally {
 				}
 			}
@@ -71,7 +71,7 @@ namespace Org.Neuroph.Util.Random {
 		public unsafe RangeRandomizer (double p0, double p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -82,7 +82,7 @@ namespace Org.Neuroph.Util.Random {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(DD)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(DD)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(DD)V", __args);
 					return;
 				}
 
@@ -91,7 +91,7 @@ namespace Org.Neuroph.Util.Random {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_DD, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_DD, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_DD, __args);
 			} finally {
 			}
 		}

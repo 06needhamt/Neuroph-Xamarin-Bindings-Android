@@ -30,7 +30,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 			get {
 				if (EMPTY_CALLER_DATA_ARRAY_jfieldId == IntPtr.Zero)
 					EMPTY_CALLER_DATA_ARRAY_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "EMPTY_CALLER_DATA_ARRAY", "[Ljava/lang/StackTraceElement;");
-				return JavaArray<global::Java.Lang.StackTraceElement>.FromJniHandle (JNIEnv.GetStaticObjectField (class_ref, EMPTY_CALLER_DATA_ARRAY_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<global::Java.Lang.StackTraceElement>.FromJniHandle (JNIEnv.GetStaticObjectField (class_ref, EMPTY_CALLER_DATA_ARRAY_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 
@@ -64,7 +64,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 		public unsafe CallerData ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -72,7 +72,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -81,7 +81,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}

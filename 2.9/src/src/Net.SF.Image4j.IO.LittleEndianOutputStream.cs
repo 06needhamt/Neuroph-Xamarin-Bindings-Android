@@ -31,7 +31,7 @@ namespace Net.SF.Image4j.IO {
 		public unsafe LittleEndianOutputStream (global::System.IO.Stream p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = global::Android.Runtime.OutputStreamAdapter.ToLocalJniHandle (p0);
@@ -42,7 +42,7 @@ namespace Net.SF.Image4j.IO {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/io/OutputStream;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/io/OutputStream;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/io/OutputStream;)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Net.SF.Image4j.IO {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_io_OutputStream_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_io_OutputStream_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_io_OutputStream_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -85,9 +85,9 @@ namespace Net.SF.Image4j.IO {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_writeDoubleLE_D, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeDoubleLE_D, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeDoubleLE", "(D)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeDoubleLE", "(D)V"), __args);
 			} finally {
 			}
 		}
@@ -120,9 +120,9 @@ namespace Net.SF.Image4j.IO {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_writeFloatLE_F, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeFloatLE_F, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeFloatLE", "(F)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeFloatLE", "(F)V"), __args);
 			} finally {
 			}
 		}
@@ -155,9 +155,9 @@ namespace Net.SF.Image4j.IO {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_writeIntLE_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeIntLE_I, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeIntLE", "(I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeIntLE", "(I)V"), __args);
 			} finally {
 			}
 		}
@@ -190,9 +190,9 @@ namespace Net.SF.Image4j.IO {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_writeLongLE_J, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeLongLE_J, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeLongLE", "(J)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeLongLE", "(J)V"), __args);
 			} finally {
 			}
 		}
@@ -225,9 +225,9 @@ namespace Net.SF.Image4j.IO {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_writeShortLE_S, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeShortLE_S, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeShortLE", "(S)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeShortLE", "(S)V"), __args);
 			} finally {
 			}
 		}
@@ -260,9 +260,9 @@ namespace Net.SF.Image4j.IO {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_writeUnsignedInt_J, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeUnsignedInt_J, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeUnsignedInt", "(J)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeUnsignedInt", "(J)V"), __args);
 			} finally {
 			}
 		}
@@ -295,9 +295,9 @@ namespace Net.SF.Image4j.IO {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_writeUnsignedIntLE_J, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeUnsignedIntLE_J, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeUnsignedIntLE", "(J)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "writeUnsignedIntLE", "(J)V"), __args);
 			} finally {
 			}
 		}

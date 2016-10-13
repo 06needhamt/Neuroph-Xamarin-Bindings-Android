@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Opencl {
 		public unsafe EncogCLQueue (global::Org.Encog.Engine.Opencl.EncogCLDevice p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Encog.Engine.Opencl {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/opencl/EncogCLDevice;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/opencl/EncogCLDevice;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/encog/engine/opencl/EncogCLDevice;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Encog.Engine.Opencl {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Encog.Engine.Opencl {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_command_queue> (JNIEnv.CallObjectMethod  (Handle, id_getCommands), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_command_queue> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCommands), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_command_queue> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCommands", "()Lorg/jocl/cl_command_queue;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_command_queue> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCommands", "()Lorg/jocl/cl_command_queue;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace Org.Encog.Engine.Opencl {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Opencl.EncogCLDevice> (JNIEnv.CallObjectMethod  (Handle, id_getDevice), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Opencl.EncogCLDevice> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDevice), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Opencl.EncogCLDevice> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDevice", "()Lorg/encog/engine/opencl/EncogCLDevice;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Opencl.EncogCLDevice> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDevice", "()Lorg/encog/engine/opencl/EncogCLDevice;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -157,9 +157,9 @@ namespace Org.Encog.Engine.Opencl {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_array2Buffer_arrayFLorg_jocl_cl_mem_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_array2Buffer_arrayFLorg_jocl_cl_mem_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "array2Buffer", "([FLorg/jocl/cl_mem;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "array2Buffer", "([FLorg/jocl/cl_mem;)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -202,9 +202,9 @@ namespace Org.Encog.Engine.Opencl {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_array2Buffer_arrayILorg_jocl_cl_mem_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_array2Buffer_arrayILorg_jocl_cl_mem_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "array2Buffer", "([ILorg/jocl/cl_mem;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "array2Buffer", "([ILorg/jocl/cl_mem;)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -247,9 +247,9 @@ namespace Org.Encog.Engine.Opencl {
 				__args [1] = new JValue (native_p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_buffer2Array_Lorg_jocl_cl_mem_arrayF, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_buffer2Array_Lorg_jocl_cl_mem_arrayF, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "buffer2Array", "(Lorg/jocl/cl_mem;[F)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "buffer2Array", "(Lorg/jocl/cl_mem;[F)V"), __args);
 			} finally {
 				if (p1 != null) {
 					JNIEnv.CopyArray (native_p1, p1);
@@ -292,9 +292,9 @@ namespace Org.Encog.Engine.Opencl {
 				__args [1] = new JValue (native_p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_buffer2Array_Lorg_jocl_cl_mem_arrayI, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_buffer2Array_Lorg_jocl_cl_mem_arrayI, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "buffer2Array", "(Lorg/jocl/cl_mem;[I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "buffer2Array", "(Lorg/jocl/cl_mem;[I)V"), __args);
 			} finally {
 				if (p1 != null) {
 					JNIEnv.CopyArray (native_p1, p1);
@@ -332,9 +332,9 @@ namespace Org.Encog.Engine.Opencl {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_execute_Lorg_encog_engine_opencl_kernels_EncogKernel_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_execute_Lorg_encog_engine_opencl_kernels_EncogKernel_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "execute", "(Lorg/encog/engine/opencl/kernels/EncogKernel;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "execute", "(Lorg/encog/engine/opencl/kernels/EncogKernel;)V"), __args);
 			} finally {
 			}
 		}
@@ -365,9 +365,9 @@ namespace Org.Encog.Engine.Opencl {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_waitFinish);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_waitFinish);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "waitFinish", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "waitFinish", "()V"));
 			} finally {
 			}
 		}

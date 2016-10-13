@@ -31,7 +31,7 @@ namespace Org.Neuroph.Samples.Convolution {
 		public unsafe MNISTImage (int p0, byte[] p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p1 = JNIEnv.NewArray (p1);
@@ -43,7 +43,7 @@ namespace Org.Neuroph.Samples.Convolution {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(I[B)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(I[B)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(I[B)V", __args);
 					return;
 				}
 
@@ -52,7 +52,7 @@ namespace Org.Neuroph.Samples.Convolution {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_IarrayB, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_IarrayB, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_IarrayB, __args);
 			} finally {
 				if (p1 != null) {
 					JNIEnv.CopyArray (native_p1, p1);
@@ -87,9 +87,9 @@ namespace Org.Neuroph.Samples.Convolution {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getLabel);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getLabel);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLabel", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLabel", "()I"));
 				} finally {
 				}
 			}
@@ -121,9 +121,9 @@ namespace Org.Neuroph.Samples.Convolution {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getSize);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getSize);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSize", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSize", "()I"));
 				} finally {
 				}
 			}
@@ -155,9 +155,9 @@ namespace Org.Neuroph.Samples.Convolution {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (byte[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getData), JniHandleOwnership.TransferLocalRef, typeof (byte));
+					return (byte[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getData), JniHandleOwnership.TransferLocalRef, typeof (byte));
 				else
-					return (byte[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getData", "()[B")), JniHandleOwnership.TransferLocalRef, typeof (byte));
+					return (byte[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getData", "()[B")), JniHandleOwnership.TransferLocalRef, typeof (byte));
 			} finally {
 			}
 		}

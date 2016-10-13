@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Util {
 		public unsafe ErrorCalculation ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Encog.Engine.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Encog.Engine.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -106,9 +106,9 @@ namespace Org.Encog.Engine.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_calculate);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_calculate);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculate", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculate", "()D"));
 			} finally {
 			}
 		}
@@ -139,9 +139,9 @@ namespace Org.Encog.Engine.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_calculateARCTAN);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_calculateARCTAN);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateARCTAN", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateARCTAN", "()D"));
 			} finally {
 			}
 		}
@@ -172,9 +172,9 @@ namespace Org.Encog.Engine.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_calculateMSE);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_calculateMSE);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateMSE", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateMSE", "()D"));
 			} finally {
 			}
 		}
@@ -205,9 +205,9 @@ namespace Org.Encog.Engine.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_calculateRMS);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_calculateRMS);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateRMS", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateRMS", "()D"));
 			} finally {
 			}
 		}
@@ -238,9 +238,9 @@ namespace Org.Encog.Engine.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_reset);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_reset);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reset", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reset", "()V"));
 			} finally {
 			}
 		}
@@ -274,9 +274,9 @@ namespace Org.Encog.Engine.Util {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_updateError_DD, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateError_DD, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateError", "(DD)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateError", "(DD)V"), __args);
 			} finally {
 			}
 		}
@@ -318,9 +318,9 @@ namespace Org.Encog.Engine.Util {
 				__args [1] = new JValue (native_p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_updateError_arrayDarrayD, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateError_arrayDarrayD, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateError", "([D[D)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateError", "([D[D)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);

@@ -25,13 +25,48 @@ namespace CH.Qos.Logback.Classic.Spi {
 
 		protected ClassPackagingData (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='ch.qos.logback.classic.spi']/class[@name='ClassPackagingData']/constructor[@name='ClassPackagingData' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;)V", "")]
+		public unsafe ClassPackagingData (string p0, string p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				if (GetType () != typeof (ClassPackagingData)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+					id_ctor_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/String;Ljava/lang/String;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
 		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_Z;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='ch.qos.logback.classic.spi']/class[@name='ClassPackagingData']/constructor[@name='ClassPackagingData' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='boolean']]"
 		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;Z)V", "")]
 		public unsafe ClassPackagingData (string p0, string p1, bool p2)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewString (p0);
@@ -45,7 +80,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;Z)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;Z)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/String;Ljava/lang/String;Z)V", __args);
 					return;
 				}
 
@@ -54,42 +89,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_Z, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_Z, __args);
-			} finally {
-				JNIEnv.DeleteLocalRef (native_p0);
-				JNIEnv.DeleteLocalRef (native_p1);
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_lang_String_Ljava_lang_String_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='ch.qos.logback.classic.spi']/class[@name='ClassPackagingData']/constructor[@name='ClassPackagingData' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
-		[Register (".ctor", "(Ljava/lang/String;Ljava/lang/String;)V", "")]
-		public unsafe ClassPackagingData (string p0, string p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p0 = JNIEnv.NewString (p0);
-			IntPtr native_p1 = JNIEnv.NewString (p1);
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (native_p0);
-				__args [1] = new JValue (native_p1);
-				if (GetType () != typeof (ClassPackagingData)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
-					id_ctor_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/String;Ljava/lang/String;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_Z, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
@@ -122,9 +122,9 @@ namespace CH.Qos.Logback.Classic.Spi {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getCodeLocation), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCodeLocation), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCodeLocation", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCodeLocation", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -156,9 +156,9 @@ namespace CH.Qos.Logback.Classic.Spi {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_isExact);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isExact);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isExact", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isExact", "()Z"));
 				} finally {
 				}
 			}
@@ -190,9 +190,9 @@ namespace CH.Qos.Logback.Classic.Spi {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getVersion), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getVersion), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getVersion", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getVersion", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

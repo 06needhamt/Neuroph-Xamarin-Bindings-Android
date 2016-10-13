@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Util {
 		public unsafe IntRange (int p0, int p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -42,7 +42,7 @@ namespace Org.Encog.Engine.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(II)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(II)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(II)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Org.Encog.Engine.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_II, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_II, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_II, __args);
 			} finally {
 			}
 		}
@@ -99,9 +99,9 @@ namespace Org.Encog.Engine.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getHigh);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getHigh);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHigh", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHigh", "()I"));
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace Org.Encog.Engine.Util {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setHigh_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setHigh_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHigh", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHigh", "(I)V"), __args);
 				} finally {
 				}
 			}
@@ -166,9 +166,9 @@ namespace Org.Encog.Engine.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getLow);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getLow);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLow", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLow", "()I"));
 				} finally {
 				}
 			}
@@ -182,9 +182,9 @@ namespace Org.Encog.Engine.Util {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setLow_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setLow_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLow", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLow", "(I)V"), __args);
 				} finally {
 				}
 			}

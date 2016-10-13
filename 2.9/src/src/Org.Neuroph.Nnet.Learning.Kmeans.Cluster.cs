@@ -31,7 +31,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 		public unsafe Cluster ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -97,9 +97,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector> (JNIEnv.CallObjectMethod  (Handle, id_getCentroid), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCentroid), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCentroid", "()Lorg/neuroph/nnet/learning/kmeans/KVector;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCentroid", "()Lorg/neuroph/nnet/learning/kmeans/KVector;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -113,9 +113,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setCentroid_Lorg_neuroph_nnet_learning_kmeans_KVector_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setCentroid_Lorg_neuroph_nnet_learning_kmeans_KVector_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setCentroid", "(Lorg/neuroph/nnet/learning/kmeans/KVector;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setCentroid", "(Lorg/neuroph/nnet/learning/kmeans/KVector;)V"), __args);
 				} finally {
 				}
 			}
@@ -147,9 +147,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Android.Runtime.JavaList<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getPoints), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaList<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getPoints), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Android.Runtime.JavaList<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getPoints", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaList<global::Org.Neuroph.Nnet.Learning.Kmeans.KVector>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getPoints", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -184,9 +184,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_assignVector_Lorg_neuroph_nnet_learning_kmeans_KVector_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_assignVector_Lorg_neuroph_nnet_learning_kmeans_KVector_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "assignVector", "(Lorg/neuroph/nnet/learning/kmeans/KVector;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "assignVector", "(Lorg/neuroph/nnet/learning/kmeans/KVector;)V"), __args);
 			} finally {
 			}
 		}
@@ -217,9 +217,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getAvgSum), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getAvgSum), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAvgSum", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAvgSum", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}
@@ -253,9 +253,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_removePoint_Lorg_neuroph_nnet_learning_kmeans_KVector_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_removePoint_Lorg_neuroph_nnet_learning_kmeans_KVector_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "removePoint", "(Lorg/neuroph/nnet/learning/kmeans/KVector;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "removePoint", "(Lorg/neuroph/nnet/learning/kmeans/KVector;)V"), __args);
 			} finally {
 			}
 		}
@@ -286,9 +286,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_size);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_size);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "size", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "size", "()I"));
 			} finally {
 			}
 		}

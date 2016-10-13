@@ -31,7 +31,7 @@ namespace Org.Neuroph.Core.Learning {
 		public unsafe SupervisedTrainingElement (double[] p0, double[] p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
@@ -44,7 +44,7 @@ namespace Org.Neuroph.Core.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "([D[D)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "([D[D)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "([D[D)V", __args);
 					return;
 				}
 
@@ -53,7 +53,7 @@ namespace Org.Neuroph.Core.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_arrayDarrayD, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_arrayDarrayD, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_arrayDarrayD, __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -72,7 +72,7 @@ namespace Org.Neuroph.Core.Learning {
 		public unsafe SupervisedTrainingElement (string p0, string p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewString (p0);
@@ -85,7 +85,7 @@ namespace Org.Neuroph.Core.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -94,7 +94,7 @@ namespace Org.Neuroph.Core.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
@@ -107,7 +107,7 @@ namespace Org.Neuroph.Core.Learning {
 		public unsafe SupervisedTrainingElement (global::System.Collections.Generic.IList<global::Java.Lang.Double> p0, global::System.Collections.Generic.IList<global::Java.Lang.Double> p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = global::Android.Runtime.JavaList<global::Java.Lang.Double>.ToLocalJniHandle (p0);
@@ -120,7 +120,7 @@ namespace Org.Neuroph.Core.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/util/ArrayList;Ljava/util/ArrayList;)V", __args);
 					return;
 				}
 
@@ -129,7 +129,7 @@ namespace Org.Neuroph.Core.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_util_ArrayList_Ljava_util_ArrayList_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
@@ -162,9 +162,9 @@ namespace Org.Neuroph.Core.Learning {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getDesiredOutput), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDesiredOutput), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDesiredOutput", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDesiredOutput", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}
@@ -201,9 +201,9 @@ namespace Org.Neuroph.Core.Learning {
 				__args [0] = new JValue (native_p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setDesiredOutput_arrayD, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setDesiredOutput_arrayD, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDesiredOutput", "([D)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDesiredOutput", "([D)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);

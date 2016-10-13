@@ -25,13 +25,41 @@ namespace Org.Neuroph.Samples.Stockmarket {
 
 		protected TrainingData (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.samples.stockmarket']/class[@name='TrainingData']/constructor[@name='TrainingData' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe TrainingData ()
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				if (GetType () != typeof (TrainingData)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
+					return;
+				}
+
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_arrayLjava_lang_String_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.samples.stockmarket']/class[@name='TrainingData']/constructor[@name='TrainingData' and count(parameter)=1 and parameter[1][@type='java.lang.String[]']]"
 		[Register (".ctor", "([Ljava/lang/String;)V", "")]
 		public unsafe TrainingData (string[] p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
@@ -42,7 +70,7 @@ namespace Org.Neuroph.Samples.Stockmarket {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "([Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "([Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "([Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -51,40 +79,12 @@ namespace Org.Neuroph.Samples.Stockmarket {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_arrayLjava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_arrayLjava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_arrayLjava_lang_String_, __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
 					JNIEnv.DeleteLocalRef (native_p0);
 				}
-			}
-		}
-
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.samples.stockmarket']/class[@name='TrainingData']/constructor[@name='TrainingData' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe TrainingData ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				if (GetType () != typeof (TrainingData)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
-					return;
-				}
-
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
-			} finally {
 			}
 		}
 
@@ -131,9 +131,9 @@ namespace Org.Neuroph.Samples.Stockmarket {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getNormalizer);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getNormalizer);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNormalizer", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNormalizer", "()D"));
 				} finally {
 				}
 			}
@@ -147,9 +147,9 @@ namespace Org.Neuroph.Samples.Stockmarket {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setNormalizer_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setNormalizer_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNormalizer", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNormalizer", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -199,9 +199,9 @@ namespace Org.Neuroph.Samples.Stockmarket {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Learning.TrainingSet> (JNIEnv.CallObjectMethod  (Handle, id_getTrainingSet), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Learning.TrainingSet> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTrainingSet), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Learning.TrainingSet> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTrainingSet", "()Lorg/neuroph/core/learning/TrainingSet;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Learning.TrainingSet> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTrainingSet", "()Lorg/neuroph/core/learning/TrainingSet;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -215,9 +215,9 @@ namespace Org.Neuroph.Samples.Stockmarket {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setTrainingSet_Lorg_neuroph_core_learning_TrainingSet_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setTrainingSet_Lorg_neuroph_core_learning_TrainingSet_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setTrainingSet", "(Lorg/neuroph/core/learning/TrainingSet;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setTrainingSet", "(Lorg/neuroph/core/learning/TrainingSet;)V"), __args);
 				} finally {
 				}
 			}
@@ -249,9 +249,9 @@ namespace Org.Neuroph.Samples.Stockmarket {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (string[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getValuesRow), JniHandleOwnership.TransferLocalRef, typeof (string));
+					return (string[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getValuesRow), JniHandleOwnership.TransferLocalRef, typeof (string));
 				else
-					return (string[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getValuesRow", "()[Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef, typeof (string));
+					return (string[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getValuesRow", "()[Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef, typeof (string));
 			} finally {
 			}
 		}
@@ -288,9 +288,9 @@ namespace Org.Neuroph.Samples.Stockmarket {
 				__args [0] = new JValue (native_p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setValuesRow_arrayLjava_lang_String_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setValuesRow_arrayLjava_lang_String_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setValuesRow", "([Ljava/lang/String;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setValuesRow", "([Ljava/lang/String;)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);

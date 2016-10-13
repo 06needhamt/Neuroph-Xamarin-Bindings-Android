@@ -52,7 +52,7 @@ namespace CH.Qos.Logback.Classic.Pattern {
 
 		public IAbbreviatorInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -83,7 +83,7 @@ namespace CH.Qos.Logback.Classic.Pattern {
 			IntPtr native_p0 = JNIEnv.NewString (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_abbreviate_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_abbreviate_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
 			JNIEnv.DeleteLocalRef (native_p0);
 			return __ret;
 		}

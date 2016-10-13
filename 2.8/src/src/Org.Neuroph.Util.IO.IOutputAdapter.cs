@@ -56,7 +56,7 @@ namespace Org.Neuroph.Util.IO {
 
 		public IOutputAdapterInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -82,7 +82,7 @@ namespace Org.Neuroph.Util.IO {
 		{
 			if (id_close == IntPtr.Zero)
 				id_close = JNIEnv.GetMethodID (class_ref, "close", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_close);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_close);
 		}
 
 		static Delegate cb_writeOutput_arrayD;
@@ -112,7 +112,7 @@ namespace Org.Neuroph.Util.IO {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_writeOutput_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_writeOutput_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);

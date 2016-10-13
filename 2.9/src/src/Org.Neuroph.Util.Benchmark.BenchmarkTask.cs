@@ -31,7 +31,7 @@ namespace Org.Neuroph.Util.Benchmark {
 		public unsafe BenchmarkTask (string p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewString (p0);
@@ -42,7 +42,7 @@ namespace Org.Neuroph.Util.Benchmark {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Org.Neuroph.Util.Benchmark {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -101,9 +101,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getName), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getName), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getName", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getName", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -118,9 +118,9 @@ namespace Org.Neuroph.Util.Benchmark {
 					__args [0] = new JValue (native_value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setName_Ljava_lang_String_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setName_Ljava_lang_String_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setName", "(Ljava/lang/String;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setName", "(Ljava/lang/String;)V"), __args);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -170,9 +170,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getTestIterations);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getTestIterations);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTestIterations", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTestIterations", "()I"));
 				} finally {
 				}
 			}
@@ -186,9 +186,9 @@ namespace Org.Neuroph.Util.Benchmark {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setTestIterations_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setTestIterations_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setTestIterations", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setTestIterations", "(I)V"), __args);
 				} finally {
 				}
 			}
@@ -237,9 +237,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getWarmupIterations);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getWarmupIterations);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWarmupIterations", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWarmupIterations", "()I"));
 				} finally {
 				}
 			}
@@ -253,9 +253,9 @@ namespace Org.Neuroph.Util.Benchmark {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setWarmupIterations_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setWarmupIterations_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setWarmupIterations", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setWarmupIterations", "(I)V"), __args);
 				} finally {
 				}
 			}
@@ -320,7 +320,7 @@ namespace Org.Neuroph.Util.Benchmark {
 			if (id_prepareTest == IntPtr.Zero)
 				id_prepareTest = JNIEnv.GetMethodID (class_ref, "prepareTest", "()V");
 			try {
-				JNIEnv.CallVoidMethod  (Handle, id_prepareTest);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_prepareTest);
 			} finally {
 			}
 		}
@@ -333,7 +333,7 @@ namespace Org.Neuroph.Util.Benchmark {
 			if (id_runTest == IntPtr.Zero)
 				id_runTest = JNIEnv.GetMethodID (class_ref, "runTest", "()V");
 			try {
-				JNIEnv.CallVoidMethod  (Handle, id_runTest);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_runTest);
 			} finally {
 			}
 		}

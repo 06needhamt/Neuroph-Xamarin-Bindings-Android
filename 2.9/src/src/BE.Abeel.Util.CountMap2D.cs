@@ -26,41 +26,13 @@ namespace BE.Abeel.Util {
 
 		protected CountMap2D (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='CountMap2D']/constructor[@name='CountMap2D' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe CountMap2D ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				if (GetType () != typeof (CountMap2D)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
-					return;
-				}
-
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
-			} finally {
-			}
-		}
-
 		static IntPtr id_ctor_I;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='CountMap2D']/constructor[@name='CountMap2D' and count(parameter)=1 and parameter[1][@type='int']]"
 		[Register (".ctor", "(I)V", "")]
 		public unsafe CountMap2D (int p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -70,7 +42,7 @@ namespace BE.Abeel.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(I)V", __args);
 					return;
 				}
 
@@ -79,7 +51,35 @@ namespace BE.Abeel.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_I, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='be.abeel.util']/class[@name='CountMap2D']/constructor[@name='CountMap2D' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe CountMap2D ()
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				if (GetType () != typeof (CountMap2D)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
+					return;
+				}
+
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -117,9 +117,9 @@ namespace BE.Abeel.Util {
 				__args [1] = new JValue (native_p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_count_Ljava_lang_Object_Ljava_lang_Object_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_count_Ljava_lang_Object_Ljava_lang_Object_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "count", "(Ljava/lang/Object;Ljava/lang/Object;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "count", "(Ljava/lang/Object;Ljava/lang/Object;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
@@ -161,9 +161,9 @@ namespace BE.Abeel.Util {
 
 				double __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.CallDoubleMethod  (Handle, id_getNormalized_Ljava_lang_Object_Ljava_lang_Object_, __args);
+					__ret = JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getNormalized_Ljava_lang_Object_Ljava_lang_Object_, __args);
 				else
-					__ret = JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNormalized", "(Ljava/lang/Object;Ljava/lang/Object;)D"), __args);
+					__ret = JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNormalized", "(Ljava/lang/Object;Ljava/lang/Object;)D"), __args);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -197,9 +197,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_totalCount);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_totalCount);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalCount", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalCount", "()I"));
 			} finally {
 			}
 		}
@@ -236,9 +236,9 @@ namespace BE.Abeel.Util {
 
 				int __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.CallIntMethod  (Handle, id_totalXCount_Ljava_lang_Object_, __args);
+					__ret = JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_totalXCount_Ljava_lang_Object_, __args);
 				else
-					__ret = JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalXCount", "(Ljava/lang/Object;)I"), __args);
+					__ret = JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalXCount", "(Ljava/lang/Object;)I"), __args);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -277,9 +277,9 @@ namespace BE.Abeel.Util {
 
 				int __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.CallIntMethod  (Handle, id_totalYCount_Ljava_lang_Object_, __args);
+					__ret = JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_totalYCount_Ljava_lang_Object_, __args);
 				else
-					__ret = JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalYCount", "(Ljava/lang/Object;)I"), __args);
+					__ret = JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalYCount", "(Ljava/lang/Object;)I"), __args);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);

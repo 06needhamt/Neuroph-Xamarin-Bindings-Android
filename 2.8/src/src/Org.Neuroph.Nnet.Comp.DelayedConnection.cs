@@ -31,7 +31,7 @@ namespace Org.Neuroph.Nnet.Comp {
 		public unsafe DelayedConnection (global::Org.Neuroph.Core.Neuron p0, global::Org.Neuroph.Core.Neuron p1, double p2, int p3)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -44,7 +44,7 @@ namespace Org.Neuroph.Nnet.Comp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;DI)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;DI)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/Neuron;Lorg/neuroph/core/Neuron;DI)V", __args);
 					return;
 				}
 
@@ -53,7 +53,7 @@ namespace Org.Neuroph.Nnet.Comp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_DI, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_DI, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_Neuron_Lorg_neuroph_core_Neuron_DI, __args);
 			} finally {
 			}
 		}
@@ -101,9 +101,9 @@ namespace Org.Neuroph.Nnet.Comp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getDelay);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getDelay);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDelay", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDelay", "()I"));
 				} finally {
 				}
 			}
@@ -117,9 +117,9 @@ namespace Org.Neuroph.Nnet.Comp {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setDelay_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setDelay_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDelay", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDelay", "(I)V"), __args);
 				} finally {
 				}
 			}

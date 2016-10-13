@@ -17,13 +17,13 @@ namespace Org.Neuroph.Nnet.Learning {
 			get {
 				if (temperature_jfieldId == IntPtr.Zero)
 					temperature_jfieldId = JNIEnv.GetFieldID (class_ref, "temperature", "D");
-				return JNIEnv.GetDoubleField (Handle, temperature_jfieldId);
+				return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, temperature_jfieldId);
 			}
 			set {
 				if (temperature_jfieldId == IntPtr.Zero)
 					temperature_jfieldId = JNIEnv.GetFieldID (class_ref, "temperature", "D");
 				try {
-					JNIEnv.SetField (Handle, temperature_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, temperature_jfieldId, value);
 				} finally {
 				}
 			}
@@ -51,7 +51,7 @@ namespace Org.Neuroph.Nnet.Learning {
 		public unsafe SimulatedAnnealingLearning (global::Org.Neuroph.Core.NeuralNetwork p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -61,7 +61,7 @@ namespace Org.Neuroph.Nnet.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/NeuralNetwork;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/NeuralNetwork;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/NeuralNetwork;)V", __args);
 					return;
 				}
 
@@ -70,7 +70,7 @@ namespace Org.Neuroph.Nnet.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_, __args);
 			} finally {
 			}
 		}
@@ -81,7 +81,7 @@ namespace Org.Neuroph.Nnet.Learning {
 		public unsafe SimulatedAnnealingLearning (global::Org.Neuroph.Core.NeuralNetwork p0, double p1, double p2, int p3)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -94,7 +94,7 @@ namespace Org.Neuroph.Nnet.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/NeuralNetwork;DDI)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/NeuralNetwork;DDI)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/NeuralNetwork;DDI)V", __args);
 					return;
 				}
 
@@ -103,7 +103,7 @@ namespace Org.Neuroph.Nnet.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_DDI, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_DDI, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_NeuralNetwork_DDI, __args);
 			} finally {
 			}
 		}
@@ -134,9 +134,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.NeuralNetwork> (JNIEnv.CallObjectMethod  (Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.NeuralNetwork> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.NeuralNetwork> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNetwork", "()Lorg/neuroph/core/NeuralNetwork;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.NeuralNetwork> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNetwork", "()Lorg/neuroph/core/NeuralNetwork;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -168,9 +168,9 @@ namespace Org.Neuroph.Nnet.Learning {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_randomize);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_randomize);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "randomize", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "randomize", "()V"));
 			} finally {
 			}
 		}
@@ -207,9 +207,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				__args [0] = new JValue (native_p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_updateNetworkWeights_arrayD, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateNetworkWeights_arrayD, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateNetworkWeights", "([D)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateNetworkWeights", "([D)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -250,9 +250,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				__args [0] = new JValue (native_p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_updateTotalNetworkError_arrayD, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateTotalNetworkError_arrayD, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateTotalNetworkError", "([D)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateTotalNetworkError", "([D)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);

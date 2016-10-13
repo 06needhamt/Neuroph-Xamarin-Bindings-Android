@@ -25,13 +25,41 @@ namespace Org.Neuroph.Core.Input {
 
 		protected InputFunction (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.input']/class[@name='InputFunction']/constructor[@name='InputFunction' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe InputFunction ()
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				if (GetType () != typeof (InputFunction)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
+					return;
+				}
+
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_Lorg_neuroph_core_input_WeightsFunction_Lorg_neuroph_core_input_SummingFunction_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.input']/class[@name='InputFunction']/constructor[@name='InputFunction' and count(parameter)=2 and parameter[1][@type='org.neuroph.core.input.WeightsFunction'] and parameter[2][@type='org.neuroph.core.input.SummingFunction']]"
 		[Register (".ctor", "(Lorg/neuroph/core/input/WeightsFunction;Lorg/neuroph/core/input/SummingFunction;)V", "")]
 		public unsafe InputFunction (global::Org.Neuroph.Core.Input.WeightsFunction p0, global::Org.Neuroph.Core.Input.SummingFunction p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -42,7 +70,7 @@ namespace Org.Neuroph.Core.Input {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/input/WeightsFunction;Lorg/neuroph/core/input/SummingFunction;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/input/WeightsFunction;Lorg/neuroph/core/input/SummingFunction;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/input/WeightsFunction;Lorg/neuroph/core/input/SummingFunction;)V", __args);
 					return;
 				}
 
@@ -51,35 +79,7 @@ namespace Org.Neuroph.Core.Input {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_input_WeightsFunction_Lorg_neuroph_core_input_SummingFunction_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_input_WeightsFunction_Lorg_neuroph_core_input_SummingFunction_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.core.input']/class[@name='InputFunction']/constructor[@name='InputFunction' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe InputFunction ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				if (GetType () != typeof (InputFunction)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
-					return;
-				}
-
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_input_WeightsFunction_Lorg_neuroph_core_input_SummingFunction_, __args);
 			} finally {
 			}
 		}
@@ -110,9 +110,9 @@ namespace Org.Neuroph.Core.Input {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.SummingFunction> (JNIEnv.CallObjectMethod  (Handle, id_getSummingFunction), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.SummingFunction> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getSummingFunction), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.SummingFunction> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSummingFunction", "()Lorg/neuroph/core/input/SummingFunction;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.SummingFunction> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSummingFunction", "()Lorg/neuroph/core/input/SummingFunction;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -144,9 +144,9 @@ namespace Org.Neuroph.Core.Input {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.WeightsFunction> (JNIEnv.CallObjectMethod  (Handle, id_getWeightsFunction), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.WeightsFunction> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getWeightsFunction), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.WeightsFunction> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWeightsFunction", "()Lorg/neuroph/core/input/WeightsFunction;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Input.WeightsFunction> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWeightsFunction", "()Lorg/neuroph/core/input/WeightsFunction;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -184,9 +184,9 @@ namespace Org.Neuroph.Core.Input {
 
 				double __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.CallDoubleMethod  (Handle, id_getOutput_Ljava_util_List_, __args);
+					__ret = JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getOutput_Ljava_util_List_, __args);
 				else
-					__ret = JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(Ljava/util/List;)D"), __args);
+					__ret = JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(Ljava/util/List;)D"), __args);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);

@@ -31,7 +31,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 		public unsafe StackTraceElementProxy (global::Java.Lang.StackTraceElement p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/StackTraceElement;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/StackTraceElement;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/StackTraceElement;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_StackTraceElement_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_StackTraceElement_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_StackTraceElement_, __args);
 			} finally {
 			}
 		}
@@ -99,9 +99,9 @@ namespace CH.Qos.Logback.Classic.Spi {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::CH.Qos.Logback.Classic.Spi.ClassPackagingData> (JNIEnv.CallObjectMethod  (Handle, id_getClassPackagingData), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::CH.Qos.Logback.Classic.Spi.ClassPackagingData> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getClassPackagingData), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::CH.Qos.Logback.Classic.Spi.ClassPackagingData> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getClassPackagingData", "()Lch/qos/logback/classic/spi/ClassPackagingData;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::CH.Qos.Logback.Classic.Spi.ClassPackagingData> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getClassPackagingData", "()Lch/qos/logback/classic/spi/ClassPackagingData;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace CH.Qos.Logback.Classic.Spi {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setClassPackagingData_Lch_qos_logback_classic_spi_ClassPackagingData_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setClassPackagingData_Lch_qos_logback_classic_spi_ClassPackagingData_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setClassPackagingData", "(Lch/qos/logback/classic/spi/ClassPackagingData;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setClassPackagingData", "(Lch/qos/logback/classic/spi/ClassPackagingData;)V"), __args);
 				} finally {
 				}
 			}
@@ -149,9 +149,9 @@ namespace CH.Qos.Logback.Classic.Spi {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getSTEAsString), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getSTEAsString), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSTEAsString", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSTEAsString", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -183,9 +183,9 @@ namespace CH.Qos.Logback.Classic.Spi {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.StackTraceElement> (JNIEnv.CallObjectMethod  (Handle, id_getStackTraceElement), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.StackTraceElement> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getStackTraceElement), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.StackTraceElement> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getStackTraceElement", "()Ljava/lang/StackTraceElement;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.StackTraceElement> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getStackTraceElement", "()Ljava/lang/StackTraceElement;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

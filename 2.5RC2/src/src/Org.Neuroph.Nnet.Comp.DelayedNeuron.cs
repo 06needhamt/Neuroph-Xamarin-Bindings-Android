@@ -17,7 +17,7 @@ namespace Org.Neuroph.Nnet.Comp {
 			get {
 				if (outputHistory_jfieldId == IntPtr.Zero)
 					outputHistory_jfieldId = JNIEnv.GetFieldID (class_ref, "outputHistory", "Ljava/util/Vector;");
-				IntPtr __ret = JNIEnv.GetObjectField (Handle, outputHistory_jfieldId);
+				IntPtr __ret = JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, outputHistory_jfieldId);
 				return global::Java.Lang.Object.GetObject<global::Java.Util.Vector> (__ret, JniHandleOwnership.TransferLocalRef);
 			}
 			set {
@@ -25,7 +25,7 @@ namespace Org.Neuroph.Nnet.Comp {
 					outputHistory_jfieldId = JNIEnv.GetFieldID (class_ref, "outputHistory", "Ljava/util/Vector;");
 				IntPtr native_value = JNIEnv.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, outputHistory_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, outputHistory_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -54,7 +54,7 @@ namespace Org.Neuroph.Nnet.Comp {
 		public unsafe DelayedNeuron (global::Org.Neuroph.Core.Input.InputFunction p0, global::Org.Neuroph.Core.Transfer.TransferFunction p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -65,7 +65,7 @@ namespace Org.Neuroph.Nnet.Comp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/input/InputFunction;Lorg/neuroph/core/transfer/TransferFunction;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/input/InputFunction;Lorg/neuroph/core/transfer/TransferFunction;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/input/InputFunction;Lorg/neuroph/core/transfer/TransferFunction;)V", __args);
 					return;
 				}
 
@@ -74,7 +74,7 @@ namespace Org.Neuroph.Nnet.Comp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_input_InputFunction_Lorg_neuroph_core_transfer_TransferFunction_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_input_InputFunction_Lorg_neuroph_core_transfer_TransferFunction_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_input_InputFunction_Lorg_neuroph_core_transfer_TransferFunction_, __args);
 			} finally {
 			}
 		}
@@ -107,9 +107,9 @@ namespace Org.Neuroph.Nnet.Comp {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_getOutput_I, __args);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getOutput_I, __args);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(I)D"), __args);
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(I)D"), __args);
 			} finally {
 			}
 		}

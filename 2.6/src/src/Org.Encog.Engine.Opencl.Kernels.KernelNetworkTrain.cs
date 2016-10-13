@@ -59,7 +59,7 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 		public unsafe KernelNetworkTrain (global::Org.Encog.Engine.Opencl.EncogCLDevice p0, global::Org.Encog.Engine.Network.Flat.FlatNetwork p1, global::Org.Encog.Engine.Data.IEngineIndexableSet p2, int p3)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -72,7 +72,7 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/opencl/EncogCLDevice;Lorg/encog/engine/network/flat/FlatNetwork;Lorg/encog/engine/data/EngineIndexableSet;I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/opencl/EncogCLDevice;Lorg/encog/engine/network/flat/FlatNetwork;Lorg/encog/engine/data/EngineIndexableSet;I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/encog/engine/opencl/EncogCLDevice;Lorg/encog/engine/network/flat/FlatNetwork;Lorg/encog/engine/data/EngineIndexableSet;I)V", __args);
 					return;
 				}
 
@@ -81,7 +81,7 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_Lorg_encog_engine_network_flat_FlatNetwork_Lorg_encog_engine_data_EngineIndexableSet_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_Lorg_encog_engine_network_flat_FlatNetwork_Lorg_encog_engine_data_EngineIndexableSet_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_Lorg_encog_engine_network_flat_FlatNetwork_Lorg_encog_engine_data_EngineIndexableSet_I, __args);
 			} finally {
 			}
 		}
@@ -115,9 +115,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_assignWorkgroupSizes_II, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_assignWorkgroupSizes_II, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "assignWorkgroupSizes", "(II)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "assignWorkgroupSizes", "(II)V"), __args);
 			} finally {
 			}
 		}
@@ -153,9 +153,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 				__args [3] = new JValue (p3);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_calculate_IIZI, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_calculate_IIZI, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculate", "(IIZI)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculate", "(IIZI)V"), __args);
 			} finally {
 			}
 		}
@@ -194,9 +194,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 				__args [2] = new JValue (p2);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_compile_Ljava_util_Map_Lorg_encog_engine_network_train_prop_OpenCLTrainingProfile_Lorg_encog_engine_network_flat_FlatNetwork_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_compile_Ljava_util_Map_Lorg_encog_engine_network_train_prop_OpenCLTrainingProfile_Lorg_encog_engine_network_flat_FlatNetwork_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "compile", "(Ljava/util/Map;Lorg/encog/engine/network/train/prop/OpenCLTrainingProfile;Lorg/encog/engine/network/flat/FlatNetwork;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "compile", "(Ljava/util/Map;Lorg/encog/engine/network/train/prop/OpenCLTrainingProfile;Lorg/encog/engine/network/flat/FlatNetwork;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -228,9 +228,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (float[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getErrors), JniHandleOwnership.TransferLocalRef, typeof (float));
+					return (float[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getErrors), JniHandleOwnership.TransferLocalRef, typeof (float));
 				else
-					return (float[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getErrors", "()[F")), JniHandleOwnership.TransferLocalRef, typeof (float));
+					return (float[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getErrors", "()[F")), JniHandleOwnership.TransferLocalRef, typeof (float));
 			} finally {
 			}
 		}
@@ -261,9 +261,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (float[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getTempDataArray), JniHandleOwnership.TransferLocalRef, typeof (float));
+					return (float[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTempDataArray), JniHandleOwnership.TransferLocalRef, typeof (float));
 				else
-					return (float[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTempDataArray", "()[F")), JniHandleOwnership.TransferLocalRef, typeof (float));
+					return (float[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTempDataArray", "()[F")), JniHandleOwnership.TransferLocalRef, typeof (float));
 			} finally {
 			}
 		}
@@ -294,9 +294,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (float[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getWeightOutArray), JniHandleOwnership.TransferLocalRef, typeof (float));
+					return (float[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getWeightOutArray), JniHandleOwnership.TransferLocalRef, typeof (float));
 				else
-					return (float[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWeightOutArray", "()[F")), JniHandleOwnership.TransferLocalRef, typeof (float));
+					return (float[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWeightOutArray", "()[F")), JniHandleOwnership.TransferLocalRef, typeof (float));
 			} finally {
 			}
 		}
@@ -330,9 +330,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_init_Lorg_encog_engine_network_train_prop_OpenCLTrainingProfile_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_init_Lorg_encog_engine_network_train_prop_OpenCLTrainingProfile_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "init", "(Lorg/encog/engine/network/train/prop/OpenCLTrainingProfile;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "init", "(Lorg/encog/engine/network/train/prop/OpenCLTrainingProfile;)V"), __args);
 			} finally {
 			}
 		}
@@ -369,9 +369,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 				__args [0] = new JValue (native_p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setTempDataArray_arrayF, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setTempDataArray_arrayF, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setTempDataArray", "([F)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setTempDataArray", "([F)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);

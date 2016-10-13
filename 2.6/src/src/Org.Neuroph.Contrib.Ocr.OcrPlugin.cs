@@ -35,7 +35,7 @@ namespace Org.Neuroph.Contrib.Ocr {
 		public unsafe OcrPlugin (global::Org.Neuroph.Contrib.Imgrec.Image.Dimension p0, global::Org.Neuroph.Contrib.Imgrec.ColorMode p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -46,7 +46,7 @@ namespace Org.Neuroph.Contrib.Ocr {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/contrib/imgrec/image/Dimension;Lorg/neuroph/contrib/imgrec/ColorMode;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/contrib/imgrec/image/Dimension;Lorg/neuroph/contrib/imgrec/ColorMode;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/contrib/imgrec/image/Dimension;Lorg/neuroph/contrib/imgrec/ColorMode;)V", __args);
 					return;
 				}
 
@@ -55,7 +55,7 @@ namespace Org.Neuroph.Contrib.Ocr {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_contrib_imgrec_image_Dimension_Lorg_neuroph_contrib_imgrec_ColorMode_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_contrib_imgrec_image_Dimension_Lorg_neuroph_contrib_imgrec_ColorMode_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_contrib_imgrec_image_Dimension_Lorg_neuroph_contrib_imgrec_ColorMode_, __args);
 			} finally {
 			}
 		}
@@ -86,9 +86,9 @@ namespace Org.Neuroph.Contrib.Ocr {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallObjectMethod  (Handle, id_getColorMode), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getColorMode), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColorMode", "()Lorg/neuroph/contrib/imgrec/ColorMode;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColorMode", "()Lorg/neuroph/contrib/imgrec/ColorMode;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -120,9 +120,9 @@ namespace Org.Neuroph.Contrib.Ocr {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.Image.Dimension> (JNIEnv.CallObjectMethod  (Handle, id_getSamplingResolution), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.Image.Dimension> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getSamplingResolution), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.Image.Dimension> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSamplingResolution", "()Lorg/neuroph/contrib/imgrec/image/Dimension;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.Image.Dimension> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSamplingResolution", "()Lorg/neuroph/contrib/imgrec/image/Dimension;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -159,9 +159,9 @@ namespace Org.Neuroph.Contrib.Ocr {
 
 				global::Java.Lang.Character __ret;
 				if (GetType () == ThresholdType)
-					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallObjectMethod  (Handle, id_recognizeCharacter_Lorg_neuroph_contrib_imgrec_image_Image_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_recognizeCharacter_Lorg_neuroph_contrib_imgrec_image_Image_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeCharacter", "(Lorg/neuroph/contrib/imgrec/image/Image;)Ljava/lang/Character;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeCharacter", "(Lorg/neuroph/contrib/imgrec/image/Image;)Ljava/lang/Character;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}
@@ -200,9 +200,9 @@ namespace Org.Neuroph.Contrib.Ocr {
 
 				global::Java.Lang.Character __ret;
 				if (GetType () == ThresholdType)
-					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallObjectMethod  (Handle, id_recognizeCharacter_Lorg_neuroph_contrib_imgrec_image_Image_Lorg_neuroph_contrib_imgrec_image_Dimension_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_recognizeCharacter_Lorg_neuroph_contrib_imgrec_image_Image_Lorg_neuroph_contrib_imgrec_image_Dimension_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeCharacter", "(Lorg/neuroph/contrib/imgrec/image/Image;Lorg/neuroph/contrib/imgrec/image/Dimension;)Ljava/lang/Character;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Java.Lang.Object.GetObject<global::Java.Lang.Character> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeCharacter", "(Lorg/neuroph/contrib/imgrec/image/Image;Lorg/neuroph/contrib/imgrec/image/Dimension;)Ljava/lang/Character;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}
@@ -239,9 +239,9 @@ namespace Org.Neuroph.Contrib.Ocr {
 
 				global::System.Collections.IDictionary __ret;
 				if (GetType () == ThresholdType)
-					__ret = global::Android.Runtime.JavaDictionary.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_recognizeCharacterProbabilities_Lorg_neuroph_contrib_imgrec_image_Image_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Android.Runtime.JavaDictionary.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_recognizeCharacterProbabilities_Lorg_neuroph_contrib_imgrec_image_Image_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = global::Android.Runtime.JavaDictionary.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeCharacterProbabilities", "(Lorg/neuroph/contrib/imgrec/image/Image;)Ljava/util/HashMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Android.Runtime.JavaDictionary.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeCharacterProbabilities", "(Lorg/neuroph/contrib/imgrec/image/Image;)Ljava/util/HashMap;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}

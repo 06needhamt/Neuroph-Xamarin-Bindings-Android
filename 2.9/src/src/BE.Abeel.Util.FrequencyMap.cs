@@ -31,7 +31,7 @@ namespace BE.Abeel.Util {
 		public unsafe FrequencyMap ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace BE.Abeel.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace BE.Abeel.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -79,9 +79,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_average);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_average);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "average", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "average", "()D"));
 			} finally {
 			}
 		}
@@ -114,9 +114,9 @@ namespace BE.Abeel.Util {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod  (Handle, id_bin_I, __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_bin_I, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "bin", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "bin", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -147,9 +147,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod  (Handle, id_copy), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_copy), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "copy", "()Lbe/abeel/util/FrequencyMap;")), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "copy", "()Lbe/abeel/util/FrequencyMap;")), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -182,9 +182,9 @@ namespace BE.Abeel.Util {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_count_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_count_I, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "count", "(I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "count", "(I)V"), __args);
 			} finally {
 			}
 		}
@@ -218,9 +218,9 @@ namespace BE.Abeel.Util {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_count_II, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_count_II, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "count", "(II)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "count", "(II)V"), __args);
 			} finally {
 			}
 		}
@@ -251,9 +251,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_max);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_max);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "max", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "max", "()I"));
 			} finally {
 			}
 		}
@@ -284,9 +284,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_median);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_median);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "median", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "median", "()I"));
 			} finally {
 			}
 		}
@@ -317,9 +317,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_min);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_min);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "min", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "min", "()I"));
 			} finally {
 			}
 		}
@@ -350,9 +350,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_mode);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_mode);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "mode", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "mode", "()I"));
 			} finally {
 			}
 		}
@@ -385,9 +385,9 @@ namespace BE.Abeel.Util {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod  (Handle, id_removeAbove_I, __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_removeAbove_I, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "removeAbove", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "removeAbove", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -420,9 +420,9 @@ namespace BE.Abeel.Util {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod  (Handle, id_removeBelow_I, __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_removeBelow_I, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "removeBelow", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "removeBelow", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -455,9 +455,9 @@ namespace BE.Abeel.Util {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod  (Handle, id_shift_I, __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_shift_I, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "shift", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "shift", "(I)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -488,9 +488,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_std);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_std);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "std", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "std", "()D"));
 			} finally {
 			}
 		}
@@ -521,9 +521,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_sum);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_sum);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sum", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sum", "()D"));
 			} finally {
 			}
 		}
@@ -554,9 +554,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_totalCount);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_totalCount);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalCount", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "totalCount", "()I"));
 			} finally {
 			}
 		}
@@ -590,9 +590,9 @@ namespace BE.Abeel.Util {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod  (Handle, id_truncate_II, __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_truncate_II, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "truncate", "(II)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.FrequencyMap> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "truncate", "(II)Lbe/abeel/util/FrequencyMap;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

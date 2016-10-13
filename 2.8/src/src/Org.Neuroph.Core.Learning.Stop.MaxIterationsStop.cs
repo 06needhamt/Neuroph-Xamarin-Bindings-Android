@@ -31,7 +31,7 @@ namespace Org.Neuroph.Core.Learning.Stop {
 		public unsafe MaxIterationsStop (global::Org.Neuroph.Core.Learning.IterativeLearning p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Neuroph.Core.Learning.Stop {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/learning/IterativeLearning;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/learning/IterativeLearning;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/learning/IterativeLearning;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Neuroph.Core.Learning.Stop {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_learning_IterativeLearning_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_learning_IterativeLearning_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_learning_IterativeLearning_, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Neuroph.Core.Learning.Stop {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_isReached);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isReached);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isReached", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isReached", "()Z"));
 				} finally {
 				}
 			}

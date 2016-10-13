@@ -53,7 +53,7 @@ namespace Org.Neuroph.Core.Learning.Stop {
 
 		public IStopConditionInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -79,7 +79,7 @@ namespace Org.Neuroph.Core.Learning.Stop {
 			get {
 				if (id_isReached == IntPtr.Zero)
 					id_isReached = JNIEnv.GetMethodID (class_ref, "isReached", "()Z");
-				return JNIEnv.CallBooleanMethod (Handle, id_isReached);
+				return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isReached);
 			}
 		}
 

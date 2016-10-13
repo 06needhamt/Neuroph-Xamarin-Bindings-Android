@@ -63,7 +63,7 @@ namespace Org.Encog.Engine.Data {
 
 		public IEngineDataSetInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -89,7 +89,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_getIdealSize == IntPtr.Zero)
 					id_getIdealSize = JNIEnv.GetMethodID (class_ref, "getIdealSize", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getIdealSize);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getIdealSize);
 			}
 		}
 
@@ -114,7 +114,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_getInputSize == IntPtr.Zero)
 					id_getInputSize = JNIEnv.GetMethodID (class_ref, "getInputSize", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getInputSize);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getInputSize);
 			}
 		}
 
@@ -139,7 +139,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_isSupervised == IntPtr.Zero)
 					id_isSupervised = JNIEnv.GetMethodID (class_ref, "isSupervised", "()Z");
-				return JNIEnv.CallBooleanMethod (Handle, id_isSupervised);
+				return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isSupervised);
 			}
 		}
 

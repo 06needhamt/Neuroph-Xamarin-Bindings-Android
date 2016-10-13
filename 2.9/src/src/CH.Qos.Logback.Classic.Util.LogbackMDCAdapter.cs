@@ -31,7 +31,7 @@ namespace CH.Qos.Logback.Classic.Util {
 		public unsafe LogbackMDCAdapter ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace CH.Qos.Logback.Classic.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace CH.Qos.Logback.Classic.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -61,7 +61,7 @@ namespace CH.Qos.Logback.Classic.Util {
 				if (id_getCopyOfContextMap == IntPtr.Zero)
 					id_getCopyOfContextMap = JNIEnv.GetMethodID (class_ref, "getCopyOfContextMap", "()Ljava/util/Map;");
 				try {
-					return global::Android.Runtime.JavaDictionary.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getCopyOfContextMap), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaDictionary.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCopyOfContextMap), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -75,7 +75,7 @@ namespace CH.Qos.Logback.Classic.Util {
 				if (id_getKeys == IntPtr.Zero)
 					id_getKeys = JNIEnv.GetMethodID (class_ref, "getKeys", "()Ljava/util/Set;");
 				try {
-					return global::Android.Runtime.JavaSet<string>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getKeys), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaSet<string>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getKeys), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -89,7 +89,7 @@ namespace CH.Qos.Logback.Classic.Util {
 				if (id_getPropertyMap == IntPtr.Zero)
 					id_getPropertyMap = JNIEnv.GetMethodID (class_ref, "getPropertyMap", "()Ljava/util/Map;");
 				try {
-					return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getPropertyMap), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getPropertyMap), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -103,7 +103,7 @@ namespace CH.Qos.Logback.Classic.Util {
 			if (id_clear == IntPtr.Zero)
 				id_clear = JNIEnv.GetMethodID (class_ref, "clear", "()V");
 			try {
-				JNIEnv.CallVoidMethod  (Handle, id_clear);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_clear);
 			} finally {
 			}
 		}
@@ -119,7 +119,7 @@ namespace CH.Qos.Logback.Classic.Util {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (native_p0);
-				string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_get_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+				string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_get_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -139,7 +139,7 @@ namespace CH.Qos.Logback.Classic.Util {
 				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (native_p0);
 				__args [1] = new JValue (native_p1);
-				JNIEnv.CallVoidMethod  (Handle, id_put_Ljava_lang_String_Ljava_lang_String_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_put_Ljava_lang_String_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
@@ -157,7 +157,7 @@ namespace CH.Qos.Logback.Classic.Util {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (native_p0);
-				JNIEnv.CallVoidMethod  (Handle, id_remove_Ljava_lang_String_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_remove_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -174,7 +174,7 @@ namespace CH.Qos.Logback.Classic.Util {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (native_p0);
-				JNIEnv.CallVoidMethod  (Handle, id_setContextMap_Ljava_util_Map_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setContextMap_Ljava_util_Map_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}

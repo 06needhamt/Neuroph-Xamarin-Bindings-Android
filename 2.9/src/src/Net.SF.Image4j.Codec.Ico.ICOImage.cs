@@ -69,9 +69,9 @@ namespace Net.SF.Image4j.Codec.Ico {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Ico.IconEntry> (JNIEnv.CallObjectMethod  (Handle, id_getIconEntry), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Ico.IconEntry> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getIconEntry), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Ico.IconEntry> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIconEntry", "()Lnet/sf/image4j/codec/ico/IconEntry;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Ico.IconEntry> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIconEntry", "()Lnet/sf/image4j/codec/ico/IconEntry;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -85,9 +85,9 @@ namespace Net.SF.Image4j.Codec.Ico {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setIconEntry_Lnet_sf_image4j_codec_ico_IconEntry_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIconEntry_Lnet_sf_image4j_codec_ico_IconEntry_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIconEntry", "(Lnet/sf/image4j/codec/ico/IconEntry;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIconEntry", "(Lnet/sf/image4j/codec/ico/IconEntry;)V"), __args);
 				} finally {
 				}
 			}
@@ -136,9 +136,9 @@ namespace Net.SF.Image4j.Codec.Ico {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getIconIndex);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getIconIndex);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIconIndex", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIconIndex", "()I"));
 				} finally {
 				}
 			}
@@ -152,9 +152,9 @@ namespace Net.SF.Image4j.Codec.Ico {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setIconIndex_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIconIndex_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIconIndex", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIconIndex", "(I)V"), __args);
 				} finally {
 				}
 			}
@@ -203,9 +203,9 @@ namespace Net.SF.Image4j.Codec.Ico {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_isPngCompressed);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isPngCompressed);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isPngCompressed", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isPngCompressed", "()Z"));
 				} finally {
 				}
 			}
@@ -219,9 +219,9 @@ namespace Net.SF.Image4j.Codec.Ico {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setPngCompressed_Z, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setPngCompressed_Z, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setPngCompressed", "(Z)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setPngCompressed", "(Z)V"), __args);
 				} finally {
 				}
 			}

@@ -25,13 +25,41 @@ namespace Org.Neuroph.Util.Random {
 
 		protected WeightsRandomizer (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util.random']/class[@name='WeightsRandomizer']/constructor[@name='WeightsRandomizer' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe WeightsRandomizer ()
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				if (GetType () != typeof (WeightsRandomizer)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
+					return;
+				}
+
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
+			} finally {
+			}
+		}
+
 		static IntPtr id_ctor_Ljava_util_Random_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util.random']/class[@name='WeightsRandomizer']/constructor[@name='WeightsRandomizer' and count(parameter)=1 and parameter[1][@type='java.util.Random']]"
 		[Register (".ctor", "(Ljava/util/Random;)V", "")]
 		public unsafe WeightsRandomizer (global::Java.Util.Random p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +69,7 @@ namespace Org.Neuroph.Util.Random {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/util/Random;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/util/Random;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/util/Random;)V", __args);
 					return;
 				}
 
@@ -50,35 +78,7 @@ namespace Org.Neuroph.Util.Random {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_util_Random_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_util_Random_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util.random']/class[@name='WeightsRandomizer']/constructor[@name='WeightsRandomizer' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe WeightsRandomizer ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				if (GetType () != typeof (WeightsRandomizer)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
-					return;
-				}
-
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_util_Random_, __args);
 			} finally {
 			}
 		}
@@ -109,9 +109,9 @@ namespace Org.Neuroph.Util.Random {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Util.Random> (JNIEnv.CallObjectMethod  (Handle, id_getRandomGenerator), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Util.Random> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getRandomGenerator), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Util.Random> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRandomGenerator", "()Ljava/util/Random;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Util.Random> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRandomGenerator", "()Ljava/util/Random;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -143,9 +143,9 @@ namespace Org.Neuroph.Util.Random {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallDoubleMethod  (Handle, id_nextRandomWeight);
+					return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_nextRandomWeight);
 				else
-					return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "nextRandomWeight", "()D"));
+					return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "nextRandomWeight", "()D"));
 			} finally {
 			}
 		}
@@ -179,9 +179,9 @@ namespace Org.Neuroph.Util.Random {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_randomize_Lorg_neuroph_core_NeuralNetwork_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_randomize_Lorg_neuroph_core_NeuralNetwork_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "randomize", "(Lorg/neuroph/core/NeuralNetwork;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "randomize", "(Lorg/neuroph/core/NeuralNetwork;)V"), __args);
 			} finally {
 			}
 		}

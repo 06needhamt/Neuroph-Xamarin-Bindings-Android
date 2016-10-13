@@ -52,7 +52,7 @@ namespace Org.Neuroph.Core.Events {
 
 		public ILearningEventListenerInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -81,7 +81,7 @@ namespace Org.Neuroph.Core.Events {
 				id_handleLearningEvent_Lorg_neuroph_core_events_LearningEvent_ = JNIEnv.GetMethodID (class_ref, "handleLearningEvent", "(Lorg/neuroph/core/events/LearningEvent;)V");
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (p0);
-			JNIEnv.CallVoidMethod (Handle, id_handleLearningEvent_Lorg_neuroph_core_events_LearningEvent_, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_handleLearningEvent_Lorg_neuroph_core_events_LearningEvent_, __args);
 		}
 
 	}

@@ -31,7 +31,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 		public unsafe MatrixMultiLayerPerceptron (global::Org.Neuroph.Nnet.MultiLayerPerceptron p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/MultiLayerPerceptron;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/MultiLayerPerceptron;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/nnet/MultiLayerPerceptron;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_MultiLayerPerceptron_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_MultiLayerPerceptron_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_MultiLayerPerceptron_, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getMatrixLayers), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer));
+					return (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMatrixLayers), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer));
 				else
-					return (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMatrixLayers", "()[Lorg/neuroph/contrib/matrixmlp/MatrixLayer;")), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer));
+					return (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMatrixLayers", "()[Lorg/neuroph/contrib/matrixmlp/MatrixLayer;")), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Contrib.Matrixmlp.IMatrixLayer));
 			} finally {
 			}
 		}

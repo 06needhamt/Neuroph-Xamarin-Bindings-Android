@@ -31,7 +31,7 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 		protected unsafe RadicalCleavageIntensity (int p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(I)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_I, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 			try {
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.CallIntMethod  (Handle, id_length);
+					return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_length);
 				else
-					return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "length", "()I"));
+					return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "length", "()I"));
 			} finally {
 			}
 		}
@@ -120,9 +120,9 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 
 				double[] __ret;
 				if (GetType () == ThresholdType)
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_normalizedProfile_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_normalizedProfile_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalizedProfile", "(Ljava/lang/String;)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalizedProfile", "(Ljava/lang/String;)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -161,9 +161,9 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 
 				double __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.CallDoubleMethod  (Handle, id_normalizedValue_Ljava_lang_String_, __args);
+					__ret = JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_normalizedValue_Ljava_lang_String_, __args);
 				else
-					__ret = JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalizedValue", "(Ljava/lang/String;)D"), __args);
+					__ret = JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "normalizedValue", "(Ljava/lang/String;)D"), __args);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -202,9 +202,9 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 
 				double[] __ret;
 				if (GetType () == ThresholdType)
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_profile_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_profile_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "profile", "(Ljava/lang/String;)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "profile", "(Ljava/lang/String;)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -243,9 +243,9 @@ namespace BE.Abeel.Bioinformatics.Dnaproperties {
 
 				double __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.CallDoubleMethod  (Handle, id_value_Ljava_lang_String_, __args);
+					__ret = JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_value_Ljava_lang_String_, __args);
 				else
-					__ret = JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "value", "(Ljava/lang/String;)D"), __args);
+					__ret = JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "value", "(Ljava/lang/String;)D"), __args);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);

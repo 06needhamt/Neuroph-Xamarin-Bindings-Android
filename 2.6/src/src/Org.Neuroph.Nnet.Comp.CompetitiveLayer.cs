@@ -31,7 +31,7 @@ namespace Org.Neuroph.Nnet.Comp {
 		public unsafe CompetitiveLayer (int p0, global::Org.Neuroph.Util.NeuronProperties p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -42,7 +42,7 @@ namespace Org.Neuroph.Nnet.Comp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(ILorg/neuroph/util/NeuronProperties;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(ILorg/neuroph/util/NeuronProperties;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(ILorg/neuroph/util/NeuronProperties;)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Org.Neuroph.Nnet.Comp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_ILorg_neuroph_util_NeuronProperties_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_ILorg_neuroph_util_NeuronProperties_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_ILorg_neuroph_util_NeuronProperties_, __args);
 			} finally {
 			}
 		}
@@ -99,9 +99,9 @@ namespace Org.Neuroph.Nnet.Comp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getMaxIterations);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getMaxIterations);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxIterations", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxIterations", "()I"));
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace Org.Neuroph.Nnet.Comp {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setMaxIterations_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setMaxIterations_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMaxIterations", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMaxIterations", "(I)V"), __args);
 				} finally {
 				}
 			}
@@ -149,9 +149,9 @@ namespace Org.Neuroph.Nnet.Comp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.CompetitiveNeuron> (JNIEnv.CallObjectMethod  (Handle, id_getWinner), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.CompetitiveNeuron> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getWinner), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.CompetitiveNeuron> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWinner", "()Lorg/neuroph/nnet/comp/CompetitiveNeuron;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.CompetitiveNeuron> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWinner", "()Lorg/neuroph/nnet/comp/CompetitiveNeuron;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

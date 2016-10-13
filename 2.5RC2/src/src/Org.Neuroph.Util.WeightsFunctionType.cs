@@ -59,7 +59,7 @@ namespace Org.Neuroph.Util {
 				if (id_getTypeClass == IntPtr.Zero)
 					id_getTypeClass = JNIEnv.GetMethodID (class_ref, "getTypeClass", "()Ljava/lang/Class;");
 				try {
-					return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod  (Handle, id_getTypeClass), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTypeClass), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -73,7 +73,7 @@ namespace Org.Neuroph.Util {
 				if (id_getTypeLabel == IntPtr.Zero)
 					id_getTypeLabel = JNIEnv.GetMethodID (class_ref, "getTypeLabel", "()Ljava/lang/String;");
 				try {
-					return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getTypeLabel), JniHandleOwnership.TransferLocalRef);
+					return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTypeLabel), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

@@ -17,7 +17,7 @@ namespace Org.Neuroph.Util.IO {
 			get {
 				if (bufferedReader_jfieldId == IntPtr.Zero)
 					bufferedReader_jfieldId = JNIEnv.GetFieldID (class_ref, "bufferedReader", "Ljava/io/BufferedReader;");
-				IntPtr __ret = JNIEnv.GetObjectField (Handle, bufferedReader_jfieldId);
+				IntPtr __ret = JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, bufferedReader_jfieldId);
 				return global::Java.Lang.Object.GetObject<global::Java.IO.BufferedReader> (__ret, JniHandleOwnership.TransferLocalRef);
 			}
 			set {
@@ -25,7 +25,7 @@ namespace Org.Neuroph.Util.IO {
 					bufferedReader_jfieldId = JNIEnv.GetFieldID (class_ref, "bufferedReader", "Ljava/io/BufferedReader;");
 				IntPtr native_value = JNIEnv.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, bufferedReader_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bufferedReader_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -54,7 +54,7 @@ namespace Org.Neuroph.Util.IO {
 		public unsafe InputStreamAdapter (global::System.IO.Stream p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = global::Android.Runtime.InputStreamAdapter.ToLocalJniHandle (p0);
@@ -65,7 +65,7 @@ namespace Org.Neuroph.Util.IO {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/io/InputStream;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/io/InputStream;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/io/InputStream;)V", __args);
 					return;
 				}
 
@@ -74,7 +74,7 @@ namespace Org.Neuroph.Util.IO {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_io_InputStream_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_io_InputStream_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_io_InputStream_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -86,7 +86,7 @@ namespace Org.Neuroph.Util.IO {
 		public unsafe InputStreamAdapter (global::Java.IO.BufferedReader p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -96,7 +96,7 @@ namespace Org.Neuroph.Util.IO {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/io/BufferedReader;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/io/BufferedReader;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/io/BufferedReader;)V", __args);
 					return;
 				}
 
@@ -105,7 +105,7 @@ namespace Org.Neuroph.Util.IO {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_io_BufferedReader_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_io_BufferedReader_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_io_BufferedReader_, __args);
 			} finally {
 			}
 		}
@@ -136,9 +136,9 @@ namespace Org.Neuroph.Util.IO {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_close);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_close);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "close", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "close", "()V"));
 			} finally {
 			}
 		}
@@ -169,9 +169,9 @@ namespace Org.Neuroph.Util.IO {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_readInput), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_readInput), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "readInput", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "readInput", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}

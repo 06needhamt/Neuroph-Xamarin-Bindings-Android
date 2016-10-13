@@ -35,7 +35,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 			public unsafe Dimensions (int p0, int p1)
 				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 			{
-				if (Handle != IntPtr.Zero)
+				if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 					return;
 
 				try {
@@ -46,7 +46,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 						SetHandle (
 								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(II)V", __args),
 								JniHandleOwnership.TransferLocalRef);
-						global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(II)V", __args);
+						global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(II)V", __args);
 						return;
 					}
 
@@ -55,7 +55,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_II, __args),
 							JniHandleOwnership.TransferLocalRef);
-					JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_II, __args);
+					JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_II, __args);
 				} finally {
 				}
 			}
@@ -103,9 +103,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 					try {
 
 						if (GetType () == ThresholdType)
-							return JNIEnv.CallIntMethod  (Handle, id_getHeight);
+							return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getHeight);
 						else
-							return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
+							return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
 					} finally {
 					}
 				}
@@ -119,9 +119,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 						__args [0] = new JValue (value);
 
 						if (GetType () == ThresholdType)
-							JNIEnv.CallVoidMethod  (Handle, id_setHeight_I, __args);
+							JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setHeight_I, __args);
 						else
-							JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHeight", "(I)V"), __args);
+							JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setHeight", "(I)V"), __args);
 					} finally {
 					}
 				}
@@ -170,9 +170,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 					try {
 
 						if (GetType () == ThresholdType)
-							return JNIEnv.CallIntMethod  (Handle, id_getWidth);
+							return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getWidth);
 						else
-							return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
+							return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
 					} finally {
 					}
 				}
@@ -186,9 +186,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 						__args [0] = new JValue (value);
 
 						if (GetType () == ThresholdType)
-							JNIEnv.CallVoidMethod  (Handle, id_setWidth_I, __args);
+							JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setWidth_I, __args);
 						else
-							JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setWidth", "(I)V"), __args);
+							JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setWidth", "(I)V"), __args);
 					} finally {
 					}
 				}
@@ -219,7 +219,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 		public unsafe Layer2D (global::Org.Neuroph.Nnet.Comp.Layer.Layer2D.Dimensions p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -229,7 +229,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;)V", __args);
 					return;
 				}
 
@@ -238,7 +238,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_, __args);
 			} finally {
 			}
 		}
@@ -249,7 +249,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 		public unsafe Layer2D (global::Org.Neuroph.Nnet.Comp.Layer.Layer2D.Dimensions p0, global::Org.Neuroph.Util.NeuronProperties p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -260,7 +260,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;Lorg/neuroph/util/NeuronProperties;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;Lorg/neuroph/util/NeuronProperties;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;Lorg/neuroph/util/NeuronProperties;)V", __args);
 					return;
 				}
 
@@ -269,7 +269,7 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_Lorg_neuroph_util_NeuronProperties_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_Lorg_neuroph_util_NeuronProperties_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Dimensions_Lorg_neuroph_util_NeuronProperties_, __args);
 			} finally {
 			}
 		}
@@ -300,9 +300,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getHeight);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getHeight);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
 				} finally {
 				}
 			}
@@ -334,9 +334,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getWidth);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getWidth);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
 				} finally {
 				}
 			}
@@ -368,9 +368,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 			try {
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.Layer.Layer2D.Dimensions> (JNIEnv.CallObjectMethod  (Handle, id_getDimensions), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.Layer.Layer2D.Dimensions> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDimensions), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.Layer.Layer2D.Dimensions> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDimensions", "()Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;")), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Nnet.Comp.Layer.Layer2D.Dimensions> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDimensions", "()Lorg/neuroph/nnet/comp/layer/Layer2D$Dimensions;")), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -404,9 +404,9 @@ namespace Org.Neuroph.Nnet.Comp.Layer {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Neuron> (JNIEnv.CallObjectMethod  (Handle, id_getNeuronAt_II, __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Neuron> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getNeuronAt_II, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Neuron> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNeuronAt", "(II)Lorg/neuroph/core/Neuron;"), __args), JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Neuron> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNeuronAt", "(II)Lorg/neuroph/core/Neuron;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

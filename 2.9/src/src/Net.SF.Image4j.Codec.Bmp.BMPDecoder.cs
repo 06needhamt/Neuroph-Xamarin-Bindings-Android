@@ -31,7 +31,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe BMPDecoder (global::System.IO.Stream p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = global::Android.Runtime.InputStreamAdapter.ToLocalJniHandle (p0);
@@ -42,7 +42,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/io/InputStream;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/io/InputStream;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/io/InputStream;)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_io_InputStream_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_io_InputStream_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_io_InputStream_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
@@ -83,9 +83,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallObjectMethod  (Handle, id_getInfoHeader), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getInfoHeader), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInfoHeader", "()Lnet/sf/image4j/codec/bmp/InfoHeader;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInfoHeader", "()Lnet/sf/image4j/codec/bmp/InfoHeader;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

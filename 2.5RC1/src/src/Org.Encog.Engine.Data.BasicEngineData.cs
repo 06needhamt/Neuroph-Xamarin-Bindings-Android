@@ -25,48 +25,13 @@ namespace Org.Encog.Engine.Data {
 
 		protected BasicEngineData (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor_arrayD;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.encog.engine.data']/class[@name='BasicEngineData']/constructor[@name='BasicEngineData' and count(parameter)=1 and parameter[1][@type='double[]']]"
-		[Register (".ctor", "([D)V", "")]
-		public unsafe BasicEngineData (double[] p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			IntPtr native_p0 = JNIEnv.NewArray (p0);
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (native_p0);
-				if (GetType () != typeof (BasicEngineData)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "([D)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "([D)V", __args);
-					return;
-				}
-
-				if (id_ctor_arrayD == IntPtr.Zero)
-					id_ctor_arrayD = JNIEnv.GetMethodID (class_ref, "<init>", "([D)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_arrayD, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_arrayD, __args);
-			} finally {
-				if (p0 != null) {
-					JNIEnv.CopyArray (native_p0, p0);
-					JNIEnv.DeleteLocalRef (native_p0);
-				}
-			}
-		}
-
 		static IntPtr id_ctor_arrayDarrayD;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.encog.engine.data']/class[@name='BasicEngineData']/constructor[@name='BasicEngineData' and count(parameter)=2 and parameter[1][@type='double[]'] and parameter[2][@type='double[]']]"
 		[Register (".ctor", "([D[D)V", "")]
 		public unsafe BasicEngineData (double[] p0, double[] p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
@@ -79,7 +44,7 @@ namespace Org.Encog.Engine.Data {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "([D[D)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "([D[D)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "([D[D)V", __args);
 					return;
 				}
 
@@ -88,7 +53,7 @@ namespace Org.Encog.Engine.Data {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_arrayDarrayD, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_arrayDarrayD, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_arrayDarrayD, __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -97,6 +62,41 @@ namespace Org.Encog.Engine.Data {
 				if (p1 != null) {
 					JNIEnv.CopyArray (native_p1, p1);
 					JNIEnv.DeleteLocalRef (native_p1);
+				}
+			}
+		}
+
+		static IntPtr id_ctor_arrayD;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.encog.engine.data']/class[@name='BasicEngineData']/constructor[@name='BasicEngineData' and count(parameter)=1 and parameter[1][@type='double[]']]"
+		[Register (".ctor", "([D)V", "")]
+		public unsafe BasicEngineData (double[] p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p0 = JNIEnv.NewArray (p0);
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (native_p0);
+				if (GetType () != typeof (BasicEngineData)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "([D)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "([D)V", __args);
+					return;
+				}
+
+				if (id_ctor_arrayD == IntPtr.Zero)
+					id_ctor_arrayD = JNIEnv.GetMethodID (class_ref, "<init>", "([D)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_arrayD, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_arrayD, __args);
+			} finally {
+				if (p0 != null) {
+					JNIEnv.CopyArray (native_p0, p0);
+					JNIEnv.DeleteLocalRef (native_p0);
 				}
 			}
 		}
@@ -127,9 +127,9 @@ namespace Org.Encog.Engine.Data {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_isSupervised);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isSupervised);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isSupervised", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isSupervised", "()Z"));
 				} finally {
 				}
 			}
@@ -177,9 +177,9 @@ namespace Org.Encog.Engine.Data {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getIdealArray), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getIdealArray), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIdealArray", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIdealArray", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}
@@ -210,9 +210,9 @@ namespace Org.Encog.Engine.Data {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getInputArray), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getInputArray), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInputArray", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInputArray", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}
@@ -249,9 +249,9 @@ namespace Org.Encog.Engine.Data {
 				__args [0] = new JValue (native_p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setIdealArray_arrayD, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIdealArray_arrayD, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIdealArray", "([D)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIdealArray", "([D)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -292,9 +292,9 @@ namespace Org.Encog.Engine.Data {
 				__args [0] = new JValue (native_p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setInputArray_arrayD, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setInputArray_arrayD, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInputArray", "([D)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInputArray", "([D)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);

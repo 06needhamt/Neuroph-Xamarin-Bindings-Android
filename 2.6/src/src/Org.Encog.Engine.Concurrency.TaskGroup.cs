@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Concurrency {
 		public unsafe TaskGroup (int p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Encog.Engine.Concurrency {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(I)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Encog.Engine.Concurrency {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_I, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Encog.Engine.Concurrency {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getID);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getID);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getID", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getID", "()I"));
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace Org.Encog.Engine.Concurrency {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_getNoTasks);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_getNoTasks);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNoTasks", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNoTasks", "()Z"));
 				} finally {
 				}
 			}
@@ -149,9 +149,9 @@ namespace Org.Encog.Engine.Concurrency {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_taskStarting);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_taskStarting);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "taskStarting", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "taskStarting", "()V"));
 			} finally {
 			}
 		}
@@ -182,9 +182,9 @@ namespace Org.Encog.Engine.Concurrency {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_taskStopping);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_taskStopping);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "taskStopping", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "taskStopping", "()V"));
 			} finally {
 			}
 		}
@@ -215,9 +215,9 @@ namespace Org.Encog.Engine.Concurrency {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_waitForComplete);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_waitForComplete);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "waitForComplete", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "waitForComplete", "()V"));
 			} finally {
 			}
 		}

@@ -62,7 +62,7 @@ namespace Org.Encog.Engine.Network.Train.Gradient {
 
 		public IFlatGradientWorkerInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -88,7 +88,7 @@ namespace Org.Encog.Engine.Network.Train.Gradient {
 			get {
 				if (id_getElapsedTime == IntPtr.Zero)
 					id_getElapsedTime = JNIEnv.GetMethodID (class_ref, "getElapsedTime", "()J");
-				return JNIEnv.CallLongMethod (Handle, id_getElapsedTime);
+				return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getElapsedTime);
 			}
 		}
 
@@ -113,7 +113,7 @@ namespace Org.Encog.Engine.Network.Train.Gradient {
 			get {
 				if (id_getNetwork == IntPtr.Zero)
 					id_getNetwork = JNIEnv.GetMethodID (class_ref, "getNetwork", "()Lorg/encog/engine/network/flat/FlatNetwork;");
-				return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallObjectMethod (Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 
@@ -138,7 +138,7 @@ namespace Org.Encog.Engine.Network.Train.Gradient {
 		{
 			if (id_getWeights == IntPtr.Zero)
 				id_getWeights = JNIEnv.GetMethodID (class_ref, "getWeights", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getWeights), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getWeights), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_run;
@@ -162,7 +162,7 @@ namespace Org.Encog.Engine.Network.Train.Gradient {
 		{
 			if (id_run == IntPtr.Zero)
 				id_run = JNIEnv.GetMethodID (class_ref, "run", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_run);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_run);
 		}
 
 	}

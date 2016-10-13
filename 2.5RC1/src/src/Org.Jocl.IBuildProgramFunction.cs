@@ -52,7 +52,7 @@ namespace Org.Jocl {
 
 		public IBuildProgramFunctionInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -83,7 +83,7 @@ namespace Org.Jocl {
 			JValue* __args = stackalloc JValue [2];
 			__args [0] = new JValue (p0);
 			__args [1] = new JValue (p1);
-			JNIEnv.CallVoidMethod (Handle, id_function_Lorg_jocl_cl_program_Ljava_lang_Object_, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_function_Lorg_jocl_cl_program_Ljava_lang_Object_, __args);
 		}
 
 	}

@@ -52,7 +52,7 @@ namespace Org.Encog.Engine {
 
 		public IStatusReportableInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -84,7 +84,7 @@ namespace Org.Encog.Engine {
 			__args [0] = new JValue (p0);
 			__args [1] = new JValue (p1);
 			__args [2] = new JValue (native_p2);
-			JNIEnv.CallVoidMethod (Handle, id_report_IILjava_lang_String_, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_report_IILjava_lang_String_, __args);
 			JNIEnv.DeleteLocalRef (native_p2);
 		}
 

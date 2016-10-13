@@ -87,7 +87,7 @@ namespace Org.Neuroph.Imgrec.Image {
 
 		public IImageInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -113,7 +113,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			get {
 				if (id_getHeight == IntPtr.Zero)
 					id_getHeight = JNIEnv.GetMethodID (class_ref, "getHeight", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getHeight);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getHeight);
 			}
 		}
 
@@ -138,7 +138,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			get {
 				if (id_getType == IntPtr.Zero)
 					id_getType = JNIEnv.GetMethodID (class_ref, "getType", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getType);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getType);
 			}
 		}
 
@@ -163,7 +163,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			get {
 				if (id_getWidth == IntPtr.Zero)
 					id_getWidth = JNIEnv.GetMethodID (class_ref, "getWidth", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getWidth);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getWidth);
 			}
 		}
 
@@ -193,7 +193,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			__args [1] = new JValue (p1);
 			__args [2] = new JValue (p2);
 			__args [3] = new JValue (p3);
-			return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Imgrec.Image.IImage> (JNIEnv.CallObjectMethod (Handle, id_crop_IIII, __args), JniHandleOwnership.TransferLocalRef);
+			return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Imgrec.Image.IImage> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_crop_IIII, __args), JniHandleOwnership.TransferLocalRef);
 		}
 
 		static Delegate cb_getPixel_II;
@@ -220,7 +220,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			JValue* __args = stackalloc JValue [2];
 			__args [0] = new JValue (p0);
 			__args [1] = new JValue (p1);
-			return JNIEnv.CallIntMethod (Handle, id_getPixel_II, __args);
+			return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getPixel_II, __args);
 		}
 
 		static Delegate cb_getPixels_IIIIII;
@@ -251,7 +251,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			__args [3] = new JValue (p3);
 			__args [4] = new JValue (p4);
 			__args [5] = new JValue (p5);
-			return (int[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getPixels_IIIIII, __args), JniHandleOwnership.TransferLocalRef, typeof (int));
+			return (int[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getPixels_IIIIII, __args), JniHandleOwnership.TransferLocalRef, typeof (int));
 		}
 
 		static Delegate cb_resize_II;
@@ -278,7 +278,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			JValue* __args = stackalloc JValue [2];
 			__args [0] = new JValue (p0);
 			__args [1] = new JValue (p1);
-			return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Imgrec.Image.IImage> (JNIEnv.CallObjectMethod (Handle, id_resize_II, __args), JniHandleOwnership.TransferLocalRef);
+			return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Imgrec.Image.IImage> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_resize_II, __args), JniHandleOwnership.TransferLocalRef);
 		}
 
 		static Delegate cb_setPixel_III;
@@ -306,7 +306,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			__args [0] = new JValue (p0);
 			__args [1] = new JValue (p1);
 			__args [2] = new JValue (p2);
-			JNIEnv.CallVoidMethod (Handle, id_setPixel_III, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setPixel_III, __args);
 		}
 
 		static Delegate cb_setPixels_arrayIIIIIII;
@@ -342,7 +342,7 @@ namespace Org.Neuroph.Imgrec.Image {
 			__args [4] = new JValue (p4);
 			__args [5] = new JValue (p5);
 			__args [6] = new JValue (p6);
-			JNIEnv.CallVoidMethod (Handle, id_setPixels_arrayIIIIIII, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setPixels_arrayIIIIIII, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);

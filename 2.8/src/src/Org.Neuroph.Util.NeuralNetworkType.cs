@@ -280,7 +280,7 @@ namespace Org.Neuroph.Util {
 				if (id_getTypeLabel == IntPtr.Zero)
 					id_getTypeLabel = JNIEnv.GetMethodID (class_ref, "getTypeLabel", "()Ljava/lang/String;");
 				try {
-					return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getTypeLabel), JniHandleOwnership.TransferLocalRef);
+					return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTypeLabel), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

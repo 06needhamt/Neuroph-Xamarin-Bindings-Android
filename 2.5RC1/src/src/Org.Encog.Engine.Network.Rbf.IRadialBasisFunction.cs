@@ -83,7 +83,7 @@ namespace Org.Encog.Engine.Network.Rbf {
 
 		public IRadialBasisFunctionInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -109,7 +109,7 @@ namespace Org.Encog.Engine.Network.Rbf {
 			get {
 				if (id_getDimensions == IntPtr.Zero)
 					id_getDimensions = JNIEnv.GetMethodID (class_ref, "getDimensions", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getDimensions);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getDimensions);
 			}
 		}
 
@@ -151,14 +151,14 @@ namespace Org.Encog.Engine.Network.Rbf {
 			get {
 				if (id_getPeak == IntPtr.Zero)
 					id_getPeak = JNIEnv.GetMethodID (class_ref, "getPeak", "()D");
-				return JNIEnv.CallDoubleMethod (Handle, id_getPeak);
+				return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getPeak);
 			}
 			set {
 				if (id_setPeak_D == IntPtr.Zero)
 					id_setPeak_D = JNIEnv.GetMethodID (class_ref, "setPeak", "(D)V");
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (value);
-				JNIEnv.CallVoidMethod (Handle, id_setPeak_D, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setPeak_D, __args);
 			}
 		}
 
@@ -200,14 +200,14 @@ namespace Org.Encog.Engine.Network.Rbf {
 			get {
 				if (id_getWidth == IntPtr.Zero)
 					id_getWidth = JNIEnv.GetMethodID (class_ref, "getWidth", "()D");
-				return JNIEnv.CallDoubleMethod (Handle, id_getWidth);
+				return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getWidth);
 			}
 			set {
 				if (id_setWidth_D == IntPtr.Zero)
 					id_setWidth_D = JNIEnv.GetMethodID (class_ref, "setWidth", "(D)V");
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (value);
-				JNIEnv.CallVoidMethod (Handle, id_setWidth_D, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setWidth_D, __args);
 			}
 		}
 
@@ -239,7 +239,7 @@ namespace Org.Encog.Engine.Network.Rbf {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			double __ret = JNIEnv.CallDoubleMethod (Handle, id_calculate_arrayD, __args);
+			double __ret = JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_calculate_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -270,7 +270,7 @@ namespace Org.Encog.Engine.Network.Rbf {
 				id_getCenter_I = JNIEnv.GetMethodID (class_ref, "getCenter", "(I)D");
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (p0);
-			return JNIEnv.CallDoubleMethod (Handle, id_getCenter_I, __args);
+			return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getCenter_I, __args);
 		}
 
 		static Delegate cb_getCenters;
@@ -294,7 +294,7 @@ namespace Org.Encog.Engine.Network.Rbf {
 		{
 			if (id_getCenters == IntPtr.Zero)
 				id_getCenters = JNIEnv.GetMethodID (class_ref, "getCenters", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getCenters), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCenters), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_setCenters_arrayD;
@@ -324,7 +324,7 @@ namespace Org.Encog.Engine.Network.Rbf {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_setCenters_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setCenters_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);

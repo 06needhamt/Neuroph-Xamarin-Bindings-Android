@@ -31,7 +31,7 @@ namespace Org.Neuroph.Core.Input {
 		public unsafe Difference ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Neuroph.Core.Input {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Neuroph.Core.Input {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -92,9 +92,9 @@ namespace Org.Neuroph.Core.Input {
 
 				double[] __ret;
 				if (GetType () == ThresholdType)
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getOutput_arrayDarrayD, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getOutput_arrayDarrayD, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "([D[D)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "([D[D)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				return __ret;
 			} finally {
 				if (p0 != null) {
@@ -140,9 +140,9 @@ namespace Org.Neuroph.Core.Input {
 
 				double[] __ret;
 				if (GetType () == ThresholdType)
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getOutput_Ljava_util_List_, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getOutput_Ljava_util_List_, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(Ljava/util/List;)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "(Ljava/util/List;)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);

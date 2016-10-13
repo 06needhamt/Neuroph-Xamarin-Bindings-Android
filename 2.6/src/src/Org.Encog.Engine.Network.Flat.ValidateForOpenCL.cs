@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Network.Flat {
 		public unsafe ValidateForOpenCL ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Encog.Engine.Network.Flat {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Encog.Engine.Network.Flat {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -84,9 +84,9 @@ namespace Org.Encog.Engine.Network.Flat {
 
 				string __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_isValid_Lorg_encog_engine_EngineMachineLearning_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_isValid_Lorg_encog_engine_EngineMachineLearning_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isValid", "(Lorg/encog/engine/EngineMachineLearning;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isValid", "(Lorg/encog/engine/EngineMachineLearning;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}

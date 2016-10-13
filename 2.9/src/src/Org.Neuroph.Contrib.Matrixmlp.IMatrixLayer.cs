@@ -68,7 +68,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 
 		public IMatrixLayerInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -94,7 +94,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 		{
 			if (id_calculate == IntPtr.Zero)
 				id_calculate = JNIEnv.GetMethodID (class_ref, "calculate", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_calculate);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_calculate);
 		}
 
 		static Delegate cb_getInputs;
@@ -118,7 +118,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 		{
 			if (id_getInputs == IntPtr.Zero)
 				id_getInputs = JNIEnv.GetMethodID (class_ref, "getInputs", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getInputs), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getInputs), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_getOutputs;
@@ -142,7 +142,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 		{
 			if (id_getOutputs == IntPtr.Zero)
 				id_getOutputs = JNIEnv.GetMethodID (class_ref, "getOutputs", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getOutputs), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getOutputs), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_setInputs_arrayD;
@@ -172,7 +172,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_setInputs_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setInputs_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -206,7 +206,7 @@ namespace Org.Neuroph.Contrib.Matrixmlp {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_setOutputs_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setOutputs_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);

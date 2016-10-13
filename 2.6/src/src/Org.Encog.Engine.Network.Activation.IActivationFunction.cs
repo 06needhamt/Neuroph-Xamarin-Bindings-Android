@@ -81,7 +81,7 @@ namespace Org.Encog.Engine.Network.Activation {
 
 		public IActivationFunctionInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -107,7 +107,7 @@ namespace Org.Encog.Engine.Network.Activation {
 			get {
 				if (id_hasDerivative == IntPtr.Zero)
 					id_hasDerivative = JNIEnv.GetMethodID (class_ref, "hasDerivative", "()Z");
-				return JNIEnv.CallBooleanMethod (Handle, id_hasDerivative);
+				return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_hasDerivative);
 			}
 		}
 
@@ -140,7 +140,7 @@ namespace Org.Encog.Engine.Network.Activation {
 			__args [0] = new JValue (native_p0);
 			__args [1] = new JValue (p1);
 			__args [2] = new JValue (p2);
-			JNIEnv.CallVoidMethod (Handle, id_activationFunction_arrayDII, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_activationFunction_arrayDII, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -168,7 +168,7 @@ namespace Org.Encog.Engine.Network.Activation {
 		{
 			if (id_clone == IntPtr.Zero)
 				id_clone = JNIEnv.GetMethodID (class_ref, "clone", "()Lorg/encog/engine/network/activation/ActivationFunction;");
-			return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Activation.IActivationFunction> (JNIEnv.CallObjectMethod (Handle, id_clone), JniHandleOwnership.TransferLocalRef);
+			return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Activation.IActivationFunction> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_clone), JniHandleOwnership.TransferLocalRef);
 		}
 
 		static Delegate cb_derivativeFunction_D;
@@ -194,7 +194,7 @@ namespace Org.Encog.Engine.Network.Activation {
 				id_derivativeFunction_D = JNIEnv.GetMethodID (class_ref, "derivativeFunction", "(D)D");
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (p0);
-			return JNIEnv.CallDoubleMethod (Handle, id_derivativeFunction_D, __args);
+			return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_derivativeFunction_D, __args);
 		}
 
 		static Delegate cb_getOpenCLExpression_Z;
@@ -220,7 +220,7 @@ namespace Org.Encog.Engine.Network.Activation {
 				id_getOpenCLExpression_Z = JNIEnv.GetMethodID (class_ref, "getOpenCLExpression", "(Z)Ljava/lang/String;");
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (p0);
-			return JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_getOpenCLExpression_Z, __args), JniHandleOwnership.TransferLocalRef);
+			return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getOpenCLExpression_Z, __args), JniHandleOwnership.TransferLocalRef);
 		}
 
 		static Delegate cb_getParamNames;
@@ -244,7 +244,7 @@ namespace Org.Encog.Engine.Network.Activation {
 		{
 			if (id_getParamNames == IntPtr.Zero)
 				id_getParamNames = JNIEnv.GetMethodID (class_ref, "getParamNames", "()[Ljava/lang/String;");
-			return (string[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getParamNames), JniHandleOwnership.TransferLocalRef, typeof (string));
+			return (string[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getParamNames), JniHandleOwnership.TransferLocalRef, typeof (string));
 		}
 
 		static Delegate cb_getParams;
@@ -268,7 +268,7 @@ namespace Org.Encog.Engine.Network.Activation {
 		{
 			if (id_getParams == IntPtr.Zero)
 				id_getParams = JNIEnv.GetMethodID (class_ref, "getParams", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getParams), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getParams), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 		static Delegate cb_setParam_ID;
@@ -295,7 +295,7 @@ namespace Org.Encog.Engine.Network.Activation {
 			JValue* __args = stackalloc JValue [2];
 			__args [0] = new JValue (p0);
 			__args [1] = new JValue (p1);
-			JNIEnv.CallVoidMethod (Handle, id_setParam_ID, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setParam_ID, __args);
 		}
 
 	}

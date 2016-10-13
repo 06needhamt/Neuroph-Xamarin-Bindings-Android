@@ -61,7 +61,7 @@ namespace Org.Neuroph.Core.Learning.Error {
 
 		public IErrorFunctionInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -87,7 +87,7 @@ namespace Org.Neuroph.Core.Learning.Error {
 			get {
 				if (id_getTotalError == IntPtr.Zero)
 					id_getTotalError = JNIEnv.GetMethodID (class_ref, "getTotalError", "()D");
-				return JNIEnv.CallDoubleMethod (Handle, id_getTotalError);
+				return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getTotalError);
 			}
 		}
 
@@ -118,7 +118,7 @@ namespace Org.Neuroph.Core.Learning.Error {
 			IntPtr native_p0 = JNIEnv.NewArray (p0);
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (native_p0);
-			JNIEnv.CallVoidMethod (Handle, id_addOutputError_arrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_addOutputError_arrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -146,7 +146,7 @@ namespace Org.Neuroph.Core.Learning.Error {
 		{
 			if (id_reset == IntPtr.Zero)
 				id_reset = JNIEnv.GetMethodID (class_ref, "reset", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_reset);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_reset);
 		}
 
 	}

@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 		public unsafe ConcurrentJob (global::Org.Encog.Engine.IStatusReportable p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/StatusReportable;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/StatusReportable;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/encog/engine/StatusReportable;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_StatusReportable_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_StatusReportable_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_encog_engine_StatusReportable_, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Encog.Engine.Concurrency.Job {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_getShouldStop);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_getShouldStop);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getShouldStop", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getShouldStop", "()Z"));
 				} finally {
 				}
 			}
@@ -156,9 +156,9 @@ namespace Org.Encog.Engine.Concurrency.Job {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_process);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_process);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "process", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "process", "()V"));
 			} finally {
 			}
 		}
@@ -195,9 +195,9 @@ namespace Org.Encog.Engine.Concurrency.Job {
 				__args [1] = new JValue (native_p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_reportStatus_Lorg_encog_engine_concurrency_job_JobUnitContext_Ljava_lang_String_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_reportStatus_Lorg_encog_engine_concurrency_job_JobUnitContext_Ljava_lang_String_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reportStatus", "(Lorg/encog/engine/concurrency/job/JobUnitContext;Ljava/lang/String;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "reportStatus", "(Lorg/encog/engine/concurrency/job/JobUnitContext;Ljava/lang/String;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p1);
 			}
@@ -249,9 +249,9 @@ namespace Org.Encog.Engine.Concurrency.Job {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_stop);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_stop);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "stop", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "stop", "()V"));
 			} finally {
 			}
 		}
@@ -275,7 +275,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 			if (id_loadWorkload == IntPtr.Zero)
 				id_loadWorkload = JNIEnv.GetMethodID (class_ref, "loadWorkload", "()I");
 			try {
-				return JNIEnv.CallIntMethod  (Handle, id_loadWorkload);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_loadWorkload);
 			} finally {
 			}
 		}
@@ -290,7 +290,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
-				JNIEnv.CallVoidMethod  (Handle, id_performJobUnit_Lorg_encog_engine_concurrency_job_JobUnitContext_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_performJobUnit_Lorg_encog_engine_concurrency_job_JobUnitContext_, __args);
 			} finally {
 			}
 		}
@@ -303,7 +303,7 @@ namespace Org.Encog.Engine.Concurrency.Job {
 			if (id_requestNextTask == IntPtr.Zero)
 				id_requestNextTask = JNIEnv.GetMethodID (class_ref, "requestNextTask", "()Ljava/lang/Object;");
 			try {
-				return global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_requestNextTask), JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_requestNextTask), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

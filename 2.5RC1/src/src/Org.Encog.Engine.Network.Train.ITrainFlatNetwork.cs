@@ -89,7 +89,7 @@ namespace Org.Encog.Engine.Network.Train {
 
 		public ITrainFlatNetworkInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -115,7 +115,7 @@ namespace Org.Encog.Engine.Network.Train {
 			get {
 				if (id_getError == IntPtr.Zero)
 					id_getError = JNIEnv.GetMethodID (class_ref, "getError", "()D");
-				return JNIEnv.CallDoubleMethod (Handle, id_getError);
+				return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getError);
 			}
 		}
 
@@ -157,14 +157,14 @@ namespace Org.Encog.Engine.Network.Train {
 			get {
 				if (id_getIteration == IntPtr.Zero)
 					id_getIteration = JNIEnv.GetMethodID (class_ref, "getIteration", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getIteration);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getIteration);
 			}
 			set {
 				if (id_setIteration_I == IntPtr.Zero)
 					id_setIteration_I = JNIEnv.GetMethodID (class_ref, "setIteration", "(I)V");
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (value);
-				JNIEnv.CallVoidMethod (Handle, id_setIteration_I, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIteration_I, __args);
 			}
 		}
 
@@ -189,7 +189,7 @@ namespace Org.Encog.Engine.Network.Train {
 			get {
 				if (id_getNetwork == IntPtr.Zero)
 					id_getNetwork = JNIEnv.GetMethodID (class_ref, "getNetwork", "()Lorg/encog/engine/network/flat/FlatNetwork;");
-				return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallObjectMethod (Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 
@@ -231,14 +231,14 @@ namespace Org.Encog.Engine.Network.Train {
 			get {
 				if (id_getNumThreads == IntPtr.Zero)
 					id_getNumThreads = JNIEnv.GetMethodID (class_ref, "getNumThreads", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getNumThreads);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getNumThreads);
 			}
 			set {
 				if (id_setNumThreads_I == IntPtr.Zero)
 					id_setNumThreads_I = JNIEnv.GetMethodID (class_ref, "setNumThreads", "(I)V");
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (value);
-				JNIEnv.CallVoidMethod (Handle, id_setNumThreads_I, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setNumThreads_I, __args);
 			}
 		}
 
@@ -263,7 +263,7 @@ namespace Org.Encog.Engine.Network.Train {
 			get {
 				if (id_getTraining == IntPtr.Zero)
 					id_getTraining = JNIEnv.GetMethodID (class_ref, "getTraining", "()Lorg/encog/engine/data/EngineDataSet;");
-				return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineDataSet> (JNIEnv.CallObjectMethod (Handle, id_getTraining), JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineDataSet> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTraining), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 
@@ -288,7 +288,7 @@ namespace Org.Encog.Engine.Network.Train {
 		{
 			if (id_finishTraining == IntPtr.Zero)
 				id_finishTraining = JNIEnv.GetMethodID (class_ref, "finishTraining", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_finishTraining);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_finishTraining);
 		}
 
 		static Delegate cb_iteration;
@@ -312,7 +312,7 @@ namespace Org.Encog.Engine.Network.Train {
 		{
 			if (id_iteration == IntPtr.Zero)
 				id_iteration = JNIEnv.GetMethodID (class_ref, "iteration", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_iteration);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_iteration);
 		}
 
 		static Delegate cb_iteration_I;
@@ -338,7 +338,7 @@ namespace Org.Encog.Engine.Network.Train {
 				id_iteration_I = JNIEnv.GetMethodID (class_ref, "iteration", "(I)V");
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (p0);
-			JNIEnv.CallVoidMethod (Handle, id_iteration_I, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_iteration_I, __args);
 		}
 
 	}

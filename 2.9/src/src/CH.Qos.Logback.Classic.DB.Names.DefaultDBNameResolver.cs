@@ -31,7 +31,7 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 		public unsafe DefaultDBNameResolver ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -86,9 +86,9 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 
 				string __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getColumnName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getColumnName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColumnName", "(Ljava/lang/Enum;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColumnName", "(Ljava/lang/Enum;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -128,9 +128,9 @@ namespace CH.Qos.Logback.Classic.DB.Names {
 
 				string __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getTableName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTableName_Ljava_lang_Enum_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTableName", "(Ljava/lang/Enum;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTableName", "(Ljava/lang/Enum;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);

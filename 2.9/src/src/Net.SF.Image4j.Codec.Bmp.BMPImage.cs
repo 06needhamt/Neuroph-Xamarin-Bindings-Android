@@ -51,9 +51,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getColourCount);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getColourCount);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColourCount", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColourCount", "()I"));
 				} finally {
 				}
 			}
@@ -85,9 +85,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getColourDepth);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getColourDepth);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColourDepth", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColourDepth", "()I"));
 				} finally {
 				}
 			}
@@ -119,9 +119,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getHeight);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getHeight);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
 				} finally {
 				}
 			}
@@ -171,9 +171,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallObjectMethod  (Handle, id_getInfoHeader), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getInfoHeader), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInfoHeader", "()Lnet/sf/image4j/codec/bmp/InfoHeader;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Net.SF.Image4j.Codec.Bmp.InfoHeader> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInfoHeader", "()Lnet/sf/image4j/codec/bmp/InfoHeader;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -187,9 +187,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setInfoHeader_Lnet_sf_image4j_codec_bmp_InfoHeader_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setInfoHeader_Lnet_sf_image4j_codec_bmp_InfoHeader_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInfoHeader", "(Lnet/sf/image4j/codec/bmp/InfoHeader;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInfoHeader", "(Lnet/sf/image4j/codec/bmp/InfoHeader;)V"), __args);
 				} finally {
 				}
 			}
@@ -221,9 +221,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_isIndexed);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isIndexed);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isIndexed", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isIndexed", "()Z"));
 				} finally {
 				}
 			}
@@ -255,9 +255,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getWidth);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getWidth);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
 				} finally {
 				}
 			}

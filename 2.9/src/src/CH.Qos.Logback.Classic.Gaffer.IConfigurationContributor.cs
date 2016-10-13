@@ -53,7 +53,7 @@ namespace CH.Qos.Logback.Classic.Gaffer {
 
 		public IConfigurationContributorInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -79,7 +79,7 @@ namespace CH.Qos.Logback.Classic.Gaffer {
 			get {
 				if (id_getMappings == IntPtr.Zero)
 					id_getMappings = JNIEnv.GetMethodID (class_ref, "getMappings", "()Ljava/util/Map;");
-				return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallObjectMethod (Handle, id_getMappings), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMappings), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 

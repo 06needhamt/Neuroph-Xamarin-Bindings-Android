@@ -39,7 +39,7 @@ namespace Org.Neuroph.Samples.Convolution {
 		public unsafe MNISTImageLoader (string p0, string p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewString (p0);
@@ -52,7 +52,7 @@ namespace Org.Neuroph.Samples.Convolution {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/String;Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -61,7 +61,7 @@ namespace Org.Neuroph.Samples.Convolution {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
@@ -94,9 +94,9 @@ namespace Org.Neuroph.Samples.Convolution {
 			try {
 
 				if (GetType () == ThresholdType)
-					return global::Android.Runtime.JavaList<global::Org.Neuroph.Samples.Convolution.MNISTImage>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_loadDigitImages), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaList<global::Org.Neuroph.Samples.Convolution.MNISTImage>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_loadDigitImages), JniHandleOwnership.TransferLocalRef);
 				else
-					return global::Android.Runtime.JavaList<global::Org.Neuroph.Samples.Convolution.MNISTImage>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "loadDigitImages", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
+					return global::Android.Runtime.JavaList<global::Org.Neuroph.Samples.Convolution.MNISTImage>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "loadDigitImages", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

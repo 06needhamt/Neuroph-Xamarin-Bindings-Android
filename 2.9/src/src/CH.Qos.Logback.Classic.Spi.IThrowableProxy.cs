@@ -76,7 +76,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 
 		public IThrowableProxyInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -102,7 +102,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 			get {
 				if (id_getCause == IntPtr.Zero)
 					id_getCause = JNIEnv.GetMethodID (class_ref, "getCause", "()Lch/qos/logback/classic/spi/IThrowableProxy;");
-				return global::Java.Lang.Object.GetObject<global::CH.Qos.Logback.Classic.Spi.IThrowableProxy> (JNIEnv.CallObjectMethod (Handle, id_getCause), JniHandleOwnership.TransferLocalRef);
+				return global::Java.Lang.Object.GetObject<global::CH.Qos.Logback.Classic.Spi.IThrowableProxy> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCause), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 
@@ -127,7 +127,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 			get {
 				if (id_getClassName == IntPtr.Zero)
 					id_getClassName = JNIEnv.GetMethodID (class_ref, "getClassName", "()Ljava/lang/String;");
-				return JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_getClassName), JniHandleOwnership.TransferLocalRef);
+				return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getClassName), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 
@@ -152,7 +152,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 			get {
 				if (id_getCommonFrames == IntPtr.Zero)
 					id_getCommonFrames = JNIEnv.GetMethodID (class_ref, "getCommonFrames", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getCommonFrames);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getCommonFrames);
 			}
 		}
 
@@ -177,7 +177,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 			get {
 				if (id_getMessage == IntPtr.Zero)
 					id_getMessage = JNIEnv.GetMethodID (class_ref, "getMessage", "()Ljava/lang/String;");
-				return JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_getMessage), JniHandleOwnership.TransferLocalRef);
+				return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMessage), JniHandleOwnership.TransferLocalRef);
 			}
 		}
 
@@ -202,7 +202,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 		{
 			if (id_getStackTraceElementProxyArray == IntPtr.Zero)
 				id_getStackTraceElementProxyArray = JNIEnv.GetMethodID (class_ref, "getStackTraceElementProxyArray", "()[Lch/qos/logback/classic/spi/StackTraceElementProxy;");
-			return (global::CH.Qos.Logback.Classic.Spi.StackTraceElementProxy[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getStackTraceElementProxyArray), JniHandleOwnership.TransferLocalRef, typeof (global::CH.Qos.Logback.Classic.Spi.StackTraceElementProxy));
+			return (global::CH.Qos.Logback.Classic.Spi.StackTraceElementProxy[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getStackTraceElementProxyArray), JniHandleOwnership.TransferLocalRef, typeof (global::CH.Qos.Logback.Classic.Spi.StackTraceElementProxy));
 		}
 
 		static Delegate cb_getSuppressed;
@@ -226,7 +226,7 @@ namespace CH.Qos.Logback.Classic.Spi {
 		{
 			if (id_getSuppressed == IntPtr.Zero)
 				id_getSuppressed = JNIEnv.GetMethodID (class_ref, "getSuppressed", "()[Lch/qos/logback/classic/spi/IThrowableProxy;");
-			return (global::CH.Qos.Logback.Classic.Spi.IThrowableProxy[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_getSuppressed), JniHandleOwnership.TransferLocalRef, typeof (global::CH.Qos.Logback.Classic.Spi.IThrowableProxy));
+			return (global::CH.Qos.Logback.Classic.Spi.IThrowableProxy[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getSuppressed), JniHandleOwnership.TransferLocalRef, typeof (global::CH.Qos.Logback.Classic.Spi.IThrowableProxy));
 		}
 
 	}

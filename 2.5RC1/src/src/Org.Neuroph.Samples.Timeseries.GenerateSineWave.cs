@@ -51,9 +51,9 @@ namespace Org.Neuroph.Samples.Timeseries {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getNextSample);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getNextSample);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNextSample", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNextSample", "()D"));
 				} finally {
 				}
 			}

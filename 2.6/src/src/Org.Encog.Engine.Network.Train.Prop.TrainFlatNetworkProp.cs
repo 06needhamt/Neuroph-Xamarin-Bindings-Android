@@ -17,13 +17,13 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			get {
 				if (currentError_jfieldId == IntPtr.Zero)
 					currentError_jfieldId = JNIEnv.GetFieldID (class_ref, "currentError", "D");
-				return JNIEnv.GetDoubleField (Handle, currentError_jfieldId);
+				return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, currentError_jfieldId);
 			}
 			set {
 				if (currentError_jfieldId == IntPtr.Zero)
 					currentError_jfieldId = JNIEnv.GetFieldID (class_ref, "currentError", "D");
 				try {
-					JNIEnv.SetField (Handle, currentError_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, currentError_jfieldId, value);
 				} finally {
 				}
 			}
@@ -37,14 +37,14 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			get {
 				if (gradients_jfieldId == IntPtr.Zero)
 					gradients_jfieldId = JNIEnv.GetFieldID (class_ref, "gradients", "[D");
-				return JavaArray<double>.FromJniHandle (JNIEnv.GetObjectField (Handle, gradients_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<double>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, gradients_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 			set {
 				if (gradients_jfieldId == IntPtr.Zero)
 					gradients_jfieldId = JNIEnv.GetFieldID (class_ref, "gradients", "[D");
-				IntPtr native_value = JavaArray<double>.ToLocalJniHandle (value);
+				IntPtr native_value = global::Android.Runtime.JavaArray<double>.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, gradients_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, gradients_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -59,7 +59,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			get {
 				if (indexable_jfieldId == IntPtr.Zero)
 					indexable_jfieldId = JNIEnv.GetFieldID (class_ref, "indexable", "Lorg/encog/engine/data/EngineIndexableSet;");
-				IntPtr __ret = JNIEnv.GetObjectField (Handle, indexable_jfieldId);
+				IntPtr __ret = JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, indexable_jfieldId);
 				return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineIndexableSet> (__ret, JniHandleOwnership.TransferLocalRef);
 			}
 			set {
@@ -67,7 +67,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 					indexable_jfieldId = JNIEnv.GetFieldID (class_ref, "indexable", "Lorg/encog/engine/data/EngineIndexableSet;");
 				IntPtr native_value = JNIEnv.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, indexable_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, indexable_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -82,14 +82,14 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			get {
 				if (lastGradient_jfieldId == IntPtr.Zero)
 					lastGradient_jfieldId = JNIEnv.GetFieldID (class_ref, "lastGradient", "[D");
-				return JavaArray<double>.FromJniHandle (JNIEnv.GetObjectField (Handle, lastGradient_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<double>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, lastGradient_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 			set {
 				if (lastGradient_jfieldId == IntPtr.Zero)
 					lastGradient_jfieldId = JNIEnv.GetFieldID (class_ref, "lastGradient", "[D");
-				IntPtr native_value = JavaArray<double>.ToLocalJniHandle (value);
+				IntPtr native_value = global::Android.Runtime.JavaArray<double>.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, lastGradient_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, lastGradient_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -104,7 +104,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			get {
 				if (reportedException_jfieldId == IntPtr.Zero)
 					reportedException_jfieldId = JNIEnv.GetFieldID (class_ref, "reportedException", "Ljava/lang/Throwable;");
-				IntPtr __ret = JNIEnv.GetObjectField (Handle, reportedException_jfieldId);
+				IntPtr __ret = JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, reportedException_jfieldId);
 				return global::Java.Lang.Object.GetObject<global::Java.Lang.Throwable> (__ret, JniHandleOwnership.TransferLocalRef);
 			}
 			set {
@@ -112,7 +112,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 					reportedException_jfieldId = JNIEnv.GetFieldID (class_ref, "reportedException", "Ljava/lang/Throwable;");
 				IntPtr native_value = JNIEnv.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, reportedException_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, reportedException_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -127,13 +127,13 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			get {
 				if (totalError_jfieldId == IntPtr.Zero)
 					totalError_jfieldId = JNIEnv.GetFieldID (class_ref, "totalError", "D");
-				return JNIEnv.GetDoubleField (Handle, totalError_jfieldId);
+				return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, totalError_jfieldId);
 			}
 			set {
 				if (totalError_jfieldId == IntPtr.Zero)
 					totalError_jfieldId = JNIEnv.GetFieldID (class_ref, "totalError", "D");
 				try {
-					JNIEnv.SetField (Handle, totalError_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, totalError_jfieldId, value);
 				} finally {
 				}
 			}
@@ -147,14 +147,14 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			get {
 				if (workers_jfieldId == IntPtr.Zero)
 					workers_jfieldId = JNIEnv.GetFieldID (class_ref, "workers", "[Lorg/encog/engine/network/train/gradient/FlatGradientWorker;");
-				return JavaArray<global::Org.Encog.Engine.Network.Train.Gradient.IFlatGradientWorker>.FromJniHandle (JNIEnv.GetObjectField (Handle, workers_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<global::Org.Encog.Engine.Network.Train.Gradient.IFlatGradientWorker>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, workers_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 			set {
 				if (workers_jfieldId == IntPtr.Zero)
 					workers_jfieldId = JNIEnv.GetFieldID (class_ref, "workers", "[Lorg/encog/engine/network/train/gradient/FlatGradientWorker;");
-				IntPtr native_value = JavaArray<global::Org.Encog.Engine.Network.Train.Gradient.IFlatGradientWorker>.ToLocalJniHandle (value);
+				IntPtr native_value = global::Android.Runtime.JavaArray<global::Org.Encog.Engine.Network.Train.Gradient.IFlatGradientWorker>.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, workers_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, workers_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -183,7 +183,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 		public unsafe TrainFlatNetworkProp (global::Org.Encog.Engine.Network.Flat.FlatNetwork p0, global::Org.Encog.Engine.Data.IEngineDataSet p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -194,7 +194,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/network/flat/FlatNetwork;Lorg/encog/engine/data/EngineDataSet;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/network/flat/FlatNetwork;Lorg/encog/engine/data/EngineDataSet;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/encog/engine/network/flat/FlatNetwork;Lorg/encog/engine/data/EngineDataSet;)V", __args);
 					return;
 				}
 
@@ -203,7 +203,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_Lorg_encog_engine_data_EngineDataSet_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_Lorg_encog_engine_data_EngineDataSet_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_encog_engine_network_flat_FlatNetwork_Lorg_encog_engine_data_EngineDataSet_, __args);
 			} finally {
 			}
 		}
@@ -234,9 +234,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getError);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getError);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getError", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getError", "()D"));
 				} finally {
 				}
 			}
@@ -285,9 +285,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getIteration);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getIteration);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIteration", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIteration", "()I"));
 				} finally {
 				}
 			}
@@ -301,9 +301,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setIteration_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIteration_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIteration", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIteration", "(I)V"), __args);
 				} finally {
 				}
 			}
@@ -335,9 +335,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallObjectMethod  (Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getNetwork), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNetwork", "()Lorg/encog/engine/network/flat/FlatNetwork;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Network.Flat.FlatNetwork> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNetwork", "()Lorg/encog/engine/network/flat/FlatNetwork;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -386,9 +386,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getNumThreads);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getNumThreads);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNumThreads", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNumThreads", "()I"));
 				} finally {
 				}
 			}
@@ -402,9 +402,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setNumThreads_I, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setNumThreads_I, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNumThreads", "(I)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNumThreads", "(I)V"), __args);
 				} finally {
 				}
 			}
@@ -436,9 +436,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineDataSet> (JNIEnv.CallObjectMethod  (Handle, id_getTraining), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineDataSet> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTraining), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineDataSet> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTraining", "()Lorg/encog/engine/data/EngineDataSet;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineDataSet> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTraining", "()Lorg/encog/engine/data/EngineDataSet;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -470,9 +470,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_calculateGradients);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_calculateGradients);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateGradients", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateGradients", "()V"));
 			} finally {
 			}
 		}
@@ -503,9 +503,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_finishTraining);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_finishTraining);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "finishTraining", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "finishTraining", "()V"));
 			} finally {
 			}
 		}
@@ -536,9 +536,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getLastGradient), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getLastGradient), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLastGradient", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLastGradient", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}
@@ -569,9 +569,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_iteration);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_iteration);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "iteration", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "iteration", "()V"));
 			} finally {
 			}
 		}
@@ -604,9 +604,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_iteration_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_iteration_I, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "iteration", "(I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "iteration", "(I)V"), __args);
 			} finally {
 			}
 		}
@@ -637,9 +637,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_learn);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_learn);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learn", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learn", "()V"));
 			} finally {
 			}
 		}
@@ -670,9 +670,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_learnLimited);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_learnLimited);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learnLimited", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "learnLimited", "()V"));
 			} finally {
 			}
 		}
@@ -712,9 +712,9 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				__args [2] = new JValue (p2);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_report_arrayDDLjava_lang_Throwable_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_report_arrayDDLjava_lang_Throwable_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "report", "([DDLjava/lang/Throwable;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "report", "([DDLjava/lang/Throwable;)V"), __args);
 			} finally {
 				if (p0 != null) {
 					JNIEnv.CopyArray (native_p0, p0);
@@ -775,7 +775,7 @@ namespace Org.Encog.Engine.Network.Train.Prop {
 				__args [0] = new JValue (native_p0);
 				__args [1] = new JValue (native_p1);
 				__args [2] = new JValue (p2);
-				double __ret = JNIEnv.CallDoubleMethod  (Handle, id_updateWeight_arrayDarrayDI, __args);
+				double __ret = JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_updateWeight_arrayDarrayDI, __args);
 				return __ret;
 			} finally {
 				if (p0 != null) {

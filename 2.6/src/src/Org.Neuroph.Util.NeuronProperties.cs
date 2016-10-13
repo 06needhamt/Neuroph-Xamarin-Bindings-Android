@@ -25,258 +25,13 @@ namespace Org.Neuroph.Util {
 
 		protected NeuronProperties (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
-		static IntPtr id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=3 and parameter[1][@type='org.neuroph.util.WeightsFunctionType'] and parameter[2][@type='org.neuroph.util.SummingFunctionType'] and parameter[3][@type='org.neuroph.util.TransferFunctionType']]"
-		[Register (".ctor", "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V", "")]
-		public unsafe NeuronProperties (global::Org.Neuroph.Util.WeightsFunctionType p0, global::Org.Neuroph.Util.SummingFunctionType p1, global::Org.Neuroph.Util.TransferFunctionType p2)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [3];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (p1);
-				__args [2] = new JValue (p2);
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=3 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;'] and parameter[2][@type='java.lang.Class&lt;? extends org.neuroph.core.input.InputFunction&gt;'] and parameter[3][@type='java.lang.Class&lt;? extends org.neuroph.core.transfer.TransferFunction&gt;']]"
-		[Register (".ctor", "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", "")]
-		public unsafe NeuronProperties (global::Java.Lang.Class p0, global::Java.Lang.Class p1, global::Java.Lang.Class p2)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [3];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (p1);
-				__args [2] = new JValue (p2);
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_ == IntPtr.Zero)
-					id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_lang_Class_Ljava_lang_Class_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;'] and parameter[2][@type='java.lang.Class&lt;? extends org.neuroph.core.transfer.TransferFunction&gt;']]"
-		[Register (".ctor", "(Ljava/lang/Class;Ljava/lang/Class;)V", "")]
-		public unsafe NeuronProperties (global::Java.Lang.Class p0, global::Java.Lang.Class p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (p1);
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;Ljava/lang/Class;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Class;Ljava/lang/Class;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_lang_Class_Ljava_lang_Class_ == IntPtr.Zero)
-					id_ctor_Ljava_lang_Class_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;Ljava/lang/Class;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_lang_Class_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;']]"
-		[Register (".ctor", "(Ljava/lang/Class;)V", "")]
-		public unsafe NeuronProperties (global::Java.Lang.Class p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Class;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_lang_Class_ == IntPtr.Zero)
-					id_ctor_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Class_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=0]"
-		[Register (".ctor", "()V", "")]
-		public unsafe NeuronProperties ()
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
-					return;
-				}
-
-				if (id_ctor == IntPtr.Zero)
-					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Lorg_neuroph_util_TransferFunctionType_Z;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=2 and parameter[1][@type='org.neuroph.util.TransferFunctionType'] and parameter[2][@type='boolean']]"
-		[Register (".ctor", "(Lorg/neuroph/util/TransferFunctionType;Z)V", "")]
-		public unsafe NeuronProperties (global::Org.Neuroph.Util.TransferFunctionType p0, bool p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (p1);
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/TransferFunctionType;Z)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/util/TransferFunctionType;Z)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_util_TransferFunctionType_Z == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_util_TransferFunctionType_Z = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/TransferFunctionType;Z)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_Z, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_Z, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;'] and parameter[2][@type='org.neuroph.util.TransferFunctionType']]"
-		[Register (".ctor", "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V", "")]
-		public unsafe NeuronProperties (global::Java.Lang.Class p0, global::Org.Neuroph.Util.TransferFunctionType p1)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (p0);
-				__args [1] = new JValue (p1);
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_ == IntPtr.Zero)
-					id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_, __args);
-			} finally {
-			}
-		}
-
-		static IntPtr id_ctor_Lorg_neuroph_util_TransferFunctionType_;
-		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=1 and parameter[1][@type='org.neuroph.util.TransferFunctionType']]"
-		[Register (".ctor", "(Lorg/neuroph/util/TransferFunctionType;)V", "")]
-		public unsafe NeuronProperties (global::Org.Neuroph.Util.TransferFunctionType p0)
-			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
-		{
-			if (Handle != IntPtr.Zero)
-				return;
-
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-				if (GetType () != typeof (NeuronProperties)) {
-					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/TransferFunctionType;)V", __args),
-							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/util/TransferFunctionType;)V", __args);
-					return;
-				}
-
-				if (id_ctor_Lorg_neuroph_util_TransferFunctionType_ == IntPtr.Zero)
-					id_ctor_Lorg_neuroph_util_TransferFunctionType_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/TransferFunctionType;)V");
-				SetHandle (
-						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_, __args),
-						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_, __args);
-			} finally {
-			}
-		}
-
 		static IntPtr id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=4 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;'] and parameter[2][@type='java.lang.Class&lt;? extends org.neuroph.core.input.WeightsFunction&gt;'] and parameter[3][@type='java.lang.Class&lt;? extends org.neuroph.core.input.SummingFunction&gt;'] and parameter[4][@type='java.lang.Class&lt;? extends org.neuroph.core.transfer.TransferFunction&gt;']]"
 		[Register (".ctor", "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", "")]
 		public unsafe NeuronProperties (global::Java.Lang.Class p0, global::Java.Lang.Class p1, global::Java.Lang.Class p2, global::Java.Lang.Class p3)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -289,7 +44,7 @@ namespace Org.Neuroph.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", __args);
 					return;
 				}
 
@@ -298,7 +53,252 @@ namespace Org.Neuroph.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Lorg_neuroph_util_TransferFunctionType_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=1 and parameter[1][@type='org.neuroph.util.TransferFunctionType']]"
+		[Register (".ctor", "(Lorg/neuroph/util/TransferFunctionType;)V", "")]
+		public unsafe NeuronProperties (global::Org.Neuroph.Util.TransferFunctionType p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/TransferFunctionType;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/util/TransferFunctionType;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_util_TransferFunctionType_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_util_TransferFunctionType_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/TransferFunctionType;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;'] and parameter[2][@type='org.neuroph.util.TransferFunctionType']]"
+		[Register (".ctor", "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V", "")]
+		public unsafe NeuronProperties (global::Java.Lang.Class p0, global::Org.Neuroph.Util.TransferFunctionType p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_ == IntPtr.Zero)
+					id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;Lorg/neuroph/util/TransferFunctionType;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_Class_Lorg_neuroph_util_TransferFunctionType_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Lorg_neuroph_util_TransferFunctionType_Z;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=2 and parameter[1][@type='org.neuroph.util.TransferFunctionType'] and parameter[2][@type='boolean']]"
+		[Register (".ctor", "(Lorg/neuroph/util/TransferFunctionType;Z)V", "")]
+		public unsafe NeuronProperties (global::Org.Neuroph.Util.TransferFunctionType p0, bool p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/TransferFunctionType;Z)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/util/TransferFunctionType;Z)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_util_TransferFunctionType_Z == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_util_TransferFunctionType_Z = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/TransferFunctionType;Z)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_Z, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_util_TransferFunctionType_Z, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=3 and parameter[1][@type='org.neuroph.util.WeightsFunctionType'] and parameter[2][@type='org.neuroph.util.SummingFunctionType'] and parameter[3][@type='org.neuroph.util.TransferFunctionType']]"
+		[Register (".ctor", "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V", "")]
+		public unsafe NeuronProperties (global::Org.Neuroph.Util.WeightsFunctionType p0, global::Org.Neuroph.Util.SummingFunctionType p1, global::Org.Neuroph.Util.TransferFunctionType p2)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_ == IntPtr.Zero)
+					id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lorg/neuroph/util/WeightsFunctionType;Lorg/neuroph/util/SummingFunctionType;Lorg/neuroph/util/TransferFunctionType;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_util_WeightsFunctionType_Lorg_neuroph_util_SummingFunctionType_Lorg_neuroph_util_TransferFunctionType_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=0]"
+		[Register (".ctor", "()V", "")]
+		public unsafe NeuronProperties ()
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
+					return;
+				}
+
+				if (id_ctor == IntPtr.Zero)
+					id_ctor = JNIEnv.GetMethodID (class_ref, "<init>", "()V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Ljava_lang_Class_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=1 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;']]"
+		[Register (".ctor", "(Ljava/lang/Class;)V", "")]
+		public unsafe NeuronProperties (global::Java.Lang.Class p0)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/Class;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_lang_Class_ == IntPtr.Zero)
+					id_ctor_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_Class_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Ljava_lang_Class_Ljava_lang_Class_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=2 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;'] and parameter[2][@type='java.lang.Class&lt;? extends org.neuroph.core.transfer.TransferFunction&gt;']]"
+		[Register (".ctor", "(Ljava/lang/Class;Ljava/lang/Class;)V", "")]
+		public unsafe NeuronProperties (global::Java.Lang.Class p0, global::Java.Lang.Class p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;Ljava/lang/Class;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/Class;Ljava/lang/Class;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_lang_Class_Ljava_lang_Class_ == IntPtr.Zero)
+					id_ctor_Ljava_lang_Class_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;Ljava/lang/Class;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='org.neuroph.util']/class[@name='NeuronProperties']/constructor[@name='NeuronProperties' and count(parameter)=3 and parameter[1][@type='java.lang.Class&lt;? extends org.neuroph.core.Neuron&gt;'] and parameter[2][@type='java.lang.Class&lt;? extends org.neuroph.core.input.InputFunction&gt;'] and parameter[3][@type='java.lang.Class&lt;? extends org.neuroph.core.transfer.TransferFunction&gt;']]"
+		[Register (".ctor", "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", "")]
+		public unsafe NeuronProperties (global::Java.Lang.Class p0, global::Java.Lang.Class p1, global::Java.Lang.Class p2)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+				if (GetType () != typeof (NeuronProperties)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_ == IntPtr.Zero)
+					id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_Class_Ljava_lang_Class_Ljava_lang_Class_, __args);
 			} finally {
 			}
 		}
@@ -329,9 +329,9 @@ namespace Org.Neuroph.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod  (Handle, id_getInputFunction), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getInputFunction), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInputFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInputFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -363,9 +363,9 @@ namespace Org.Neuroph.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod  (Handle, id_getNeuronType), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getNeuronType), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNeuronType", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNeuronType", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -397,9 +397,9 @@ namespace Org.Neuroph.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod  (Handle, id_getSummingFunction), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getSummingFunction), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSummingFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getSummingFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -431,9 +431,9 @@ namespace Org.Neuroph.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod  (Handle, id_getTransferFunction), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTransferFunction), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTransferFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTransferFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -465,9 +465,9 @@ namespace Org.Neuroph.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Util.Properties> (JNIEnv.CallObjectMethod  (Handle, id_getTransferFunctionProperties), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Util.Properties> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getTransferFunctionProperties), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Util.Properties> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTransferFunctionProperties", "()Lorg/neuroph/util/Properties;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Util.Properties> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTransferFunctionProperties", "()Lorg/neuroph/util/Properties;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -499,9 +499,9 @@ namespace Org.Neuroph.Util {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod  (Handle, id_getWeightsFunction), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getWeightsFunction), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWeightsFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWeightsFunction", "()Ljava/lang/Class;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -519,7 +519,7 @@ namespace Org.Neuroph.Util {
 				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (native_p0);
 				__args [1] = new JValue (p1);
-				JNIEnv.CallVoidMethod  (Handle, id_setProperty_Ljava_lang_String_Ljava_lang_Object_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setProperty_Ljava_lang_String_Ljava_lang_Object_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}

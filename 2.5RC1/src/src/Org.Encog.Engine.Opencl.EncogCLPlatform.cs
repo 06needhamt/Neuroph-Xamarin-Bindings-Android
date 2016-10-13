@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Opencl {
 		public unsafe EncogCLPlatform (global::Org.Jocl.Cl_platform_id p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Encog.Engine.Opencl {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/jocl/cl_platform_id;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/jocl/cl_platform_id;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/jocl/cl_platform_id;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Encog.Engine.Opencl {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_jocl_cl_platform_id_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_jocl_cl_platform_id_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_jocl_cl_platform_id_, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Encog.Engine.Opencl {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_context> (JNIEnv.CallObjectMethod  (Handle, id_getContext), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_context> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getContext), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_context> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getContext", "()Lorg/jocl/cl_context;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_context> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getContext", "()Lorg/jocl/cl_context;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace Org.Encog.Engine.Opencl {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Opencl.EncogCLDevice>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getDevices), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Opencl.EncogCLDevice>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDevices), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Opencl.EncogCLDevice>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDevices", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaList<global::Org.Encog.Engine.Opencl.EncogCLDevice>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDevices", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -149,9 +149,9 @@ namespace Org.Encog.Engine.Opencl {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_platform_id> (JNIEnv.CallObjectMethod  (Handle, id_getPlatform), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_platform_id> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getPlatform), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_platform_id> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getPlatform", "()Lorg/jocl/cl_platform_id;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Jocl.Cl_platform_id> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getPlatform", "()Lorg/jocl/cl_platform_id;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -185,9 +185,9 @@ namespace Org.Encog.Engine.Opencl {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getPlatformString_I, __args), JniHandleOwnership.TransferLocalRef);
+					return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getPlatformString_I, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getPlatformString", "(I)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+					return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getPlatformString", "(I)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}

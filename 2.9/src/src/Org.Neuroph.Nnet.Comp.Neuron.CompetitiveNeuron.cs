@@ -31,7 +31,7 @@ namespace Org.Neuroph.Nnet.Comp.Neuron {
 		public unsafe CompetitiveNeuron (global::Org.Neuroph.Core.Input.InputFunction p0, global::Org.Neuroph.Core.Transfer.TransferFunction p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -42,7 +42,7 @@ namespace Org.Neuroph.Nnet.Comp.Neuron {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/input/InputFunction;Lorg/neuroph/core/transfer/TransferFunction;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/input/InputFunction;Lorg/neuroph/core/transfer/TransferFunction;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/input/InputFunction;Lorg/neuroph/core/transfer/TransferFunction;)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Org.Neuroph.Nnet.Comp.Neuron {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_input_InputFunction_Lorg_neuroph_core_transfer_TransferFunction_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_input_InputFunction_Lorg_neuroph_core_transfer_TransferFunction_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_input_InputFunction_Lorg_neuroph_core_transfer_TransferFunction_, __args);
 			} finally {
 			}
 		}
@@ -99,9 +99,9 @@ namespace Org.Neuroph.Nnet.Comp.Neuron {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallBooleanMethod  (Handle, id_isCompeting);
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isCompeting);
 					else
-						return JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isCompeting", "()Z"));
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isCompeting", "()Z"));
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace Org.Neuroph.Nnet.Comp.Neuron {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setIsCompeting_Z, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIsCompeting_Z, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIsCompeting", "(Z)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIsCompeting", "(Z)V"), __args);
 				} finally {
 				}
 			}
@@ -149,9 +149,9 @@ namespace Org.Neuroph.Nnet.Comp.Neuron {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (global::Org.Neuroph.Core.Connection[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getConnectionsFromOtherLayers), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Core.Connection));
+					return (global::Org.Neuroph.Core.Connection[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getConnectionsFromOtherLayers), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Core.Connection));
 				else
-					return (global::Org.Neuroph.Core.Connection[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getConnectionsFromOtherLayers", "()[Lorg/neuroph/core/Connection;")), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Core.Connection));
+					return (global::Org.Neuroph.Core.Connection[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getConnectionsFromOtherLayers", "()[Lorg/neuroph/core/Connection;")), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Core.Connection));
 			} finally {
 			}
 		}

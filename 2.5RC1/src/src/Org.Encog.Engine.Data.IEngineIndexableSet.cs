@@ -61,7 +61,7 @@ namespace Org.Encog.Engine.Data {
 
 		public IEngineIndexableSetInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -87,7 +87,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_getRecordCount == IntPtr.Zero)
 					id_getRecordCount = JNIEnv.GetMethodID (class_ref, "getRecordCount", "()J");
-				return JNIEnv.CallLongMethod (Handle, id_getRecordCount);
+				return JNIEnv.CallLongMethod (((global::Java.Lang.Object) this).Handle, id_getRecordCount);
 			}
 		}
 
@@ -116,7 +116,7 @@ namespace Org.Encog.Engine.Data {
 			JValue* __args = stackalloc JValue [2];
 			__args [0] = new JValue (p0);
 			__args [1] = new JValue (p1);
-			JNIEnv.CallVoidMethod (Handle, id_getRecord_JLorg_encog_engine_data_EngineData_, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_getRecord_JLorg_encog_engine_data_EngineData_, __args);
 		}
 
 		static Delegate cb_openAdditional;
@@ -140,7 +140,7 @@ namespace Org.Encog.Engine.Data {
 		{
 			if (id_openAdditional == IntPtr.Zero)
 				id_openAdditional = JNIEnv.GetMethodID (class_ref, "openAdditional", "()Lorg/encog/engine/data/EngineIndexableSet;");
-			return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineIndexableSet> (JNIEnv.CallObjectMethod (Handle, id_openAdditional), JniHandleOwnership.TransferLocalRef);
+			return global::Java.Lang.Object.GetObject<global::Org.Encog.Engine.Data.IEngineIndexableSet> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_openAdditional), JniHandleOwnership.TransferLocalRef);
 		}
 
 		static Delegate cb_getIdealSize;
@@ -164,7 +164,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_getIdealSize == IntPtr.Zero)
 					id_getIdealSize = JNIEnv.GetMethodID (class_ref, "getIdealSize", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getIdealSize);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getIdealSize);
 			}
 		}
 
@@ -189,7 +189,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_getInputSize == IntPtr.Zero)
 					id_getInputSize = JNIEnv.GetMethodID (class_ref, "getInputSize", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getInputSize);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getInputSize);
 			}
 		}
 
@@ -214,7 +214,7 @@ namespace Org.Encog.Engine.Data {
 			get {
 				if (id_isSupervised == IntPtr.Zero)
 					id_isSupervised = JNIEnv.GetMethodID (class_ref, "isSupervised", "()Z");
-				return JNIEnv.CallBooleanMethod (Handle, id_isSupervised);
+				return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isSupervised);
 			}
 		}
 

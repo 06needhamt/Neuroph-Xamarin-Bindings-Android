@@ -56,7 +56,7 @@ namespace Org.Encog.Engine.Validate {
 
 		public IValidateMachineLearningInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -86,7 +86,7 @@ namespace Org.Encog.Engine.Validate {
 				id_isValid_Lorg_encog_engine_EngineMachineLearning_ = JNIEnv.GetMethodID (class_ref, "isValid", "(Lorg/encog/engine/EngineMachineLearning;)Ljava/lang/String;");
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (p0);
-			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_isValid_Lorg_encog_engine_EngineMachineLearning_, __args), JniHandleOwnership.TransferLocalRef);
+			string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_isValid_Lorg_encog_engine_EngineMachineLearning_, __args), JniHandleOwnership.TransferLocalRef);
 			return __ret;
 		}
 
@@ -114,7 +114,7 @@ namespace Org.Encog.Engine.Validate {
 				id_validate_Lorg_encog_engine_EngineMachineLearning_ = JNIEnv.GetMethodID (class_ref, "validate", "(Lorg/encog/engine/EngineMachineLearning;)V");
 			JValue* __args = stackalloc JValue [1];
 			__args [0] = new JValue (p0);
-			JNIEnv.CallVoidMethod (Handle, id_validate_Lorg_encog_engine_EngineMachineLearning_, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_validate_Lorg_encog_engine_EngineMachineLearning_, __args);
 		}
 
 	}

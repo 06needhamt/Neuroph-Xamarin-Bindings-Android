@@ -17,14 +17,14 @@ namespace Org.Neuroph.Imgrec {
 			get {
 				if (blueValues_jfieldId == IntPtr.Zero)
 					blueValues_jfieldId = JNIEnv.GetFieldID (class_ref, "blueValues", "[[D");
-				return JavaArray<double[]>.FromJniHandle (JNIEnv.GetObjectField (Handle, blueValues_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<double[]>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, blueValues_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 			set {
 				if (blueValues_jfieldId == IntPtr.Zero)
 					blueValues_jfieldId = JNIEnv.GetFieldID (class_ref, "blueValues", "[[D");
-				IntPtr native_value = JavaArray<double[]>.ToLocalJniHandle (value);
+				IntPtr native_value = global::Android.Runtime.JavaArray<double[]>.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, blueValues_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, blueValues_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -39,14 +39,14 @@ namespace Org.Neuroph.Imgrec {
 			get {
 				if (flattenedRgbValues_jfieldId == IntPtr.Zero)
 					flattenedRgbValues_jfieldId = JNIEnv.GetFieldID (class_ref, "flattenedRgbValues", "[D");
-				return JavaArray<double>.FromJniHandle (JNIEnv.GetObjectField (Handle, flattenedRgbValues_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<double>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, flattenedRgbValues_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 			set {
 				if (flattenedRgbValues_jfieldId == IntPtr.Zero)
 					flattenedRgbValues_jfieldId = JNIEnv.GetFieldID (class_ref, "flattenedRgbValues", "[D");
-				IntPtr native_value = JavaArray<double>.ToLocalJniHandle (value);
+				IntPtr native_value = global::Android.Runtime.JavaArray<double>.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, flattenedRgbValues_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, flattenedRgbValues_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -61,14 +61,14 @@ namespace Org.Neuroph.Imgrec {
 			get {
 				if (greenValues_jfieldId == IntPtr.Zero)
 					greenValues_jfieldId = JNIEnv.GetFieldID (class_ref, "greenValues", "[[D");
-				return JavaArray<double[]>.FromJniHandle (JNIEnv.GetObjectField (Handle, greenValues_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<double[]>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, greenValues_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 			set {
 				if (greenValues_jfieldId == IntPtr.Zero)
 					greenValues_jfieldId = JNIEnv.GetFieldID (class_ref, "greenValues", "[[D");
-				IntPtr native_value = JavaArray<double[]>.ToLocalJniHandle (value);
+				IntPtr native_value = global::Android.Runtime.JavaArray<double[]>.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, greenValues_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, greenValues_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -83,14 +83,14 @@ namespace Org.Neuroph.Imgrec {
 			get {
 				if (redValues_jfieldId == IntPtr.Zero)
 					redValues_jfieldId = JNIEnv.GetFieldID (class_ref, "redValues", "[[D");
-				return JavaArray<double[]>.FromJniHandle (JNIEnv.GetObjectField (Handle, redValues_jfieldId), JniHandleOwnership.TransferLocalRef);
+				return global::Android.Runtime.JavaArray<double[]>.FromJniHandle (JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, redValues_jfieldId), JniHandleOwnership.TransferLocalRef);
 			}
 			set {
 				if (redValues_jfieldId == IntPtr.Zero)
 					redValues_jfieldId = JNIEnv.GetFieldID (class_ref, "redValues", "[[D");
-				IntPtr native_value = JavaArray<double[]>.ToLocalJniHandle (value);
+				IntPtr native_value = global::Android.Runtime.JavaArray<double[]>.ToLocalJniHandle (value);
 				try {
-					JNIEnv.SetField (Handle, redValues_jfieldId, native_value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, redValues_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -119,7 +119,7 @@ namespace Org.Neuroph.Imgrec {
 		public unsafe FractionRgbData (global::Org.Neuroph.Imgrec.Image.IImage p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -129,7 +129,7 @@ namespace Org.Neuroph.Imgrec {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/imgrec/image/Image;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/imgrec/image/Image;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/imgrec/image/Image;)V", __args);
 					return;
 				}
 
@@ -138,7 +138,7 @@ namespace Org.Neuroph.Imgrec {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_imgrec_image_Image_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_imgrec_image_Image_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_imgrec_image_Image_, __args);
 			} finally {
 			}
 		}
@@ -169,9 +169,9 @@ namespace Org.Neuroph.Imgrec {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getHeight);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getHeight);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getHeight", "()I"));
 				} finally {
 				}
 			}
@@ -203,9 +203,9 @@ namespace Org.Neuroph.Imgrec {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getWidth);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getWidth);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getWidth", "()I"));
 				} finally {
 				}
 			}
@@ -258,9 +258,9 @@ namespace Org.Neuroph.Imgrec {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getBlueValues), JniHandleOwnership.TransferLocalRef, typeof (double[]));
+					return (double[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getBlueValues), JniHandleOwnership.TransferLocalRef, typeof (double[]));
 				else
-					return (double[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getBlueValues", "()[[D")), JniHandleOwnership.TransferLocalRef, typeof (double[]));
+					return (double[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getBlueValues", "()[[D")), JniHandleOwnership.TransferLocalRef, typeof (double[]));
 			} finally {
 			}
 		}
@@ -291,9 +291,9 @@ namespace Org.Neuroph.Imgrec {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getFlattenedRgbValues), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getFlattenedRgbValues), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getFlattenedRgbValues", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
+					return (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getFlattenedRgbValues", "()[D")), JniHandleOwnership.TransferLocalRef, typeof (double));
 			} finally {
 			}
 		}
@@ -324,9 +324,9 @@ namespace Org.Neuroph.Imgrec {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getGreenValues), JniHandleOwnership.TransferLocalRef, typeof (double[]));
+					return (double[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getGreenValues), JniHandleOwnership.TransferLocalRef, typeof (double[]));
 				else
-					return (double[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getGreenValues", "()[[D")), JniHandleOwnership.TransferLocalRef, typeof (double[]));
+					return (double[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getGreenValues", "()[[D")), JniHandleOwnership.TransferLocalRef, typeof (double[]));
 			} finally {
 			}
 		}
@@ -357,9 +357,9 @@ namespace Org.Neuroph.Imgrec {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (double[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getRedValues), JniHandleOwnership.TransferLocalRef, typeof (double[]));
+					return (double[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getRedValues), JniHandleOwnership.TransferLocalRef, typeof (double[]));
 				else
-					return (double[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRedValues", "()[[D")), JniHandleOwnership.TransferLocalRef, typeof (double[]));
+					return (double[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRedValues", "()[[D")), JniHandleOwnership.TransferLocalRef, typeof (double[]));
 			} finally {
 			}
 		}
@@ -374,7 +374,7 @@ namespace Org.Neuroph.Imgrec {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
-				JNIEnv.CallVoidMethod  (Handle, id_populateRGBArrays_Lorg_neuroph_imgrec_image_Image_, __args);
+				JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_populateRGBArrays_Lorg_neuroph_imgrec_image_Image_, __args);
 			} finally {
 			}
 		}

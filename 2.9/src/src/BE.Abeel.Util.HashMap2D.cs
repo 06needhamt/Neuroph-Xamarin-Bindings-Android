@@ -32,7 +32,7 @@ namespace BE.Abeel.Util {
 		public unsafe HashMap2D ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -40,7 +40,7 @@ namespace BE.Abeel.Util {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -49,7 +49,7 @@ namespace BE.Abeel.Util {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -89,9 +89,9 @@ namespace BE.Abeel.Util {
 
 				bool __ret;
 				if (GetType () == ThresholdType)
-					__ret = JNIEnv.CallBooleanMethod  (Handle, id_containsKey_Ljava_lang_Object_Ljava_lang_Object_, __args);
+					__ret = JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_containsKey_Ljava_lang_Object_Ljava_lang_Object_, __args);
 				else
-					__ret = JNIEnv.CallNonvirtualBooleanMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "containsKey", "(Ljava/lang/Object;Ljava/lang/Object;)Z"), __args);
+					__ret = JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "containsKey", "(Ljava/lang/Object;Ljava/lang/Object;)Z"), __args);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -134,9 +134,9 @@ namespace BE.Abeel.Util {
 
 				global::Java.Lang.Object __ret;
 				if (GetType () == ThresholdType)
-					__ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_get_Ljava_lang_Object_Ljava_lang_Object_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_get_Ljava_lang_Object_Ljava_lang_Object_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "get", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "get", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -180,58 +180,13 @@ namespace BE.Abeel.Util {
 				__args [2] = new JValue (native_p2);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_put_Ljava_lang_Object_Ljava_lang_Object_Ljava_lang_Object_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_put_Ljava_lang_Object_Ljava_lang_Object_Ljava_lang_Object_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "put", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "put", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
 				JNIEnv.DeleteLocalRef (native_p2);
-			}
-		}
-
-		static Delegate cb_remove_Ljava_lang_Object_Ljava_lang_Object_;
-#pragma warning disable 0169
-		static Delegate GetRemove_Ljava_lang_Object_Ljava_lang_Object_Handler ()
-		{
-			if (cb_remove_Ljava_lang_Object_Ljava_lang_Object_ == null)
-				cb_remove_Ljava_lang_Object_Ljava_lang_Object_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_Remove_Ljava_lang_Object_Ljava_lang_Object_);
-			return cb_remove_Ljava_lang_Object_Ljava_lang_Object_;
-		}
-
-		static IntPtr n_Remove_Ljava_lang_Object_Ljava_lang_Object_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
-		{
-			global::BE.Abeel.Util.HashMap2D __this = global::Java.Lang.Object.GetObject<global::BE.Abeel.Util.HashMap2D> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-			global::Java.Lang.Object p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (native_p0, JniHandleOwnership.DoNotTransfer);
-			global::Java.Lang.Object p1 = global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (native_p1, JniHandleOwnership.DoNotTransfer);
-			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.Remove (p0, p1));
-			return __ret;
-		}
-#pragma warning restore 0169
-
-		static IntPtr id_remove_Ljava_lang_Object_Ljava_lang_Object_;
-		// Metadata.xml XPath method reference: path="/api/package[@name='be.abeel.util']/class[@name='HashMap2D']/method[@name='remove' and count(parameter)=2 and parameter[1][@type='K'] and parameter[2][@type='L']]"
-		[Register ("remove", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "GetRemove_Ljava_lang_Object_Ljava_lang_Object_Handler")]
-		public virtual unsafe global::Java.Lang.Object Remove (global::Java.Lang.Object p0, global::Java.Lang.Object p1)
-		{
-			if (id_remove_Ljava_lang_Object_Ljava_lang_Object_ == IntPtr.Zero)
-				id_remove_Ljava_lang_Object_Ljava_lang_Object_ = JNIEnv.GetMethodID (class_ref, "remove", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;");
-			IntPtr native_p0 = JNIEnv.ToLocalJniHandle (p0);
-			IntPtr native_p1 = JNIEnv.ToLocalJniHandle (p1);
-			try {
-				JValue* __args = stackalloc JValue [2];
-				__args [0] = new JValue (native_p0);
-				__args [1] = new JValue (native_p1);
-
-				global::Java.Lang.Object __ret;
-				if (GetType () == ThresholdType)
-					__ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallObjectMethod  (Handle, id_remove_Ljava_lang_Object_Ljava_lang_Object_, __args), JniHandleOwnership.TransferLocalRef);
-				else
-					__ret = (Java.Lang.Object) global::Java.Lang.Object.GetObject<global::Java.Lang.Object> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "remove", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"), __args), JniHandleOwnership.TransferLocalRef);
-				return __ret;
-			} finally {
-				JNIEnv.DeleteLocalRef (native_p0);
-				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 
@@ -261,9 +216,9 @@ namespace BE.Abeel.Util {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (global::Java.Lang.Object[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_toArray), JniHandleOwnership.TransferLocalRef, typeof (global::Java.Lang.Object[]));
+					return (global::Java.Lang.Object[][]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_toArray), JniHandleOwnership.TransferLocalRef, typeof (global::Java.Lang.Object[]));
 				else
-					return (global::Java.Lang.Object[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "toArray", "()[[Ljava/lang/Object;")), JniHandleOwnership.TransferLocalRef, typeof (global::Java.Lang.Object[]));
+					return (global::Java.Lang.Object[][]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "toArray", "()[[Ljava/lang/Object;")), JniHandleOwnership.TransferLocalRef, typeof (global::Java.Lang.Object[]));
 			} finally {
 			}
 		}

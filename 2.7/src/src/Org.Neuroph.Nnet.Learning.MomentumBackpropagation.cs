@@ -21,13 +21,13 @@ namespace Org.Neuroph.Nnet.Learning {
 				get {
 					if (previousValue_jfieldId == IntPtr.Zero)
 						previousValue_jfieldId = JNIEnv.GetFieldID (class_ref, "previousValue", "D");
-					return JNIEnv.GetDoubleField (Handle, previousValue_jfieldId);
+					return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, previousValue_jfieldId);
 				}
 				set {
 					if (previousValue_jfieldId == IntPtr.Zero)
 						previousValue_jfieldId = JNIEnv.GetFieldID (class_ref, "previousValue", "D");
 					try {
-						JNIEnv.SetField (Handle, previousValue_jfieldId, value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, previousValue_jfieldId, value);
 					} finally {
 					}
 				}
@@ -55,7 +55,7 @@ namespace Org.Neuroph.Nnet.Learning {
 			public unsafe MomentumWeightTrainingData (global::Org.Neuroph.Nnet.Learning.MomentumBackpropagation __self)
 				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 			{
-				if (Handle != IntPtr.Zero)
+				if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 					return;
 
 				try {
@@ -65,7 +65,7 @@ namespace Org.Neuroph.Nnet.Learning {
 						SetHandle (
 								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args),
 								JniHandleOwnership.TransferLocalRef);
-						global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args);
+						global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args);
 						return;
 					}
 
@@ -74,7 +74,7 @@ namespace Org.Neuroph.Nnet.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_learning_MomentumBackpropagation_, __args),
 							JniHandleOwnership.TransferLocalRef);
-					JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_learning_MomentumBackpropagation_, __args);
+					JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_learning_MomentumBackpropagation_, __args);
 				} finally {
 				}
 			}
@@ -104,7 +104,7 @@ namespace Org.Neuroph.Nnet.Learning {
 		public unsafe MomentumBackpropagation ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -112,7 +112,7 @@ namespace Org.Neuroph.Nnet.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -121,7 +121,7 @@ namespace Org.Neuroph.Nnet.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -169,9 +169,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getMomentum);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getMomentum);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMomentum", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMomentum", "()D"));
 				} finally {
 				}
 			}
@@ -185,9 +185,9 @@ namespace Org.Neuroph.Nnet.Learning {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setMomentum_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setMomentum_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMomentum", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMomentum", "(D)V"), __args);
 				} finally {
 				}
 			}

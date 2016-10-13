@@ -31,7 +31,7 @@ namespace Org.Neuroph.Util.Benchmark {
 		public unsafe BenchmarkTaskResults (int p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Neuroph.Util.Benchmark {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(I)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Neuroph.Util.Benchmark {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_I, __args);
 			} finally {
 			}
 		}
@@ -81,9 +81,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getAverageTestTime);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getAverageTestTime);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAverageTestTime", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAverageTestTime", "()D"));
 				} finally {
 				}
 			}
@@ -115,9 +115,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getMaxTestTime);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getMaxTestTime);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxTestTime", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxTestTime", "()D"));
 				} finally {
 				}
 			}
@@ -149,9 +149,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getMinTestTime);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getMinTestTime);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMinTestTime", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMinTestTime", "()D"));
 				} finally {
 				}
 			}
@@ -183,9 +183,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getStandardDeviation);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getStandardDeviation);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getStandardDeviation", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getStandardDeviation", "()D"));
 				} finally {
 				}
 			}
@@ -217,9 +217,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod  (Handle, id_getTestIterations);
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getTestIterations);
 					else
-						return JNIEnv.CallNonvirtualIntMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTestIterations", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTestIterations", "()I"));
 				} finally {
 				}
 			}
@@ -253,9 +253,9 @@ namespace Org.Neuroph.Util.Benchmark {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_addElapsedTime_J, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_addElapsedTime_J, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "addElapsedTime", "(J)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "addElapsedTime", "(J)V"), __args);
 			} finally {
 			}
 		}
@@ -286,9 +286,9 @@ namespace Org.Neuroph.Util.Benchmark {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_calculateStatistics);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_calculateStatistics);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateStatistics", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "calculateStatistics", "()V"));
 			} finally {
 			}
 		}
@@ -319,9 +319,9 @@ namespace Org.Neuroph.Util.Benchmark {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (long[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getElapsedTimes), JniHandleOwnership.TransferLocalRef, typeof (long));
+					return (long[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getElapsedTimes), JniHandleOwnership.TransferLocalRef, typeof (long));
 				else
-					return (long[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getElapsedTimes", "()[J")), JniHandleOwnership.TransferLocalRef, typeof (long));
+					return (long[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getElapsedTimes", "()[J")), JniHandleOwnership.TransferLocalRef, typeof (long));
 			} finally {
 			}
 		}

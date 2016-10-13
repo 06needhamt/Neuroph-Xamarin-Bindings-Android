@@ -31,7 +31,7 @@ namespace Org.Neuroph.Samples.Convolution {
 		public unsafe WeightVisualiser (global::Org.Neuroph.Nnet.Comp.Layer.Layer2D p0, global::Org.Neuroph.Nnet.Comp.Kernel p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -42,7 +42,7 @@ namespace Org.Neuroph.Samples.Convolution {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/nnet/comp/layer/Layer2D;Lorg/neuroph/nnet/comp/Kernel;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/nnet/comp/layer/Layer2D;Lorg/neuroph/nnet/comp/Kernel;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/nnet/comp/layer/Layer2D;Lorg/neuroph/nnet/comp/Kernel;)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Org.Neuroph.Samples.Convolution {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Lorg_neuroph_nnet_comp_Kernel_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Lorg_neuroph_nnet_comp_Kernel_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_comp_layer_Layer2D_Lorg_neuroph_nnet_comp_Kernel_, __args);
 			} finally {
 			}
 		}
@@ -82,9 +82,9 @@ namespace Org.Neuroph.Samples.Convolution {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_displayWeights);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_displayWeights);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "displayWeights", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "displayWeights", "()V"));
 			} finally {
 			}
 		}

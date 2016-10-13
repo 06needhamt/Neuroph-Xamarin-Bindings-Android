@@ -17,13 +17,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iColorsImportant_jfieldId == IntPtr.Zero)
 					iColorsImportant_jfieldId = JNIEnv.GetFieldID (class_ref, "iColorsImportant", "I");
-				return JNIEnv.GetIntField (Handle, iColorsImportant_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iColorsImportant_jfieldId);
 			}
 			set {
 				if (iColorsImportant_jfieldId == IntPtr.Zero)
 					iColorsImportant_jfieldId = JNIEnv.GetFieldID (class_ref, "iColorsImportant", "I");
 				try {
-					JNIEnv.SetField (Handle, iColorsImportant_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iColorsImportant_jfieldId, value);
 				} finally {
 				}
 			}
@@ -37,13 +37,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iColorsUsed_jfieldId == IntPtr.Zero)
 					iColorsUsed_jfieldId = JNIEnv.GetFieldID (class_ref, "iColorsUsed", "I");
-				return JNIEnv.GetIntField (Handle, iColorsUsed_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iColorsUsed_jfieldId);
 			}
 			set {
 				if (iColorsUsed_jfieldId == IntPtr.Zero)
 					iColorsUsed_jfieldId = JNIEnv.GetFieldID (class_ref, "iColorsUsed", "I");
 				try {
-					JNIEnv.SetField (Handle, iColorsUsed_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iColorsUsed_jfieldId, value);
 				} finally {
 				}
 			}
@@ -57,13 +57,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iCompression_jfieldId == IntPtr.Zero)
 					iCompression_jfieldId = JNIEnv.GetFieldID (class_ref, "iCompression", "I");
-				return JNIEnv.GetIntField (Handle, iCompression_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iCompression_jfieldId);
 			}
 			set {
 				if (iCompression_jfieldId == IntPtr.Zero)
 					iCompression_jfieldId = JNIEnv.GetFieldID (class_ref, "iCompression", "I");
 				try {
-					JNIEnv.SetField (Handle, iCompression_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iCompression_jfieldId, value);
 				} finally {
 				}
 			}
@@ -77,13 +77,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iHeight_jfieldId == IntPtr.Zero)
 					iHeight_jfieldId = JNIEnv.GetFieldID (class_ref, "iHeight", "I");
-				return JNIEnv.GetIntField (Handle, iHeight_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iHeight_jfieldId);
 			}
 			set {
 				if (iHeight_jfieldId == IntPtr.Zero)
 					iHeight_jfieldId = JNIEnv.GetFieldID (class_ref, "iHeight", "I");
 				try {
-					JNIEnv.SetField (Handle, iHeight_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iHeight_jfieldId, value);
 				} finally {
 				}
 			}
@@ -97,13 +97,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iImageSize_jfieldId == IntPtr.Zero)
 					iImageSize_jfieldId = JNIEnv.GetFieldID (class_ref, "iImageSize", "I");
-				return JNIEnv.GetIntField (Handle, iImageSize_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iImageSize_jfieldId);
 			}
 			set {
 				if (iImageSize_jfieldId == IntPtr.Zero)
 					iImageSize_jfieldId = JNIEnv.GetFieldID (class_ref, "iImageSize", "I");
 				try {
-					JNIEnv.SetField (Handle, iImageSize_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iImageSize_jfieldId, value);
 				} finally {
 				}
 			}
@@ -117,13 +117,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iNumColors_jfieldId == IntPtr.Zero)
 					iNumColors_jfieldId = JNIEnv.GetFieldID (class_ref, "iNumColors", "I");
-				return JNIEnv.GetIntField (Handle, iNumColors_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iNumColors_jfieldId);
 			}
 			set {
 				if (iNumColors_jfieldId == IntPtr.Zero)
 					iNumColors_jfieldId = JNIEnv.GetFieldID (class_ref, "iNumColors", "I");
 				try {
-					JNIEnv.SetField (Handle, iNumColors_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iNumColors_jfieldId, value);
 				} finally {
 				}
 			}
@@ -137,13 +137,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iSize_jfieldId == IntPtr.Zero)
 					iSize_jfieldId = JNIEnv.GetFieldID (class_ref, "iSize", "I");
-				return JNIEnv.GetIntField (Handle, iSize_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iSize_jfieldId);
 			}
 			set {
 				if (iSize_jfieldId == IntPtr.Zero)
 					iSize_jfieldId = JNIEnv.GetFieldID (class_ref, "iSize", "I");
 				try {
-					JNIEnv.SetField (Handle, iSize_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iSize_jfieldId, value);
 				} finally {
 				}
 			}
@@ -157,13 +157,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iWidth_jfieldId == IntPtr.Zero)
 					iWidth_jfieldId = JNIEnv.GetFieldID (class_ref, "iWidth", "I");
-				return JNIEnv.GetIntField (Handle, iWidth_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iWidth_jfieldId);
 			}
 			set {
 				if (iWidth_jfieldId == IntPtr.Zero)
 					iWidth_jfieldId = JNIEnv.GetFieldID (class_ref, "iWidth", "I");
 				try {
-					JNIEnv.SetField (Handle, iWidth_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iWidth_jfieldId, value);
 				} finally {
 				}
 			}
@@ -177,13 +177,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iXpixelsPerM_jfieldId == IntPtr.Zero)
 					iXpixelsPerM_jfieldId = JNIEnv.GetFieldID (class_ref, "iXpixelsPerM", "I");
-				return JNIEnv.GetIntField (Handle, iXpixelsPerM_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iXpixelsPerM_jfieldId);
 			}
 			set {
 				if (iXpixelsPerM_jfieldId == IntPtr.Zero)
 					iXpixelsPerM_jfieldId = JNIEnv.GetFieldID (class_ref, "iXpixelsPerM", "I");
 				try {
-					JNIEnv.SetField (Handle, iXpixelsPerM_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iXpixelsPerM_jfieldId, value);
 				} finally {
 				}
 			}
@@ -197,13 +197,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (iYpixelsPerM_jfieldId == IntPtr.Zero)
 					iYpixelsPerM_jfieldId = JNIEnv.GetFieldID (class_ref, "iYpixelsPerM", "I");
-				return JNIEnv.GetIntField (Handle, iYpixelsPerM_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iYpixelsPerM_jfieldId);
 			}
 			set {
 				if (iYpixelsPerM_jfieldId == IntPtr.Zero)
 					iYpixelsPerM_jfieldId = JNIEnv.GetFieldID (class_ref, "iYpixelsPerM", "I");
 				try {
-					JNIEnv.SetField (Handle, iYpixelsPerM_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iYpixelsPerM_jfieldId, value);
 				} finally {
 				}
 			}
@@ -217,13 +217,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (sBitCount_jfieldId == IntPtr.Zero)
 					sBitCount_jfieldId = JNIEnv.GetFieldID (class_ref, "sBitCount", "S");
-				return JNIEnv.GetShortField (Handle, sBitCount_jfieldId);
+				return JNIEnv.GetShortField (((global::Java.Lang.Object) this).Handle, sBitCount_jfieldId);
 			}
 			set {
 				if (sBitCount_jfieldId == IntPtr.Zero)
 					sBitCount_jfieldId = JNIEnv.GetFieldID (class_ref, "sBitCount", "S");
 				try {
-					JNIEnv.SetField (Handle, sBitCount_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, sBitCount_jfieldId, value);
 				} finally {
 				}
 			}
@@ -237,13 +237,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (sPlanes_jfieldId == IntPtr.Zero)
 					sPlanes_jfieldId = JNIEnv.GetFieldID (class_ref, "sPlanes", "S");
-				return JNIEnv.GetShortField (Handle, sPlanes_jfieldId);
+				return JNIEnv.GetShortField (((global::Java.Lang.Object) this).Handle, sPlanes_jfieldId);
 			}
 			set {
 				if (sPlanes_jfieldId == IntPtr.Zero)
 					sPlanes_jfieldId = JNIEnv.GetFieldID (class_ref, "sPlanes", "S");
 				try {
-					JNIEnv.SetField (Handle, sPlanes_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, sPlanes_jfieldId, value);
 				} finally {
 				}
 			}
@@ -271,7 +271,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe InfoHeader (global::Net.SF.Image4j.Codec.Bmp.InfoHeader p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -281,7 +281,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lnet/sf/image4j/codec/bmp/InfoHeader;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lnet/sf/image4j/codec/bmp/InfoHeader;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lnet/sf/image4j/codec/bmp/InfoHeader;)V", __args);
 					return;
 				}
 
@@ -290,7 +290,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lnet_sf_image4j_codec_bmp_InfoHeader_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lnet_sf_image4j_codec_bmp_InfoHeader_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lnet_sf_image4j_codec_bmp_InfoHeader_, __args);
 			} finally {
 			}
 		}
@@ -301,7 +301,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe InfoHeader ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -309,7 +309,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -318,7 +318,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -329,7 +329,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe InfoHeader (global::Net.SF.Image4j.IO.LittleEndianInputStream p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -339,7 +339,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args);
 					return;
 				}
 
@@ -348,7 +348,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args);
 			} finally {
 			}
 		}
@@ -359,7 +359,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe InfoHeader (global::Net.SF.Image4j.IO.LittleEndianInputStream p0, int p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -370,7 +370,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lnet/sf/image4j/io/LittleEndianInputStream;I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;I)V", __args);
 					return;
 				}
 
@@ -379,7 +379,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_I, __args);
 			} finally {
 			}
 		}
@@ -414,9 +414,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				__args [1] = new JValue (p1);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_init_Lnet_sf_image4j_io_LittleEndianInputStream_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_init_Lnet_sf_image4j_io_LittleEndianInputStream_I, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "init", "(Lnet/sf/image4j/io/LittleEndianInputStream;I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "init", "(Lnet/sf/image4j/io/LittleEndianInputStream;I)V"), __args);
 			} finally {
 			}
 		}
@@ -450,9 +450,9 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_write_Lnet_sf_image4j_io_LittleEndianOutputStream_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_write_Lnet_sf_image4j_io_LittleEndianOutputStream_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "write", "(Lnet/sf/image4j/io/LittleEndianOutputStream;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "write", "(Lnet/sf/image4j/io/LittleEndianOutputStream;)V"), __args);
 			} finally {
 			}
 		}

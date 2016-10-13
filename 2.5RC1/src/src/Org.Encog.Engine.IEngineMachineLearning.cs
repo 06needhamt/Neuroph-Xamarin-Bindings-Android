@@ -62,7 +62,7 @@ namespace Org.Encog.Engine {
 
 		public IEngineMachineLearningInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -88,7 +88,7 @@ namespace Org.Encog.Engine {
 			get {
 				if (id_getInputCount == IntPtr.Zero)
 					id_getInputCount = JNIEnv.GetMethodID (class_ref, "getInputCount", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getInputCount);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getInputCount);
 			}
 		}
 
@@ -113,7 +113,7 @@ namespace Org.Encog.Engine {
 			get {
 				if (id_getOutputCount == IntPtr.Zero)
 					id_getOutputCount = JNIEnv.GetMethodID (class_ref, "getOutputCount", "()I");
-				return JNIEnv.CallIntMethod (Handle, id_getOutputCount);
+				return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getOutputCount);
 			}
 		}
 
@@ -149,7 +149,7 @@ namespace Org.Encog.Engine {
 			JValue* __args = stackalloc JValue [2];
 			__args [0] = new JValue (native_p0);
 			__args [1] = new JValue (native_p1);
-			JNIEnv.CallVoidMethod (Handle, id_compute_arrayDarrayD, __args);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_compute_arrayDarrayD, __args);
 			if (p0 != null) {
 				JNIEnv.CopyArray (native_p0, p0);
 				JNIEnv.DeleteLocalRef (native_p0);

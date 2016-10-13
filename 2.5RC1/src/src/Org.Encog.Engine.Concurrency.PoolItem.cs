@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Concurrency {
 		public unsafe PoolItem (global::Org.Encog.Engine.Concurrency.IEngineTask p0, global::Org.Encog.Engine.Concurrency.TaskGroup p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -42,7 +42,7 @@ namespace Org.Encog.Engine.Concurrency {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/concurrency/EngineTask;Lorg/encog/engine/concurrency/TaskGroup;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/concurrency/EngineTask;Lorg/encog/engine/concurrency/TaskGroup;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/encog/engine/concurrency/EngineTask;Lorg/encog/engine/concurrency/TaskGroup;)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Org.Encog.Engine.Concurrency {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_concurrency_EngineTask_Lorg_encog_engine_concurrency_TaskGroup_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_concurrency_EngineTask_Lorg_encog_engine_concurrency_TaskGroup_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_encog_engine_concurrency_EngineTask_Lorg_encog_engine_concurrency_TaskGroup_, __args);
 			} finally {
 			}
 		}
@@ -82,9 +82,9 @@ namespace Org.Encog.Engine.Concurrency {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_run);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_run);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "run", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "run", "()V"));
 			} finally {
 			}
 		}

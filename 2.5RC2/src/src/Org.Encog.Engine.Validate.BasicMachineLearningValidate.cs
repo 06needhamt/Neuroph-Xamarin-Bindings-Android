@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Validate {
 		public unsafe BasicMachineLearningValidate ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -39,7 +39,7 @@ namespace Org.Encog.Engine.Validate {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -48,7 +48,7 @@ namespace Org.Encog.Engine.Validate {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -82,9 +82,9 @@ namespace Org.Encog.Engine.Validate {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_validate_Lorg_encog_engine_EngineMachineLearning_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_validate_Lorg_encog_engine_EngineMachineLearning_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "validate", "(Lorg/encog/engine/EngineMachineLearning;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "validate", "(Lorg/encog/engine/EngineMachineLearning;)V"), __args);
 			} finally {
 			}
 		}
@@ -107,7 +107,7 @@ namespace Org.Encog.Engine.Validate {
 		}
 #pragma warning restore 0169
 
-		// Metadata.xml XPath method reference: path="/api/package[@name='org.encog.engine.validate']/class[@name='BasicMachineLearningValidate']/method[@name='isValid' and count(parameter)=1 and parameter[1][@type='org.encog.engine.EngineMachineLearning']]"
+		// Metadata.xml XPath method reference: path="/api/package[@name='org.encog.engine.validate']/interface[@name='ValidateMachineLearning']/method[@name='isValid' and count(parameter)=1 and parameter[1][@type='org.encog.engine.EngineMachineLearning']]"
 		[Register ("isValid", "(Lorg/encog/engine/EngineMachineLearning;)Ljava/lang/String;", "GetIsValid_Lorg_encog_engine_EngineMachineLearning_Handler")]
 		public abstract string IsValid (global::Org.Encog.Engine.IEngineMachineLearning p0);
 
@@ -123,7 +123,7 @@ namespace Org.Encog.Engine.Validate {
 		}
 
 		static IntPtr id_isValid_Lorg_encog_engine_EngineMachineLearning_;
-		// Metadata.xml XPath method reference: path="/api/package[@name='org.encog.engine.validate']/class[@name='BasicMachineLearningValidate']/method[@name='isValid' and count(parameter)=1 and parameter[1][@type='org.encog.engine.EngineMachineLearning']]"
+		// Metadata.xml XPath method reference: path="/api/package[@name='org.encog.engine.validate']/interface[@name='ValidateMachineLearning']/method[@name='isValid' and count(parameter)=1 and parameter[1][@type='org.encog.engine.EngineMachineLearning']]"
 		[Register ("isValid", "(Lorg/encog/engine/EngineMachineLearning;)Ljava/lang/String;", "GetIsValid_Lorg_encog_engine_EngineMachineLearning_Handler")]
 		public override unsafe string IsValid (global::Org.Encog.Engine.IEngineMachineLearning p0)
 		{
@@ -132,7 +132,7 @@ namespace Org.Encog.Engine.Validate {
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (p0);
-				string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_isValid_Lorg_encog_engine_EngineMachineLearning_, __args), JniHandleOwnership.TransferLocalRef);
+				string __ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_isValid_Lorg_encog_engine_EngineMachineLearning_, __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}

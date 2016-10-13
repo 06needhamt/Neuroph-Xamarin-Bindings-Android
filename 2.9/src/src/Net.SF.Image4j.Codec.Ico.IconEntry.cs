@@ -17,13 +17,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (bColorCount_jfieldId == IntPtr.Zero)
 					bColorCount_jfieldId = JNIEnv.GetFieldID (class_ref, "bColorCount", "I");
-				return JNIEnv.GetIntField (Handle, bColorCount_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, bColorCount_jfieldId);
 			}
 			set {
 				if (bColorCount_jfieldId == IntPtr.Zero)
 					bColorCount_jfieldId = JNIEnv.GetFieldID (class_ref, "bColorCount", "I");
 				try {
-					JNIEnv.SetField (Handle, bColorCount_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bColorCount_jfieldId, value);
 				} finally {
 				}
 			}
@@ -37,13 +37,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (bHeight_jfieldId == IntPtr.Zero)
 					bHeight_jfieldId = JNIEnv.GetFieldID (class_ref, "bHeight", "I");
-				return JNIEnv.GetIntField (Handle, bHeight_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, bHeight_jfieldId);
 			}
 			set {
 				if (bHeight_jfieldId == IntPtr.Zero)
 					bHeight_jfieldId = JNIEnv.GetFieldID (class_ref, "bHeight", "I");
 				try {
-					JNIEnv.SetField (Handle, bHeight_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bHeight_jfieldId, value);
 				} finally {
 				}
 			}
@@ -57,13 +57,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (bReserved_jfieldId == IntPtr.Zero)
 					bReserved_jfieldId = JNIEnv.GetFieldID (class_ref, "bReserved", "B");
-				return JNIEnv.GetByteField (Handle, bReserved_jfieldId);
+				return JNIEnv.GetByteField (((global::Java.Lang.Object) this).Handle, bReserved_jfieldId);
 			}
 			set {
 				if (bReserved_jfieldId == IntPtr.Zero)
 					bReserved_jfieldId = JNIEnv.GetFieldID (class_ref, "bReserved", "B");
 				try {
-					JNIEnv.SetField (Handle, bReserved_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bReserved_jfieldId, value);
 				} finally {
 				}
 			}
@@ -77,13 +77,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (bWidth_jfieldId == IntPtr.Zero)
 					bWidth_jfieldId = JNIEnv.GetFieldID (class_ref, "bWidth", "I");
-				return JNIEnv.GetIntField (Handle, bWidth_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, bWidth_jfieldId);
 			}
 			set {
 				if (bWidth_jfieldId == IntPtr.Zero)
 					bWidth_jfieldId = JNIEnv.GetFieldID (class_ref, "bWidth", "I");
 				try {
-					JNIEnv.SetField (Handle, bWidth_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bWidth_jfieldId, value);
 				} finally {
 				}
 			}
@@ -97,13 +97,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (iFileOffset_jfieldId == IntPtr.Zero)
 					iFileOffset_jfieldId = JNIEnv.GetFieldID (class_ref, "iFileOffset", "I");
-				return JNIEnv.GetIntField (Handle, iFileOffset_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iFileOffset_jfieldId);
 			}
 			set {
 				if (iFileOffset_jfieldId == IntPtr.Zero)
 					iFileOffset_jfieldId = JNIEnv.GetFieldID (class_ref, "iFileOffset", "I");
 				try {
-					JNIEnv.SetField (Handle, iFileOffset_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iFileOffset_jfieldId, value);
 				} finally {
 				}
 			}
@@ -117,13 +117,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (iSizeInBytes_jfieldId == IntPtr.Zero)
 					iSizeInBytes_jfieldId = JNIEnv.GetFieldID (class_ref, "iSizeInBytes", "I");
-				return JNIEnv.GetIntField (Handle, iSizeInBytes_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, iSizeInBytes_jfieldId);
 			}
 			set {
 				if (iSizeInBytes_jfieldId == IntPtr.Zero)
 					iSizeInBytes_jfieldId = JNIEnv.GetFieldID (class_ref, "iSizeInBytes", "I");
 				try {
-					JNIEnv.SetField (Handle, iSizeInBytes_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, iSizeInBytes_jfieldId, value);
 				} finally {
 				}
 			}
@@ -137,13 +137,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (sBitCount_jfieldId == IntPtr.Zero)
 					sBitCount_jfieldId = JNIEnv.GetFieldID (class_ref, "sBitCount", "S");
-				return JNIEnv.GetShortField (Handle, sBitCount_jfieldId);
+				return JNIEnv.GetShortField (((global::Java.Lang.Object) this).Handle, sBitCount_jfieldId);
 			}
 			set {
 				if (sBitCount_jfieldId == IntPtr.Zero)
 					sBitCount_jfieldId = JNIEnv.GetFieldID (class_ref, "sBitCount", "S");
 				try {
-					JNIEnv.SetField (Handle, sBitCount_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, sBitCount_jfieldId, value);
 				} finally {
 				}
 			}
@@ -157,13 +157,13 @@ namespace Net.SF.Image4j.Codec.Ico {
 			get {
 				if (sPlanes_jfieldId == IntPtr.Zero)
 					sPlanes_jfieldId = JNIEnv.GetFieldID (class_ref, "sPlanes", "S");
-				return JNIEnv.GetShortField (Handle, sPlanes_jfieldId);
+				return JNIEnv.GetShortField (((global::Java.Lang.Object) this).Handle, sPlanes_jfieldId);
 			}
 			set {
 				if (sPlanes_jfieldId == IntPtr.Zero)
 					sPlanes_jfieldId = JNIEnv.GetFieldID (class_ref, "sPlanes", "S");
 				try {
-					JNIEnv.SetField (Handle, sPlanes_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, sPlanes_jfieldId, value);
 				} finally {
 				}
 			}
@@ -191,7 +191,7 @@ namespace Net.SF.Image4j.Codec.Ico {
 		public unsafe IconEntry (global::Net.SF.Image4j.IO.LittleEndianInputStream p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -201,7 +201,7 @@ namespace Net.SF.Image4j.Codec.Ico {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args);
 					return;
 				}
 
@@ -210,7 +210,7 @@ namespace Net.SF.Image4j.Codec.Ico {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args);
 			} finally {
 			}
 		}
@@ -221,7 +221,7 @@ namespace Net.SF.Image4j.Codec.Ico {
 		public unsafe IconEntry ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -229,7 +229,7 @@ namespace Net.SF.Image4j.Codec.Ico {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -238,7 +238,7 @@ namespace Net.SF.Image4j.Codec.Ico {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -272,9 +272,9 @@ namespace Net.SF.Image4j.Codec.Ico {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_write_Lnet_sf_image4j_io_LittleEndianOutputStream_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_write_Lnet_sf_image4j_io_LittleEndianOutputStream_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "write", "(Lnet/sf/image4j/io/LittleEndianOutputStream;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "write", "(Lnet/sf/image4j/io/LittleEndianOutputStream;)V"), __args);
 			} finally {
 			}
 		}

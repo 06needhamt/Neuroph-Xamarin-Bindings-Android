@@ -31,7 +31,7 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 		public unsafe KernelVectorAdd (global::Org.Encog.Engine.Opencl.EncogCLDevice p0, int p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -42,7 +42,7 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/encog/engine/opencl/EncogCLDevice;I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/encog/engine/opencl/EncogCLDevice;I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/encog/engine/opencl/EncogCLDevice;I)V", __args);
 					return;
 				}
 
@@ -51,7 +51,7 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_encog_engine_opencl_EncogCLDevice_I, __args);
 			} finally {
 			}
 		}
@@ -97,9 +97,9 @@ namespace Org.Encog.Engine.Opencl.Kernels {
 
 				double[] __ret;
 				if (GetType () == ThresholdType)
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_add_Lorg_encog_engine_opencl_EncogCLDevice_arrayDarrayD, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_add_Lorg_encog_engine_opencl_EncogCLDevice_arrayDarrayD, __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				else
-					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "add", "(Lorg/encog/engine/opencl/EncogCLDevice;[D[D)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
+					__ret = (double[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "add", "(Lorg/encog/engine/opencl/EncogCLDevice;[D[D)[D"), __args), JniHandleOwnership.TransferLocalRef, typeof (double));
 				return __ret;
 			} finally {
 				if (p1 != null) {

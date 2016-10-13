@@ -56,7 +56,7 @@ namespace Org.Neuroph.Util.IO {
 
 		public IInputAdapterInvoker (IntPtr handle, JniHandleOwnership transfer) : base (Validate (handle), transfer)
 		{
-			IntPtr local_ref = JNIEnv.GetObjectClass (Handle);
+			IntPtr local_ref = JNIEnv.GetObjectClass (((global::Java.Lang.Object) this).Handle);
 			this.class_ref = JNIEnv.NewGlobalRef (local_ref);
 			JNIEnv.DeleteLocalRef (local_ref);
 		}
@@ -82,7 +82,7 @@ namespace Org.Neuroph.Util.IO {
 		{
 			if (id_close == IntPtr.Zero)
 				id_close = JNIEnv.GetMethodID (class_ref, "close", "()V");
-			JNIEnv.CallVoidMethod (Handle, id_close);
+			JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_close);
 		}
 
 		static Delegate cb_readInput;
@@ -106,7 +106,7 @@ namespace Org.Neuroph.Util.IO {
 		{
 			if (id_readInput == IntPtr.Zero)
 				id_readInput = JNIEnv.GetMethodID (class_ref, "readInput", "()[D");
-			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (Handle, id_readInput), JniHandleOwnership.TransferLocalRef, typeof (double));
+			return (double[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_readInput), JniHandleOwnership.TransferLocalRef, typeof (double));
 		}
 
 	}

@@ -17,13 +17,13 @@ namespace Org.Jocl {
 			get {
 				if (image_channel_data_type_jfieldId == IntPtr.Zero)
 					image_channel_data_type_jfieldId = JNIEnv.GetFieldID (class_ref, "image_channel_data_type", "I");
-				return JNIEnv.GetIntField (Handle, image_channel_data_type_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, image_channel_data_type_jfieldId);
 			}
 			set {
 				if (image_channel_data_type_jfieldId == IntPtr.Zero)
 					image_channel_data_type_jfieldId = JNIEnv.GetFieldID (class_ref, "image_channel_data_type", "I");
 				try {
-					JNIEnv.SetField (Handle, image_channel_data_type_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, image_channel_data_type_jfieldId, value);
 				} finally {
 				}
 			}
@@ -37,13 +37,13 @@ namespace Org.Jocl {
 			get {
 				if (image_channel_order_jfieldId == IntPtr.Zero)
 					image_channel_order_jfieldId = JNIEnv.GetFieldID (class_ref, "image_channel_order", "I");
-				return JNIEnv.GetIntField (Handle, image_channel_order_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, image_channel_order_jfieldId);
 			}
 			set {
 				if (image_channel_order_jfieldId == IntPtr.Zero)
 					image_channel_order_jfieldId = JNIEnv.GetFieldID (class_ref, "image_channel_order", "I");
 				try {
-					JNIEnv.SetField (Handle, image_channel_order_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, image_channel_order_jfieldId, value);
 				} finally {
 				}
 			}
@@ -71,7 +71,7 @@ namespace Org.Jocl {
 		public unsafe Cl_image_format ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -79,7 +79,7 @@ namespace Org.Jocl {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -88,7 +88,7 @@ namespace Org.Jocl {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}

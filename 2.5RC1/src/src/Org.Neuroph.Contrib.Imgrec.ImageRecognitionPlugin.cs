@@ -55,9 +55,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallObjectMethod  (Handle, id_getColorMode), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getColorMode), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColorMode", "()Lorg/neuroph/contrib/imgrec/ColorMode;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Contrib.Imgrec.ColorMode> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getColorMode", "()Lorg/neuroph/contrib/imgrec/ColorMode;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -89,9 +89,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Android.Runtime.JavaDictionary<string, global::Org.Neuroph.Core.Neuron>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getMaxOutput), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaDictionary<string, global::Org.Neuroph.Core.Neuron>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMaxOutput), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Android.Runtime.JavaDictionary<string, global::Org.Neuroph.Core.Neuron>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxOutput", "()Ljava/util/HashMap;")), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaDictionary<string, global::Org.Neuroph.Core.Neuron>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxOutput", "()Ljava/util/HashMap;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -123,9 +123,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_getOutput), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getOutput), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "()Ljava/util/HashMap;")), JniHandleOwnership.TransferLocalRef);
+						return global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOutput", "()Ljava/util/HashMap;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -157,9 +157,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_processInput);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_processInput);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "processInput", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "processInput", "()V"));
 			} finally {
 			}
 		}
@@ -195,9 +195,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 
 				global::System.Collections.Generic.IDictionary<string, global::Java.Lang.Double> __ret;
 				if (GetType () == ThresholdType)
-					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_recognizeImage_Ljava_io_File_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_recognizeImage_Ljava_io_File_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeImage", "(Ljava/io/File;)Ljava/util/HashMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeImage", "(Ljava/io/File;)Ljava/util/HashMap;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}
@@ -234,9 +234,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 
 				global::System.Collections.Generic.IDictionary<string, global::Java.Lang.Double> __ret;
 				if (GetType () == ThresholdType)
-					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallObjectMethod  (Handle, id_recognizeImage_Ljava_net_URL_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_recognizeImage_Ljava_net_URL_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeImage", "(Ljava/net/URL;)Ljava/util/HashMap;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Android.Runtime.JavaDictionary<string, global::Java.Lang.Double>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "recognizeImage", "(Ljava/net/URL;)Ljava/util/HashMap;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 			}
@@ -271,9 +271,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setInput_Ljava_io_File_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setInput_Ljava_io_File_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInput", "(Ljava/io/File;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInput", "(Ljava/io/File;)V"), __args);
 			} finally {
 			}
 		}
@@ -307,9 +307,9 @@ namespace Org.Neuroph.Contrib.Imgrec {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setInput_Ljava_net_URL_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setInput_Ljava_net_URL_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInput", "(Ljava/net/URL;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInput", "(Ljava/net/URL;)V"), __args);
 			} finally {
 			}
 		}

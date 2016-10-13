@@ -31,7 +31,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 		public unsafe KMeansClustering (global::Org.Neuroph.Core.Data.DataSet p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -41,7 +41,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/data/DataSet;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/data/DataSet;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/data/DataSet;)V", __args);
 					return;
 				}
 
@@ -50,7 +50,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_, __args);
 			} finally {
 			}
 		}
@@ -61,7 +61,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 		public unsafe KMeansClustering (global::Org.Neuroph.Core.Data.DataSet p0, int p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -72,7 +72,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lorg/neuroph/core/data/DataSet;I)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lorg/neuroph/core/data/DataSet;I)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lorg/neuroph/core/data/DataSet;I)V", __args);
 					return;
 				}
 
@@ -81,7 +81,7 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_I, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_I, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_core_data_DataSet_I, __args);
 			} finally {
 			}
 		}
@@ -130,9 +130,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				try {
 
 					if (GetType () == ThresholdType)
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Data.DataSet> (JNIEnv.CallObjectMethod  (Handle, id_getDataSet), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Data.DataSet> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDataSet), JniHandleOwnership.TransferLocalRef);
 					else
-						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Data.DataSet> (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDataSet", "()Lorg/neuroph/core/data/DataSet;")), JniHandleOwnership.TransferLocalRef);
+						return global::Java.Lang.Object.GetObject<global::Org.Neuroph.Core.Data.DataSet> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDataSet", "()Lorg/neuroph/core/data/DataSet;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -146,9 +146,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setDataSet_Lorg_neuroph_core_data_DataSet_, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setDataSet_Lorg_neuroph_core_data_DataSet_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDataSet", "(Lorg/neuroph/core/data/DataSet;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDataSet", "(Lorg/neuroph/core/data/DataSet;)V"), __args);
 				} finally {
 				}
 			}
@@ -180,9 +180,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod  (Handle, id_getLog), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getLog), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLog", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLog", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -214,9 +214,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_doClustering);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_doClustering);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "doClustering", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "doClustering", "()V"));
 			} finally {
 			}
 		}
@@ -247,9 +247,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 			try {
 
 				if (GetType () == ThresholdType)
-					return (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod  (Handle, id_getClusters), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster));
+					return (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getClusters), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster));
 				else
-					return (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getClusters", "()[Lorg/neuroph/nnet/learning/kmeans/Cluster;")), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster));
+					return (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getClusters", "()[Lorg/neuroph/nnet/learning/kmeans/Cluster;")), JniHandleOwnership.TransferLocalRef, typeof (global::Org.Neuroph.Nnet.Learning.Kmeans.Cluster));
 			} finally {
 			}
 		}
@@ -280,9 +280,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 			try {
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_initClusters);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_initClusters);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "initClusters", "()V"));
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "initClusters", "()V"));
 			} finally {
 			}
 		}
@@ -315,9 +315,9 @@ namespace Org.Neuroph.Nnet.Learning.Kmeans {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_setNumberOfClusters_I, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setNumberOfClusters_I, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNumberOfClusters", "(I)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNumberOfClusters", "(I)V"), __args);
 			} finally {
 			}
 		}

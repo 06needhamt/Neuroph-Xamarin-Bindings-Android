@@ -21,13 +21,13 @@ namespace Org.Neuroph.Nnet.Learning {
 				get {
 					if (gradient_jfieldId == IntPtr.Zero)
 						gradient_jfieldId = JNIEnv.GetFieldID (class_ref, "gradient", "D");
-					return JNIEnv.GetDoubleField (Handle, gradient_jfieldId);
+					return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, gradient_jfieldId);
 				}
 				set {
 					if (gradient_jfieldId == IntPtr.Zero)
 						gradient_jfieldId = JNIEnv.GetFieldID (class_ref, "gradient", "D");
 					try {
-						JNIEnv.SetField (Handle, gradient_jfieldId, value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, gradient_jfieldId, value);
 					} finally {
 					}
 				}
@@ -41,13 +41,13 @@ namespace Org.Neuroph.Nnet.Learning {
 				get {
 					if (previousDelta_jfieldId == IntPtr.Zero)
 						previousDelta_jfieldId = JNIEnv.GetFieldID (class_ref, "previousDelta", "D");
-					return JNIEnv.GetDoubleField (Handle, previousDelta_jfieldId);
+					return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, previousDelta_jfieldId);
 				}
 				set {
 					if (previousDelta_jfieldId == IntPtr.Zero)
 						previousDelta_jfieldId = JNIEnv.GetFieldID (class_ref, "previousDelta", "D");
 					try {
-						JNIEnv.SetField (Handle, previousDelta_jfieldId, value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, previousDelta_jfieldId, value);
 					} finally {
 					}
 				}
@@ -61,13 +61,13 @@ namespace Org.Neuroph.Nnet.Learning {
 				get {
 					if (previousGradient_jfieldId == IntPtr.Zero)
 						previousGradient_jfieldId = JNIEnv.GetFieldID (class_ref, "previousGradient", "D");
-					return JNIEnv.GetDoubleField (Handle, previousGradient_jfieldId);
+					return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, previousGradient_jfieldId);
 				}
 				set {
 					if (previousGradient_jfieldId == IntPtr.Zero)
 						previousGradient_jfieldId = JNIEnv.GetFieldID (class_ref, "previousGradient", "D");
 					try {
-						JNIEnv.SetField (Handle, previousGradient_jfieldId, value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, previousGradient_jfieldId, value);
 					} finally {
 					}
 				}
@@ -81,13 +81,13 @@ namespace Org.Neuroph.Nnet.Learning {
 				get {
 					if (previousWeightChange_jfieldId == IntPtr.Zero)
 						previousWeightChange_jfieldId = JNIEnv.GetFieldID (class_ref, "previousWeightChange", "D");
-					return JNIEnv.GetDoubleField (Handle, previousWeightChange_jfieldId);
+					return JNIEnv.GetDoubleField (((global::Java.Lang.Object) this).Handle, previousWeightChange_jfieldId);
 				}
 				set {
 					if (previousWeightChange_jfieldId == IntPtr.Zero)
 						previousWeightChange_jfieldId = JNIEnv.GetFieldID (class_ref, "previousWeightChange", "D");
 					try {
-						JNIEnv.SetField (Handle, previousWeightChange_jfieldId, value);
+						JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, previousWeightChange_jfieldId, value);
 					} finally {
 					}
 				}
@@ -115,7 +115,7 @@ namespace Org.Neuroph.Nnet.Learning {
 			public unsafe ResilientWeightTrainingtData (global::Org.Neuroph.Nnet.Learning.ResilientPropagation __self)
 				: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 			{
-				if (Handle != IntPtr.Zero)
+				if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 					return;
 
 				try {
@@ -125,7 +125,7 @@ namespace Org.Neuroph.Nnet.Learning {
 						SetHandle (
 								global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args),
 								JniHandleOwnership.TransferLocalRef);
-						global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args);
+						global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(L" + global::Android.Runtime.JNIEnv.GetJniName (GetType ().DeclaringType) + ";)V", __args);
 						return;
 					}
 
@@ -134,7 +134,7 @@ namespace Org.Neuroph.Nnet.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lorg_neuroph_nnet_learning_ResilientPropagation_, __args),
 							JniHandleOwnership.TransferLocalRef);
-					JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lorg_neuroph_nnet_learning_ResilientPropagation_, __args);
+					JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lorg_neuroph_nnet_learning_ResilientPropagation_, __args);
 				} finally {
 				}
 			}
@@ -164,7 +164,7 @@ namespace Org.Neuroph.Nnet.Learning {
 		public unsafe ResilientPropagation ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -172,7 +172,7 @@ namespace Org.Neuroph.Nnet.Learning {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -181,7 +181,7 @@ namespace Org.Neuroph.Nnet.Learning {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -229,9 +229,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getDecreaseFactor);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getDecreaseFactor);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDecreaseFactor", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDecreaseFactor", "()D"));
 				} finally {
 				}
 			}
@@ -245,9 +245,9 @@ namespace Org.Neuroph.Nnet.Learning {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setDecreaseFactor_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setDecreaseFactor_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDecreaseFactor", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDecreaseFactor", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -296,9 +296,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getIncreaseFactor);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getIncreaseFactor);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIncreaseFactor", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getIncreaseFactor", "()D"));
 				} finally {
 				}
 			}
@@ -312,9 +312,9 @@ namespace Org.Neuroph.Nnet.Learning {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setIncreaseFactor_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setIncreaseFactor_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIncreaseFactor", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setIncreaseFactor", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -363,9 +363,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getInitialDelta);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getInitialDelta);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInitialDelta", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getInitialDelta", "()D"));
 				} finally {
 				}
 			}
@@ -379,9 +379,9 @@ namespace Org.Neuroph.Nnet.Learning {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setInitialDelta_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setInitialDelta_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInitialDelta", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setInitialDelta", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -430,9 +430,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getMaxDelta);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getMaxDelta);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxDelta", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMaxDelta", "()D"));
 				} finally {
 				}
 			}
@@ -446,9 +446,9 @@ namespace Org.Neuroph.Nnet.Learning {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setMaxDelta_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setMaxDelta_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMaxDelta", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMaxDelta", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -497,9 +497,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				try {
 
 					if (GetType () == ThresholdType)
-						return JNIEnv.CallDoubleMethod  (Handle, id_getMinDelta);
+						return JNIEnv.CallDoubleMethod (((global::Java.Lang.Object) this).Handle, id_getMinDelta);
 					else
-						return JNIEnv.CallNonvirtualDoubleMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMinDelta", "()D"));
+						return JNIEnv.CallNonvirtualDoubleMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMinDelta", "()D"));
 				} finally {
 				}
 			}
@@ -513,9 +513,9 @@ namespace Org.Neuroph.Nnet.Learning {
 					__args [0] = new JValue (value);
 
 					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod  (Handle, id_setMinDelta_D, __args);
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setMinDelta_D, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMinDelta", "(D)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMinDelta", "(D)V"), __args);
 				} finally {
 				}
 			}
@@ -550,9 +550,9 @@ namespace Org.Neuroph.Nnet.Learning {
 				__args [0] = new JValue (p0);
 
 				if (GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod  (Handle, id_resillientWeightUpdate_Lorg_neuroph_core_Weight_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_resillientWeightUpdate_Lorg_neuroph_core_Weight_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod  (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "resillientWeightUpdate", "(Lorg/neuroph/core/Weight;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "resillientWeightUpdate", "(Lorg/neuroph/core/Weight;)V"), __args);
 			} finally {
 			}
 		}

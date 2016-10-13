@@ -17,13 +17,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (bBlue_jfieldId == IntPtr.Zero)
 					bBlue_jfieldId = JNIEnv.GetFieldID (class_ref, "bBlue", "I");
-				return JNIEnv.GetIntField (Handle, bBlue_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, bBlue_jfieldId);
 			}
 			set {
 				if (bBlue_jfieldId == IntPtr.Zero)
 					bBlue_jfieldId = JNIEnv.GetFieldID (class_ref, "bBlue", "I");
 				try {
-					JNIEnv.SetField (Handle, bBlue_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bBlue_jfieldId, value);
 				} finally {
 				}
 			}
@@ -37,13 +37,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (bGreen_jfieldId == IntPtr.Zero)
 					bGreen_jfieldId = JNIEnv.GetFieldID (class_ref, "bGreen", "I");
-				return JNIEnv.GetIntField (Handle, bGreen_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, bGreen_jfieldId);
 			}
 			set {
 				if (bGreen_jfieldId == IntPtr.Zero)
 					bGreen_jfieldId = JNIEnv.GetFieldID (class_ref, "bGreen", "I");
 				try {
-					JNIEnv.SetField (Handle, bGreen_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bGreen_jfieldId, value);
 				} finally {
 				}
 			}
@@ -57,13 +57,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (bRed_jfieldId == IntPtr.Zero)
 					bRed_jfieldId = JNIEnv.GetFieldID (class_ref, "bRed", "I");
-				return JNIEnv.GetIntField (Handle, bRed_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, bRed_jfieldId);
 			}
 			set {
 				if (bRed_jfieldId == IntPtr.Zero)
 					bRed_jfieldId = JNIEnv.GetFieldID (class_ref, "bRed", "I");
 				try {
-					JNIEnv.SetField (Handle, bRed_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bRed_jfieldId, value);
 				} finally {
 				}
 			}
@@ -77,13 +77,13 @@ namespace Net.SF.Image4j.Codec.Bmp {
 			get {
 				if (bReserved_jfieldId == IntPtr.Zero)
 					bReserved_jfieldId = JNIEnv.GetFieldID (class_ref, "bReserved", "I");
-				return JNIEnv.GetIntField (Handle, bReserved_jfieldId);
+				return JNIEnv.GetIntField (((global::Java.Lang.Object) this).Handle, bReserved_jfieldId);
 			}
 			set {
 				if (bReserved_jfieldId == IntPtr.Zero)
 					bReserved_jfieldId = JNIEnv.GetFieldID (class_ref, "bReserved", "I");
 				try {
-					JNIEnv.SetField (Handle, bReserved_jfieldId, value);
+					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, bReserved_jfieldId, value);
 				} finally {
 				}
 			}
@@ -111,7 +111,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe ColorEntry (global::Net.SF.Image4j.IO.LittleEndianInputStream p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -121,7 +121,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lnet/sf/image4j/io/LittleEndianInputStream;)V", __args);
 					return;
 				}
 
@@ -130,7 +130,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lnet_sf_image4j_io_LittleEndianInputStream_, __args);
 			} finally {
 			}
 		}
@@ -141,7 +141,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe ColorEntry ()
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -149,7 +149,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "()V"),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "()V");
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "()V");
 					return;
 				}
 
@@ -158,7 +158,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
 			} finally {
 			}
 		}
@@ -169,7 +169,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 		public unsafe ColorEntry (int p0, int p1, int p2, int p3)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
 				return;
 
 			try {
@@ -182,7 +182,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 					SetHandle (
 							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(IIII)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(IIII)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(IIII)V", __args);
 					return;
 				}
 
@@ -191,7 +191,7 @@ namespace Net.SF.Image4j.Codec.Bmp {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_IIII, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_IIII, __args);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_IIII, __args);
 			} finally {
 			}
 		}
